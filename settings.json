@@ -6,8 +6,8 @@
     "enable_accessibility_rule_caching": true,
 	"name": "Tunic Randomizer - Item & Map Tracker",
 	  "game_name": "Tunic",
-      "author": "SapphireSapphic, Scout_JD, Br00ty",
-      "version": "2.0.2",
+      "author": "SapphireSapphic, Scout_JD, Br00ty, ScipioWright",
+      "version": "2.2.3",
       "uid": "tunic_sapphiresapphic",
 	"package_repositories": ["sapphiresapphic.github.io/repository.json"]
 }
