@@ -627,7 +627,7 @@
       {
         "name": "Cathedral",
         "access_rules": [
-          "@Swamp Mid,pray"
+          "@Cathedral,pray"
         ],
         "children": [
           {
