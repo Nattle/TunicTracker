@@ -4,9 +4,10 @@
 
             "package_version": "2.2.3",
             "download_url": "https://github.com/SapphireSapphic/TunicTracker/releases/download/2.2.3/TunicTracker.zip",
-            "sha256": "1430CCE1B32092E5DB551339246E43039A3E1192B3AD479118C6E23C9D2F29AD",
+            "sha256": "1BFB8AEB5E2ADFDD4C0F95CB327AC740157130CCB2F117CFC8C5677D3FC203D9",
             "changelog": [
-                "Fix the Cathedral Fuse logic."
+                "Fix the Cathedral Fuse logic.",
+                "Add more codes to maps."
             ]
         },
         {
