@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Combat Logic Regions",
+    "children": [
+      {
+        "name": "Frog's Domain Main",
+        "access_rules": [
+          "@Frog's Domain,$combat_logic_on|frogs_domain"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden before Terry",
+        "access_rules": [
+          "@Overworld to West Garden from Furnace",
+          "@LS Elev 0",
+          "@West Garden Hero's Grave Region",
+          "@West Garden after Terry,$combat_logic_on|west_garden|dagger|laurels"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden after Terry",
+        "access_rules": [
+          "@West Garden before Terry,$combat_logic_on|west_garden|dagger|laurels",
+          "@West Garden West Combat",
+          "@West Garden South Checkpoint,dash"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden West Combat",
+        "access_rules": [
+          "@West Garden after Terry,$combat_logic_on|west_garden",
+          "@West Garden South Checkpoint,$combat_logic_on|west_garden"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden South Checkpoint",
+        "access_rules": [
+          "@West Garden West Combat",
+          "@West Garden after Terry,dash",
+          "@West Garden at Dagger House,$west_garden_bush_access",
+          "@West Garden before Boss"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden at Dagger House",
+        "access_rules": [
+          "@Magic Dagger House",
+          "@West Garden Laurels Exit Region,dash",
+          "@West Garden Portal Item,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,$enemy_soul_access|chompignom",
+          "@West Garden South Checkpoint,$west_garden_checkpoint_to_dagger_access"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden before Boss",
+        "access_rules": [
+          "@West Garden South Checkpoint,$combat_logic_on|west_garden|none|laurels",
+          "@West Garden after Boss,dash",
+          "@West Garden after Boss,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|garden_knight",
+          "@West Garden after Boss,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$garden_knight_traversal_access"
+        ],
+        "children": []
+      },
+      {
+        "name": "Fortress Grave Path Entry",
+        "access_rules": [
+          "@Fortress Courtyard",
+          "@Fortress Grave Path Upper,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,$enemy_soul_access|custodians",
+          "@Fortress Grave Path Combat",
+          "@Fortress Grave Path by Grave",
+          "@Fortress Exterior from Overworld,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
+          "@Fortress Exterior from East Forest,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
+          "@Fortress Exterior near cave,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_to_beneath_the_vault"
+        ],
+        "children": []
+      },
+      {
+        "name": "Fortress Grave Path Combat",
+        "access_rules": [
+          "@Fortress Grave Path Entry,$combat_logic_on|eastern_vault_fortress"
+        ],
+        "children": []
+      },
+      {
+        "name": "Fortress Grave Path by Grave",
+        "access_rules": [
+          "@Fortress Grave Path Combat",
+          "@Fortress Hero's Grave Region",
+          "@Fortress Grave Path Dusty Entrance Region,dash"
+        ],
+        "children": []
+      },
+      {
+        "name": "Even Lower Quarry Isolated Chest",
+        "access_rules": [
+          "@Even Lower Quarry",
+          "@Quarry,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,icerod,staff,$enemy_soul_access|scavengers"
+        ],
+        "children": []
+      },
+      {
+        "name": "Enemy Logic - Rooted Ziggurat Lower Entry",
+        "access_rules": [
+          "@Rooted Ziggurat Middle Bottom",
+          "@Enemy Logic - Rooted Ziggurat Lower Front",
+          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint,dash",
+          "@Enemy Logic - Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
+        ],
+        "children": []
+      },
+      {
+        "name": "Enemy Logic - Rooted Ziggurat Lower Front",
+        "access_rules": [
+          "@Enemy Logic - Rooted Ziggurat Lower Entry,$combat_logic_on|rooted_ziggurat",
+          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint,$combat_logic_on|rooted_ziggurat"
+        ],
+        "children": []
+      },
+      {
+        "name": "Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint",
+        "access_rules": [
+          "@Enemy Logic - Rooted Ziggurat Lower Front",
+          "@Enemy Logic - Rooted Ziggurat Lower Entry,dash",
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_access"
+        ],
+        "children": []
+      },
+      {
+        "name": "Enemy Logic - Rooted Ziggurat Lower Miniboss Platform",
+        "access_rules": [
+          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint",
+          "@Enemy Logic - Rooted Ziggurat Lower Back,dash",
+          "@Enemy Logic - Rooted Ziggurat Lower Back,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$enemy_soul_access|voidling",
+          "@Enemy Logic - Rooted Ziggurat Lower Back,$is_fs,ziggurat_miniboss_fuse"
+        ],
+        "children": []
+      },
+      {
+        "name": "Enemy Logic - Rooted Ziggurat Lower Back",
+        "access_rules": [
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,dash",
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_access",
+          "@Rooted Ziggurat Portal Room Entrance"
+        ],
+        "children": []
+      },
+      {
+        "name": "Cathedral Entry",
+        "access_rules": [
+          "@Swamp to Cathedral Main Entrance Region",
+          "@Cathedral Gauntlet Checkpoint",
+          "@Swamp Mid,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_in_swamp",
+          "@Back of Swamp,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls"
+        ],
+        "children": []
+      },
+      {
+        "name": "Cathedral Main",
+        "access_rules": [
+          "@Cathedral Entry,$combat_logic_on|swamp"
+        ],
+        "children": []
+      }
+    ]
+  }
+]

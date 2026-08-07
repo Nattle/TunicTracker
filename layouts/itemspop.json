@@ -43,6 +43,22 @@
 			}
 		]
 	},
+	"enemy_souls": {
+		"type": "itemgrid",
+		"h_alignment": "center",
+		"margin": "0,0,0,0",
+		"item_margin": "1,2",
+		"item_size": 40,
+		"rows": [
+			["enemy_soul_administrator", "enemy_soul_phrend", "enemy_soul_beefboy", "enemy_soul_blobs", "enemy_soul_fleemers"],
+			["enemy_soul_crabs", "enemy_soul_chompignom", "enemy_soul_husher", "enemy_soul_autobolt", "enemy_soul_zombie_foxes"],
+			["enemy_soul_frogs", "enemy_soul_lost_echo", "enemy_soul_gunslinger", "enemy_soul_hedgehogs", "enemy_soul_laser_trap"],
+			["enemy_soul_envoy", "enemy_soul_garden_knight", "enemy_soul_librarian", "enemy_soul_plover", "enemy_soul_fairies"],
+			["enemy_soul_scavengers", "enemy_soul_boss_scavenger", "enemy_soul_tentacle", "enemy_soul_rudelings", "enemy_soul_spiders"],
+			["enemy_soul_siege_engine", "enemy_soul_slorm", "enemy_soul_baby_slorm", "enemy_soul_voidling", "enemy_soul_custodians"],
+			["enemy_soul_voidtouched", "enemy_soul_the_heir"]
+		]
+	},
 	"ladders": {
 		"type": "array",
 		"orientation": "horizontal",
@@ -208,6 +224,42 @@
 					"type": "item",
 					"item_margin": "-5,-1,-5,-5",
 					"item": "fuse_shuffle"
+				  }
+				]
+			  },
+			{
+				"type": "group",
+				"header": "Enemy Drop Shuffle",
+				"header_background": "#3e4b57",
+				"content": [
+				  {
+					"type": "item",
+					"item_margin": "-5,-1,-5,-5",
+					"item": "enemy_drop_shuffle_setting"
+				  }
+				]
+			  },
+			{
+				"type": "group",
+				"header": "Enemy Soul Shuffle",
+				"header_background": "#3e4b57",
+				"content": [
+				  {
+					"type": "item",
+					"item_margin": "-5,-1,-5,-5",
+					"item": "enemy_soul_shuffle_setting"
+				  }
+				]
+			  },
+			{
+				"type": "group",
+				"header": "Combat Logic",
+				"header_background": "#3e4b57",
+				"content": [
+				  {
+					"type": "item",
+					"item_margin": "-5,-1,-5,-5",
+					"item": "combat_logic_setting"
 				  }
 				]
 			  },

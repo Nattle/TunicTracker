@@ -74,6 +74,42 @@
                         "item": "fuse_shuffle"
                     }
                 ]
+            },
+			{
+                "type": "group",
+                "header": "Enemy Drop Shuffle",
+                "header_background": "#3e4b57",
+                "content":[
+                    {
+                        "type": "item",
+                        "margin": "-5,-1,-5,-5",
+                        "item": "enemy_drop_shuffle_setting"
+                    }
+                ]
+            },
+			{
+                "type": "group",
+                "header": "Enemy Soul Shuffle",
+                "header_background": "#3e4b57",
+                "content":[
+                    {
+                        "type": "item",
+                        "margin": "-5,-1,-5,-5",
+                        "item": "enemy_soul_shuffle_setting"
+                    }
+                ]
+            },
+			{
+                "type": "group",
+                "header": "Combat Logic",
+                "header_background": "#3e4b57",
+                "content":[
+                    {
+                        "type": "item",
+                        "margin": "-5,-1,-5,-5",
+                        "item": "combat_logic_setting"
+                    }
+                ]
             }
 		]
     },

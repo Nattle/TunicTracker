@@ -1,0 +1,1768 @@
+[
+  {
+    "name": "Enemy Drops",
+    "visibility_rules": "enemy_drop_shuffle",
+    "chest_unopened_img": "images/PLACEHOLDER.png",
+    "chest_opened_img": "images/PLACEHOLDER.png",
+    "overlay_background": "#000000",
+    "children": [
+      {
+        "name": "Enemy Drops - Overworld",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 2700,
+            "y": 2500,
+            "size": 65
+          },
+          {
+            "map": "overworld",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "After Ruined Passage - Blobs",
+            "item_count": 3,
+            "access_rules": [
+              "@After Ruined Passage,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "After Ruined Passage - Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@After Ruined Passage,$enemy_access|fox_enemy_zombie"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "East Overworld - Blobs",
+            "item_count": 14,
+            "access_rules": [
+              "@East Overworld,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "East Overworld - Blobs [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@East Overworld,$enemy_access|blob"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "East Overworld - Hedgehogs",
+            "item_count": 3,
+            "access_rules": [
+              "@East Overworld,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "Hourglass Cave - Autobolts",
+            "item_count": 3,
+            "access_rules": [
+              "@Hourglass Cave,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Overworld - Autobolts",
+            "item_count": 3,
+            "access_rules": [
+              "@Overworld,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Overworld - Beefboys [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|beefboy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Overworld - Big Fleemers [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|fleemer_big"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Overworld - Blobs",
+            "item_count": 9,
+            "access_rules": [
+              "@Overworld,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "Overworld - Blobs [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|blob"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Overworld - Envoys",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,@Shop,$enemy_access|envoy_shop",
+              "@Overworld,$enemy_access|envoy_combat"
+            ]
+          },
+          {
+            "name": "Overworld - Envoys (Quarry Bridge)",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|envoy_bridge"
+            ]
+          },
+          {
+            "name": "Overworld - Guard Captains [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|guard_captain"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Overworld - Hedgehogs",
+            "item_count": 9,
+            "access_rules": [
+              "@Overworld,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "Overworld - Phrends",
+            "item_count": 2,
+            "access_rules": [
+              "@Overworld,$enemy_access|phrend"
+            ]
+          },
+          {
+            "name": "Overworld - Rudelings",
+            "item_count": 10,
+            "access_rules": [
+              "@Overworld,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Overworld - Rudelings [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|rudeling"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Overworld - Shield Rudelings",
+            "item_count": 7,
+            "access_rules": [
+              "@Overworld,$enemy_access|rudeling_shield"
+            ]
+          },
+          {
+            "name": "Overworld - Shield Rudelings [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld,$enemy_access|rudeling_shield"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Overworld above Patrol Cave - Hedgehogs",
+            "item_count": 2,
+            "access_rules": [
+              "@Overworld above Patrol Cave,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "Overworld Beach - Autobolts",
+            "item_count": 2,
+            "access_rules": [
+              "@Overworld Beach,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Overworld Beach - Autobolts (Gap)",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld Beach,$enemy_access|autobolt_gap"
+            ]
+          },
+          {
+            "name": "Overworld Tunnel Turret - Autobolts",
+            "item_count": 1,
+            "access_rules": [
+              "@Overworld Tunnel Turret,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Patrol Cave - Rudelings (Shop Route)",
+            "item_count": 1,
+            "access_rules": [
+              "@Patrol Cave,@Shop,$enemy_access|rudeling_patrol"
+            ]
+          },
+          {
+            "name": "Upper Overworld - Guard Captains",
+            "item_count": 1,
+            "access_rules": [
+              "@Upper Overworld,$enemy_access|guard_captain"
+            ]
+          },
+          {
+            "name": "Upper Overworld - Phrends",
+            "item_count": 6,
+            "access_rules": [
+              "@Upper Overworld,$enemy_access|phrend"
+            ]
+          },
+          {
+            "name": "Upper Overworld - Shield Rudelings",
+            "item_count": 3,
+            "access_rules": [
+              "@Upper Overworld,$enemy_access|rudeling_shield"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - East Forest",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 3900,
+            "y": 2800,
+            "size": 65
+          },
+          {
+            "map": "east_forest",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "East Forest - Blobs",
+            "item_count": 5,
+            "access_rules": [
+              "@East Forest,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "East Forest - Hedgehogs",
+            "item_count": 4,
+            "access_rules": [
+              "@East Forest,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "East Forest - Rudelings",
+            "item_count": 5,
+            "access_rules": [
+              "@East Forest,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "East Forest - Rudelings [Extra]",
+            "item_count": 4,
+            "access_rules": [
+              "@East Forest,$enemy_access|rudeling"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "East Forest - Spiders [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@East Forest,$enemy_access|spider"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "East Forest above Guard House 2 - Envoys",
+            "item_count": 1,
+            "access_rules": [
+              "@East Forest,@Shop,$enemy_access|envoy_shop",
+              "@East Forest,$enemy_access|envoy_combat"
+            ]
+          },
+          {
+            "name": "East Forest above Guard House 2 - Rudelings",
+            "item_count": 1,
+            "access_rules": [
+              "@East Forest,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "East Forest above Guard House 2 - Shield Rudelings",
+            "item_count": 1,
+            "access_rules": [
+              "@East Forest,$enemy_access|rudeling_shield"
+            ]
+          },
+          {
+            "name": "East Forest Dance Fox Spot - Hedgehogs",
+            "item_count": 2,
+            "access_rules": [
+              "@East Forest Dance Fox Spot,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "Forest Belltower Main - Blobs",
+            "item_count": 5,
+            "access_rules": [
+              "@Forest Belltower Main,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "Forest Boss Room - Guard Captains",
+            "item_count": 1,
+            "access_rules": [
+              "@Forest Boss Room,$enemy_access|guard_captain"
+            ]
+          },
+          {
+            "name": "Forest Boss Room - Rudelings",
+            "item_count": 1,
+            "access_rules": [
+              "@Forest Boss Room,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Forest Boss Room - Rudelings [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@Forest Boss Room,$enemy_access|rudeling"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Forest Grave Path by Grave - Strong Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Forest Grave Path by Grave,$enemy_access|fox_enemy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Forest Grave Path by Grave - Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Forest Grave Path by Grave,$enemy_access|fox_enemy_zombie"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Forest Grave Path Main - Blobs",
+            "item_count": 2,
+            "access_rules": [
+              "@Forest Grave Path Main,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "Forest Grave Path Main - Hedgehogs",
+            "item_count": 3,
+            "access_rules": [
+              "@Forest Grave Path Main,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "Forest Grave Path Main - Rudelings",
+            "item_count": 1,
+            "access_rules": [
+              "@Forest Grave Path Main,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Forest Grave Path Main - Scavengers [Extra]",
+            "item_count": 4,
+            "access_rules": [
+              "@Forest Grave Path Main,$enemy_access|scavenger"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Forest Grave Path Main - Support Scavengers [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Forest Grave Path Main,$enemy_access|scavenger_support"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Guard House 1 West - Blobs",
+            "item_count": 8,
+            "access_rules": [
+              "@Guard House 1 West,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "Guard House 1 West - Hedgehogs",
+            "item_count": 1,
+            "access_rules": [
+              "@Guard House 1 West,$enemy_access|hedgehog"
+            ]
+          },
+          {
+            "name": "Guard House 2 Lower - Blobs",
+            "item_count": 3,
+            "access_rules": [
+              "@Guard House 2 Lower,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "Guard House 2 Lower - Rudelings",
+            "item_count": 2,
+            "access_rules": [
+              "@Guard House 2 Lower,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Lower Forest - Blobs (Ice Grapple)",
+            "item_count": 1,
+            "access_rules": [
+              "@Lower Forest,$enemy_access|blob_ice_grapple"
+            ]
+          },
+          {
+            "name": "Lower Forest - Rudelings",
+            "item_count": 2,
+            "access_rules": [
+              "@Lower Forest,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Lower Forest - Spiders",
+            "item_count": 5,
+            "access_rules": [
+              "@Lower Forest,$enemy_access|spider"
+            ]
+          },
+          {
+            "name": "Lower Forest - Spiders [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Lower Forest,$enemy_access|spider"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Beneath the Well",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 3200,
+            "y": 900,
+            "size": 65
+          },
+          {
+            "map": "well",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Beneath the Well Back - Phrends",
+            "item_count": 9,
+            "access_rules": [
+              "@Beneath the Well Back,$enemy_access|phrend"
+            ]
+          },
+          {
+            "name": "Beneath the Well Main - Autobolts",
+            "item_count": 2,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Beneath the Well Main - Autobolts [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|autobolt"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Beneath the Well Main - Rudelings",
+            "item_count": 3,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Beneath the Well Main - Shield Rudelings",
+            "item_count": 3,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|rudeling_shield"
+            ]
+          },
+          {
+            "name": "Beneath the Well Main - Slorms",
+            "item_count": 9,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|slorm"
+            ]
+          },
+          {
+            "name": "Beneath the Well Main - Slorms [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|slorm"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Beneath the Well Main - Tentacles",
+            "item_count": 4,
+            "access_rules": [
+              "@Beneath the Well Main,$enemy_access|tentacle"
+            ]
+          },
+          {
+            "name": "Well Boss - Envoys [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Well Boss,@Shop,$enemy_access|envoy_shop",
+              "@Well Boss,$enemy_access|envoy_combat"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Well Boss - Guard Captains",
+            "item_count": 1,
+            "access_rules": [
+              "@Well Boss,$enemy_access|guard_captain"
+            ]
+          },
+          {
+            "name": "Well Boss - Rudelings",
+            "item_count": 2,
+            "access_rules": [
+              "@Well Boss,$enemy_access|rudeling"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Dark Tomb",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 1700,
+            "y": 1000,
+            "size": 65
+          },
+          {
+            "map": "dark_tomb",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Dark Tomb Main - Fleemers",
+            "item_count": 7,
+            "access_rules": [
+              "@Dark Tomb Main,$enemy_access|fleemer"
+            ]
+          },
+          {
+            "name": "Dark Tomb Main - Fleemers [Extra]",
+            "item_count": 5,
+            "access_rules": [
+              "@Dark Tomb Main,$enemy_access|fleemer"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Dark Tomb Main - Laser Traps",
+            "item_count": 19,
+            "access_rules": [
+              "@Dark Tomb Main,$enemy_access|laser_trap"
+            ]
+          },
+          {
+            "name": "Dark Tomb Upper - Fleemers",
+            "item_count": 8,
+            "access_rules": [
+              "@Dark Tomb Upper,$enemy_access|fleemer"
+            ]
+          },
+          {
+            "name": "Dark Tomb Upper - Fleemers [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Dark Tomb Upper,$enemy_access|fleemer"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Dark Tomb Upper - Phrends",
+            "item_count": 5,
+            "access_rules": [
+              "@Dark Tomb Upper,$enemy_access|phrend"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - West Garden",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 900,
+            "y": 2850,
+            "size": 65
+          },
+          {
+            "map": "west_gardens",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "West Garden after Terry - Chompignoms",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden after Terry,$enemy_access|chompignom"
+            ]
+          },
+          {
+            "name": "West Garden after Terry - Chompignoms [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden after Terry,$enemy_access|chompignom"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "West Garden after Terry - Fairies",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden after Terry,$enemy_access|fairy"
+            ]
+          },
+          {
+            "name": "West Garden after Terry - Fairies [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden after Terry,$enemy_access|fairy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "West Garden at Dagger House - Chompignoms",
+            "item_count": 2,
+            "access_rules": [
+              "@West Garden at Dagger House,$enemy_access|chompignom"
+            ]
+          },
+          {
+            "name": "West Garden at Dagger House - Chompignoms [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden at Dagger House,$enemy_access|chompignom"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "West Garden at Dagger House - Rudelings",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden at Dagger House,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "West Garden before Boss - Garden Knights",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden before Boss,$enemy_access|garden_knight"
+            ]
+          },
+          {
+            "name": "West Garden before Terry - Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden before Terry,$enemy_access|fox_enemy_zombie"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "West Garden South Checkpoint - Chompignoms",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden South Checkpoint,$enemy_access|chompignom"
+            ]
+          },
+          {
+            "name": "West Garden South Checkpoint - Fairies",
+            "item_count": 4,
+            "access_rules": [
+              "@West Garden South Checkpoint,$enemy_access|fairy"
+            ]
+          },
+          {
+            "name": "West Garden South Checkpoint - Guard Captains",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden South Checkpoint,$enemy_access|guard_captain"
+            ]
+          },
+          {
+            "name": "West Garden South Checkpoint - Guard Captains [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@West Garden South Checkpoint,$enemy_access|guard_captain"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "West Garden South Checkpoint - Rudelings",
+            "item_count": 2,
+            "access_rules": [
+              "@West Garden South Checkpoint,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "West Garden South Checkpoint - Shield Rudelings",
+            "item_count": 2,
+            "access_rules": [
+              "@West Garden South Checkpoint,$enemy_access|rudeling_shield"
+            ]
+          },
+          {
+            "name": "West Garden West Combat - Chompignoms",
+            "item_count": 5,
+            "access_rules": [
+              "@West Garden West Combat,$enemy_access|chompignom"
+            ]
+          },
+          {
+            "name": "West Garden West Combat - Chompignoms [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@West Garden West Combat,$enemy_access|chompignom"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "West Garden West Combat - Fairies",
+            "item_count": 4,
+            "access_rules": [
+              "@West Garden West Combat,$enemy_access|fairy"
+            ]
+          },
+          {
+            "name": "West Garden West Combat - Fairies [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@West Garden West Combat,$enemy_access|fairy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Beneath the Earth",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 4800,
+            "y": 2200,
+            "size": 65
+          },
+          {
+            "map": "earth",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Beneath the Vault Back - Baby Slorms",
+            "item_count": 1,
+            "access_rules": [
+              "@Beneath the Vault Back,$enemy_access|baby_slorm"
+            ]
+          },
+          {
+            "name": "Beneath the Vault Back - Candelabra Custodians [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Beneath the Vault Back,$enemy_access|custodian_candelabra"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Beneath the Vault Back - Laser Traps [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Beneath the Vault Back,$enemy_access|laser_trap"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Beneath the Vault Back - Phrends",
+            "item_count": 2,
+            "access_rules": [
+              "@Beneath the Vault Back,$enemy_access|phrend"
+            ]
+          },
+          {
+            "name": "Beneath the Vault Back - Sword Custodians",
+            "item_count": 5,
+            "access_rules": [
+              "@Beneath the Vault Back,$enemy_access|custodian_sword"
+            ]
+          },
+          {
+            "name": "Beneath the Vault Back - Sword Custodians [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Beneath the Vault Back,$enemy_access|custodian_sword"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Beneath the Vault Main - Baby Slorms",
+            "item_count": 2,
+            "access_rules": [
+              "@Beneath the Vault Front,$enemy_access|baby_slorm"
+            ]
+          },
+          {
+            "name": "Beneath the Vault Main - Spiders",
+            "item_count": 12,
+            "access_rules": [
+              "@Beneath the Vault Front,$enemy_access|spider"
+            ]
+          },
+          {
+            "name": "Beneath the Vault Main - Spiders [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Beneath the Vault Front,$enemy_access|spider"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Eastern Vault",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 4000,
+            "y": 1700,
+            "size": 65
+          },
+          {
+            "map": "eastern_vault",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Eastern Vault Fortress - Baby Slorms",
+            "item_count": 3,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|baby_slorm"
+            ]
+          },
+          {
+            "name": "Eastern Vault Fortress - Candelabra Custodians",
+            "item_count": 2,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|custodian_candelabra"
+            ]
+          },
+          {
+            "name": "Eastern Vault Fortress - Candelabra Custodians [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|custodian_candelabra"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Eastern Vault Fortress - Laser Traps [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|laser_trap"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Eastern Vault Fortress - Sword Custodians",
+            "item_count": 8,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|custodian_sword"
+            ]
+          },
+          {
+            "name": "Eastern Vault Fortress - Sword Custodians [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|custodian_sword"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Eastern Vault Fortress - Wizard Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Eastern Vault Fortress,$enemy_access|custodian"
+            ]
+          },
+          {
+            "name": "Fortress Arena - Siege Engine",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress Arena,$enemy_access|siege_engine"
+            ]
+          },
+          {
+            "name": "Fortress Courtyard - Candelabra Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress Courtyard,$enemy_access|custodian_candelabra"
+            ]
+          },
+          {
+            "name": "Fortress Courtyard - Sword Custodians",
+            "item_count": 2,
+            "access_rules": [
+              "@Fortress Courtyard,$enemy_access|custodian_sword"
+            ]
+          },
+          {
+            "name": "Fortress Courtyard - Wizard Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress Courtyard,$enemy_access|custodian"
+            ]
+          },
+          {
+            "name": "Fortress Courtyard Upper - Candelabra Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress Courtyard Upper,$enemy_access|custodian_candelabra"
+            ]
+          },
+          {
+            "name": "Fortress Courtyard Upper - Sword Custodians",
+            "item_count": 2,
+            "access_rules": [
+              "@Fortress Courtyard Upper,$enemy_access|custodian_sword"
+            ]
+          },
+          {
+            "name": "Fortress East Shortcut Lower - Blobs",
+            "item_count": 4,
+            "access_rules": [
+              "@Fortress East Shortcut Lower,$enemy_access|blob"
+            ]
+          },
+          {
+            "name": "Fortress East Shortcut Upper - Candelabra Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress East Shortcut Upper,$enemy_access|custodian_candelabra"
+            ]
+          },
+          {
+            "name": "Fortress East Shortcut Upper - Candelabra Custodians [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress East Shortcut Upper,$enemy_access|custodian_candelabra"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Fortress East Shortcut Upper - Sword Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress East Shortcut Upper,$enemy_access|custodian_sword"
+            ]
+          },
+          {
+            "name": "Fortress East Shortcut Upper - Wizard Custodians",
+            "item_count": 3,
+            "access_rules": [
+              "@Fortress East Shortcut Upper,$enemy_access|custodian"
+            ]
+          },
+          {
+            "name": "Fortress Grave Path by Grave - Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Fortress Grave Path by Grave,$enemy_access|fox_enemy_zombie"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Fortress Grave Path Combat - Sword Custodians",
+            "item_count": 4,
+            "access_rules": [
+              "@Fortress Grave Path Combat,$enemy_access|custodian_sword"
+            ]
+          },
+          {
+            "name": "Fortress Grave Path Combat - Voidlings [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@Fortress Grave Path Combat,$enemy_access|voidling"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Fortress Grave Path Combat - Wizard Custodians",
+            "item_count": 2,
+            "access_rules": [
+              "@Fortress Grave Path Combat,$enemy_access|custodian"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Ruined Atoll",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 2400,
+            "y": 3700,
+            "size": 65
+          },
+          {
+            "map": "ruined_atoll",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ruined Atoll - Baby Slorms",
+            "item_count": 3,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|baby_slorm"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Crabbits",
+            "item_count": 22,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|crabbit"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Crabbits [Extra]",
+            "item_count": 7,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|crabbit"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Ruined Atoll - Crabbos",
+            "item_count": 2,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|crabbo"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Envoys",
+            "item_count": 1,
+            "access_rules": [
+              "@Ruined Atoll,@Shop,$enemy_access|envoy_shop",
+              "@Ruined Atoll,$enemy_access|envoy_combat"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Fairies",
+            "item_count": 11,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|fairy"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Frogs (Raised Ruins)",
+            "item_count": 2,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|frog_atoll"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Hushers",
+            "item_count": 4,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|husher"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Plovers",
+            "item_count": 3,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|plover"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Shell Crabbits [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|crabbit_shell"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Ruined Atoll - Slorms",
+            "item_count": 6,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|slorm"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Small Frogs (Raised Ruins)",
+            "item_count": 1,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|frog_atoll"
+            ]
+          },
+          {
+            "name": "Ruined Atoll - Small Frogs",
+            "item_count": 1,
+            "access_rules": [
+              "@Ruined Atoll,$enemy_access|frog_small"
+            ]
+          },
+          {
+            "name": "Ruined Atoll Lower Entry Area - Plovers",
+            "item_count": 1,
+            "access_rules": [
+              "@Ruined Atoll Lower Entry Area,$enemy_access|plover"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Frog's Domain",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 3400,
+            "y": 4300,
+            "size": 65
+          },
+          {
+            "map": "frogs_domain",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Frog Stairs Lower - Small Frogs",
+            "item_count": 1,
+            "access_rules": [
+              "@Frog Stairs Lower,$enemy_access|frog_small"
+            ]
+          },
+          {
+            "name": "Frog Stairs Upper - Spear Frogs",
+            "item_count": 1,
+            "access_rules": [
+              "@Frog Stairs Upper,$enemy_access|frog_spear"
+            ]
+          },
+          {
+            "name": "Frog's Domain Back - Autobolts (Gap)",
+            "item_count": 1,
+            "access_rules": [
+              "@Frog's Domain Back,$enemy_access|autobolt_gap"
+            ]
+          },
+          {
+            "name": "Frog's Domain Main - Baby Slorms",
+            "item_count": 17,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|baby_slorm"
+            ]
+          },
+          {
+            "name": "Frog's Domain Main - Frogs",
+            "item_count": 5,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|frog"
+            ]
+          },
+          {
+            "name": "Frog's Domain Main - Small Frogs",
+            "item_count": 17,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|frog_small"
+            ]
+          },
+          {
+            "name": "Frog's Domain Main - Small Frogs (Secret) [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|frog_secret"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Frog's Domain Main - Small Frogs [Extra]",
+            "item_count": 5,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|frog_small"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Frog's Domain Main - Spear Frogs",
+            "item_count": 2,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|frog_spear"
+            ]
+          },
+          {
+            "name": "Frog's Domain Main - Wizard Custodians",
+            "item_count": 1,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|custodian"
+            ]
+          },
+          {
+            "name": "Frog's Domain Main - Wizard Custodians [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Frog's Domain Main,$enemy_access|custodian"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - The Grand Library",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 1300,
+            "y": 3500,
+            "size": 65
+          },
+          {
+            "map": "library",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Library Arena - Librarian",
+            "item_count": 1,
+            "access_rules": [
+              "@Library Arena,$enemy_access|librarian"
+            ]
+          },
+          {
+            "name": "Library Hall - Administrators (Coffee Table)",
+            "item_count": 1,
+            "access_rules": [
+              "@Library Hall,$enemy_access|administrator_coffee"
+            ]
+          },
+          {
+            "name": "Library Hall - Beefboys",
+            "item_count": 2,
+            "access_rules": [
+              "@Library Hall,$enemy_access|beefboy"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - The Quarry",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 1100,
+            "y": 1700,
+            "size": 65
+          },
+          {
+            "map": "quarry",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Even Lower Quarry - Miner Scavengers",
+            "item_count": 4,
+            "access_rules": [
+              "@Even Lower Quarry,$enemy_access|scavenger_miner"
+            ]
+          },
+          {
+            "name": "Even Lower Quarry - Scavengers (Sniper)",
+            "item_count": 1,
+            "access_rules": [
+              "@Even Lower Quarry,$enemy_access|scavenger_sniper"
+            ]
+          },
+          {
+            "name": "Even Lower Quarry - Support Scavengers",
+            "item_count": 1,
+            "access_rules": [
+              "@Even Lower Quarry,$enemy_access|scavenger_support"
+            ]
+          },
+          {
+            "name": "Lower Quarry - Miner Scavengers",
+            "item_count": 4,
+            "access_rules": [
+              "@Lower Quarry,$enemy_access|scavenger_miner"
+            ]
+          },
+          {
+            "name": "Lower Quarry - Scavengers",
+            "item_count": 5,
+            "access_rules": [
+              "@Lower Quarry,$enemy_access|scavenger"
+            ]
+          },
+          {
+            "name": "Lower Quarry - Support Scavengers",
+            "item_count": 3,
+            "access_rules": [
+              "@Lower Quarry,$enemy_access|scavenger_support"
+            ]
+          },
+          {
+            "name": "Monastery Back - Voidtouched",
+            "item_count": 1,
+            "access_rules": [
+              "@Monastery Back,$enemy_access|voidtouched"
+            ]
+          },
+          {
+            "name": "Monastery Back - Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Monastery Back,$enemy_access|fox_enemy_zombie"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Monastery Front - Miner Scavengers",
+            "item_count": 4,
+            "access_rules": [
+              "@Monastery Front,$enemy_access|scavenger_miner"
+            ]
+          },
+          {
+            "name": "Monastery Front - Scavengers",
+            "item_count": 3,
+            "access_rules": [
+              "@Monastery Front,$enemy_access|scavenger"
+            ]
+          },
+          {
+            "name": "Monastery Front - Voidlings [Extra]",
+            "item_count": 4,
+            "access_rules": [
+              "@Monastery Front,$enemy_access|voidling"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Quarry - Miner Scavengers",
+            "item_count": 7,
+            "access_rules": [
+              "@Quarry,$enemy_access|scavenger_miner"
+            ]
+          },
+          {
+            "name": "Quarry - Scavengers",
+            "item_count": 7,
+            "access_rules": [
+              "@Quarry,$enemy_access|scavenger"
+            ]
+          },
+          {
+            "name": "Quarry - Support Scavengers",
+            "item_count": 5,
+            "access_rules": [
+              "@Quarry,$enemy_access|scavenger_support"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - The Rooted Ziggurat",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 500,
+            "y": 1500,
+            "size": 65
+          },
+          {
+            "map": "ziggurat",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Rooted Ziggurat Lower Back - Boss Scavenger",
+            "item_count": 1,
+            "access_rules": [
+              "@Enemy Logic - Rooted Ziggurat Lower Back,$enemy_access|boss_scavenger"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Lower Front - Administrators",
+            "item_count": 4,
+            "access_rules": [
+              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|administrator"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Lower Front - Autobolts",
+            "item_count": 4,
+            "access_rules": [
+              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Lower Front - Autobolts (Gap)",
+            "item_count": 2,
+            "access_rules": [
+              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|autobolt_gap"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Lower Front - Voidlings",
+            "item_count": 10,
+            "access_rules": [
+              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|voidling"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Upper Front - Administrators",
+            "item_count": 2,
+            "access_rules": [
+              "@Rooted Ziggurat Upper Front,$enemy_access|administrator"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Upper Front - Autobolts",
+            "item_count": 4,
+            "access_rules": [
+              "@Rooted Ziggurat Upper Front,$enemy_access|autobolt"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Upper Front - Autobolts (Gap)",
+            "item_count": 1,
+            "access_rules": [
+              "@Rooted Ziggurat Upper Front,$enemy_access|autobolt_gap"
+            ]
+          },
+          {
+            "name": "Rooted Ziggurat Upper Front - Fairies",
+            "item_count": 10,
+            "access_rules": [
+              "@Rooted Ziggurat Upper Front,$enemy_access|fairy"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - Swamp",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 4300,
+            "y": 3500,
+            "size": 65
+          },
+          {
+            "map": "graveyard",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Swamp Front - Big Fleemers",
+            "item_count": 1,
+            "access_rules": [
+              "@Swamp Front,$enemy_access|fleemer_big"
+            ]
+          },
+          {
+            "name": "Swamp Front - Fleemer Fencers",
+            "item_count": 1,
+            "access_rules": [
+              "@Swamp Front,$enemy_access|fleemer_fencer"
+            ]
+          },
+          {
+            "name": "Swamp Front - Fleemers",
+            "item_count": 10,
+            "access_rules": [
+              "@Swamp Front,$enemy_access|fleemer"
+            ]
+          },
+          {
+            "name": "Swamp Front - Gunslingers",
+            "item_count": 3,
+            "access_rules": [
+              "@Swamp Front,$enemy_access|gunslinger"
+            ]
+          },
+          {
+            "name": "Swamp Front - Lost Echoes",
+            "item_count": 2,
+            "access_rules": [
+              "@Swamp Front,$enemy_access|lost_echo"
+            ]
+          },
+          {
+            "name": "Swamp Front - Tentacles",
+            "item_count": 3,
+            "access_rules": [
+              "@Swamp Front,$enemy_access|tentacle"
+            ]
+          },
+          {
+            "name": "Swamp Mid - Beefboys [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Swamp Mid,$enemy_access|beefboy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Swamp Mid - Fleemer Fencers",
+            "item_count": 3,
+            "access_rules": [
+              "@Swamp Mid,$enemy_access|fleemer_fencer"
+            ]
+          },
+          {
+            "name": "Swamp Mid - Gunslingers",
+            "item_count": 2,
+            "access_rules": [
+              "@Swamp Mid,$enemy_access|gunslinger"
+            ]
+          },
+          {
+            "name": "Swamp Mid - Hushers [Extra]",
+            "item_count": 3,
+            "access_rules": [
+              "@Swamp Mid,$enemy_access|husher"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Swamp Mid - Lost Echoes",
+            "item_count": 6,
+            "access_rules": [
+              "@Swamp Mid,$enemy_access|lost_echo"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Enemy Drops - The Cathedral",
+        "map_locations": [
+          {
+            "map": "fullmap",
+            "x": 4850,
+            "y": 3000,
+            "size": 65
+          },
+          {
+            "map": "cathedral",
+            "x": 70,
+            "y": 70,
+            "size": 55
+          }
+        ],
+        "sections": [
+          {
+            "name": "Cathedral Entry - Laser Traps",
+            "item_count": 2,
+            "access_rules": [
+              "@Cathedral Entry,$enemy_access|laser_trap"
+            ]
+          },
+          {
+            "name": "Cathedral Entry - Zombie Foxes",
+            "item_count": 5,
+            "access_rules": [
+              "@Cathedral Entry,$enemy_access|fox_enemy_zombie"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Fairies (Gauntlet)",
+            "item_count": 17,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|fairy_gauntlet"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Fleemers (Gauntlet)",
+            "item_count": 15,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|fleemer_gauntlet"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Garden Knights",
+            "item_count": 2,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|garden_knight"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Guard Captains",
+            "item_count": 1,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|guard_captain"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Rudelings",
+            "item_count": 3,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|rudeling"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Shield Rudelings",
+            "item_count": 3,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|rudeling_shield"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Small Frogs",
+            "item_count": 9,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|frog_small"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Spear Frogs",
+            "item_count": 2,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|frog_spear"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Strong Zombie Foxes [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|fox_enemy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Cathedral Gauntlet - Wizard Custodians",
+            "item_count": 5,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|custodian"
+            ]
+          },
+          {
+            "name": "Cathedral Gauntlet - Zombie Foxes [Extra]",
+            "item_count": 2,
+            "access_rules": [
+              "@Cathedral Gauntlet,$enemy_access|fox_enemy_zombie"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Cathedral Main - Beefboys [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|beefboy"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Cathedral Main - Hushers",
+            "item_count": 5,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|husher"
+            ]
+          },
+          {
+            "name": "Cathedral Main - Laser Traps (Back Hallway)",
+            "item_count": 1,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|laser_cathedral_orb",
+              "@Cathedral Main,@Shop,$enemy_access|laser_cathedral_shop"
+            ]
+          },
+          {
+            "name": "Cathedral Main - Laser Traps",
+            "item_count": 4,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|laser_trap"
+            ]
+          },
+          {
+            "name": "Cathedral Main - Strong Zombie Foxes",
+            "item_count": 3,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|fox_enemy"
+            ]
+          },
+          {
+            "name": "Cathedral Main - Voidtouched [Extra]",
+            "item_count": 1,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|voidtouched"
+            ],
+            "visibility_rules": "enemy_drops_extra"
+          },
+          {
+            "name": "Cathedral Main - Zombie Foxes",
+            "item_count": 9,
+            "access_rules": [
+              "@Cathedral Main,$enemy_access|fox_enemy_zombie"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

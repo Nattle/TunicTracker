@@ -17,6 +17,7 @@ ScriptHost:AddWatchForCode("useApLayout", "progswordSetting", apLayoutChange)
 function updateLayout()
     local ladders = Tracker:FindObjectForCode("ladder_shuffle_off")
     local fuses = Tracker:FindObjectForCode("fuse_shuffle")
+    local enemySouls = Tracker:FindObjectForCode("enemy_soul_shuffle_setting")
     local layoutString = "layouts/trackerpop"
     if (string.find(Tracker.ActiveVariantUID, "standard") or string.find(Tracker.ActiveVariantUID, "var_itemsonly") or string.find(Tracker.ActiveVariantUID, "var_minimal")) then
         if ladders.CurrentStage ~= 0 then
@@ -28,6 +29,9 @@ function updateLayout()
 
         if Tracker:FindObjectForCode("show_hints").Active then
             layoutString = layoutString .. "_hints"
+        end
+        if enemySouls and enemySouls.Active and not string.find(Tracker.ActiveVariantUID, "var_minimal") then
+            layoutString = layoutString .. "_souls"
         end
         Tracker:AddLayouts(layoutString .. ".json")
         Tracker:AddLayouts(layoutString .. ".json")
@@ -82,3 +86,4 @@ end
 ScriptHost:AddWatchForCode("ladderLayout", "ladder_shuffle_off", updateLayout)
 ScriptHost:AddWatchForCode("fuseLayout", "fuse_shuffle", updateLayout)
 ScriptHost:AddWatchForCode("hintsLayout", "show_hints", updateLayout)
+ScriptHost:AddWatchForCode("enemySoulLayout", "enemy_soul_shuffle_setting", updateLayout)
