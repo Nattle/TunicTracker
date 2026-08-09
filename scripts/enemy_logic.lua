@@ -136,7 +136,9 @@ function enemy_equipment_access(signature)
     local access = ENEMY_ACCESS_RULES[signature]
     if not access or not has_soul(access.soul) then return false end
 
-    if access.rule == "siege_engine" and combat_logic_mode() >= 1 then
+    if access.rule == "voidtouched" then
+        return has_sword()
+    elseif access.rule == "siege_engine" and combat_logic_mode() >= 1 then
         return has_combat_equipment("siege_engine")
     elseif access.rule == "librarian" and combat_logic_mode() >= 1 then
         return has_ladder("ladders_in_library") and has_combat_equipment("librarian")

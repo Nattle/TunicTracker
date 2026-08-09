@@ -291,6 +291,7 @@ local function copy_set(values)
     return result
 end
 
+-- Check permanent equipment for combat logic, stats optional.
 local function check_combat_equipment(area_name, state, alternate)
     local source = alternate or (COMBAT_AREA_DATA[area_name] and make_area(COMBAT_AREA_DATA[area_name]))
     if not source then return false end
@@ -304,8 +305,6 @@ local function check_combat_equipment(area_name, state, alternate)
             return false
         elseif item == "Sword" and not has_sword then
             if source.is_boss or not has_melee then return false end
-        elseif item == "Laurels" and not state.laurels then
-            return false
         end
     end
     return true

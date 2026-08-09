@@ -1335,7 +1335,7 @@
             "name": "Monastery Back - Voidtouched",
             "item_count": 1,
             "access_rules": [
-              "@Monastery Back,$enemy_access|voidtouched"
+              "@Monastery Back,$enemy_equipment_access|voidtouched,[$enemy_access|voidtouched]"
             ]
           },
           {
@@ -1715,7 +1715,7 @@
             "name": "Cathedral Main - Voidtouched [Extra]",
             "item_count": 1,
             "access_rules": [
-              "@Cathedral Main,$enemy_access|voidtouched"
+              "@Cathedral Main,$enemy_equipment_access|voidtouched,[$enemy_access|voidtouched]"
             ],
             "visibility_rules": "enemy_drops_extra"
           },
