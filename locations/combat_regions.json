@@ -5,7 +5,7 @@
       {
         "name": "Frog's Domain Main",
         "access_rules": [
-          "@Frog's Domain,$combat_logic_on|frogs_domain"
+          "@Frog's Domain,$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
         ],
         "children": []
       },
@@ -15,14 +15,14 @@
           "@Overworld to West Garden from Furnace",
           "@LS Elev 0",
           "@West Garden Hero's Grave Region",
-          "@West Garden after Terry,$combat_logic_on|west_garden|dagger|laurels"
+          "@West Garden after Terry,$combat_logic_equipment|west_garden|dagger|laurels,[$combat_logic_on|west_garden|dagger|laurels]"
         ],
         "children": []
       },
       {
         "name": "West Garden after Terry",
         "access_rules": [
-          "@West Garden before Terry,$combat_logic_on|west_garden|dagger|laurels",
+          "@West Garden before Terry,$combat_logic_equipment|west_garden|dagger|laurels,[$combat_logic_on|west_garden|dagger|laurels]",
           "@West Garden West Combat",
           "@West Garden South Checkpoint,dash"
         ],
@@ -31,8 +31,8 @@
       {
         "name": "West Garden West Combat",
         "access_rules": [
-          "@West Garden after Terry,$combat_logic_on|west_garden",
-          "@West Garden South Checkpoint,$combat_logic_on|west_garden"
+          "@West Garden after Terry,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]",
+          "@West Garden South Checkpoint,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
         ],
         "children": []
       },
@@ -59,12 +59,47 @@
       {
         "name": "West Garden before Boss",
         "access_rules": [
-          "@West Garden South Checkpoint,$combat_logic_on|west_garden|none|laurels",
+          "@West Garden South Checkpoint,$combat_logic_equipment|west_garden|none|laurels,[$combat_logic_on|west_garden|none|laurels]",
           "@West Garden after Boss,dash",
           "@West Garden after Boss,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|garden_knight",
-          "@West Garden after Boss,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$garden_knight_traversal_access"
+          "@West Garden after Boss,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Garden Knight",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 960,
+                "y": 2475,
+                "size": 35
+              },
+              {
+                "map": "west_gardens",
+                "x": 720,
+                "y": 55,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Will Kill You",
+                "access_rules": [
+                  "$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]"
+                ],
+                "hosted_item": "gknight"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "access_rules": [
+                  "$enemy_access|garden_knight"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Fortress Grave Path Entry",
@@ -82,7 +117,7 @@
       {
         "name": "Fortress Grave Path Combat",
         "access_rules": [
-          "@Fortress Grave Path Entry,$combat_logic_on|eastern_vault_fortress"
+          "@Fortress Grave Path Entry,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
         ],
         "children": []
       },
@@ -116,8 +151,8 @@
       {
         "name": "Enemy Logic - Rooted Ziggurat Lower Front",
         "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Entry,$combat_logic_on|rooted_ziggurat",
-          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint,$combat_logic_on|rooted_ziggurat"
+          "@Enemy Logic - Rooted Ziggurat Lower Entry,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]",
+          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]"
         ],
         "children": []
       },
@@ -127,7 +162,7 @@
           "@Enemy Logic - Rooted Ziggurat Lower Front",
           "@Enemy Logic - Rooted Ziggurat Lower Entry,dash",
           "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_access"
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]"
         ],
         "children": []
       },
@@ -146,7 +181,7 @@
         "access_rules": [
           "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,dash",
           "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_access",
+          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
           "@Rooted Ziggurat Portal Room Entrance"
         ],
         "children": []
@@ -164,7 +199,7 @@
       {
         "name": "Cathedral Main",
         "access_rules": [
-          "@Cathedral Entry,$combat_logic_on|swamp"
+          "@Cathedral Entry,$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
         ],
         "children": []
       }

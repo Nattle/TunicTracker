@@ -79,7 +79,7 @@
               {
                 "name": "If you seek to increase your power...",
                 "access_rules": [
-                  "$combat_logic_on|before_well|none|laurels"
+                  "$combat_logic_equipment|before_well|none|laurels,[$combat_logic_on|before_well|none|laurels]"
                 ],
                 "item_count": 1
               }
@@ -104,7 +104,7 @@
               {
                 "name": "Mind the Autobolt...",
                 "access_rules": [
-                  "$combat_logic_on|before_well"
+                  "$combat_logic_equipment|before_well,[$combat_logic_on|before_well]"
                 ],
                 "item_count": 1
               }
@@ -129,7 +129,7 @@
               {
                 "name": "Rudeling Camp",
                 "access_rules": [
-                  "$combat_logic_on|before_well|dagger"
+                  "$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
                 ],
                 "item_count": 1
               }
@@ -257,7 +257,7 @@
               {
                 "name": "End of the Bridge",
                 "access_rules": [
-                  "$combat_logic_on|before_well|dagger"
+                  "$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
                 ],
                 "item_count": 1
               }
@@ -450,7 +450,7 @@
               {
                 "name": "Deep between the Trees",
                 "access_rules": [
-                  "$combat_logic_on|before_well",
+                  "$combat_logic_equipment|before_well,[$combat_logic_on|before_well]",
                   "@Overworld Beach,dash",
                   "@Overworld Beach,$has_ladder|ladders_in_overworld_town"
                 ],
@@ -477,9 +477,9 @@
               {
                 "name": "Let the flowers guide you",
                 "access_rules": [
-                  "gun,$combat_logic_on|before_well|dagger",
-                  "sword,@Shop,$enemy_soul_access|rudelings,$combat_logic_on|before_well|dagger",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$combat_logic_on|before_well|dagger"
+                  "gun,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]",
+                  "sword,@Shop,$enemy_soul_access|rudelings,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]",
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
                 ]
               },
               {
@@ -929,7 +929,6 @@
           "$has_ladder|ladders_near_overworld_checkpoint",
           "@Above Ruined Passage,$has_ladder|ladders_near_weathervane",
           "@Forest Belltower Main",
-          "@Fortress Exterior from East Forest",
           "@Fortress Exterior from Overworld",
           "@Fortress Exterior near cave,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_to_beneath_the_vault",
           "@Overworld Special Shop Entry,dash",
@@ -1038,7 +1037,7 @@
               {
                 "name": "Use the Holy Cross",
                 "access_rules": [
-                  "cross,$combat_logic_on|garden_knight"
+                  "cross,$combat_logic_equipment|garden_knight,[$combat_logic_on|garden_knight]"
                 ],
                 "item_count": 1
               }
@@ -1121,7 +1120,7 @@
               {
                 "name": "Behind Blue Rudelings",
                 "access_rules": [
-                  "$combat_logic_on|west_garden|dagger"
+                  "$combat_logic_equipment|west_garden|dagger,[$combat_logic_on|west_garden|dagger]"
                 ],
                 "item_count": 1
               }
@@ -1184,10 +1183,7 @@
         "name": "Overworld after Envoy",
         "access_rules": [
           "[glitches]",
-          "bigsword",
-          "dash",
-          "orb",
-	      "gun",
+          "$overworld_after_envoy_access",
           "@Overworld Quarry Entry,$has_ladder|ladder_to_quarry",
           "@LS Elev 3,[ladder_storage_med],vis_ladder_storage_med"
         ],
@@ -1321,7 +1317,7 @@
       {
         "name": "Overworld Well Ladder",
         "access_rules": [
-          "$has_ladder|ladders_in_well,$combat_logic_on|before_well|none|laurels",
+          "$has_ladder|ladders_in_well,$combat_logic_equipment|before_well|none|laurels,[$combat_logic_on|before_well|none|laurels]",
           "@Beneath the Well Ladder Exit"
         ],
         "children": []
@@ -1359,7 +1355,7 @@
               {
                 "name": "Chest",
                 "access_rules": [
-                  "$combat_logic_on|overworld|dagger"
+                  "$combat_logic_equipment|overworld|dagger,[$combat_logic_on|overworld|dagger]"
                 ],
                 "item_count": 1
               }
@@ -1384,8 +1380,8 @@
               {
                 "name": "Get Across",
                 "access_rules": [
-                  "dash,$combat_logic_on|overworld",
-                  "orb,$enemy_soul_access|autobolt,$combat_logic_on|overworld"
+                  "dash,$combat_logic_equipment|overworld,[$combat_logic_on|overworld]",
+                  "orb,$enemy_soul_access|autobolt,$combat_logic_equipment|overworld,[$combat_logic_on|overworld]"
                 ],
                 "item_count": 1
               }
@@ -1580,7 +1576,7 @@
               {
                 "name": "After Turret",
                 "access_rules": [
-                  "$combat_logic_on|before_well|dagger"
+                  "$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
                 ],
                 "item_count": 1
               }
@@ -1659,7 +1655,7 @@
       {
         "name": "Overworld Town Portal",
         "access_rules": [
-          "pray,$combat_logic_on|before_well",
+          "pray,$combat_logic_equipment|before_well,[$combat_logic_on|before_well]",
           "@Far Shore"
         ],
         "children": []
@@ -2501,7 +2497,7 @@
         "access_rules": [
           "@East Overworld",
           "@Forest Belltower Upper",
-          "@Fortress Exterior from East Forest",
+          "@Fortress Exterior from East Forest,$fortress_to_forest_belltower_access",
           "@LS Elev 5"
         ],
         "children": [
@@ -2674,7 +2670,7 @@
               {
                 "name": "Chest",
                 "access_rules": [
-                  "$combat_logic_on|east_forest|dagger"
+                  "$combat_logic_equipment|east_forest|dagger,[$combat_logic_on|east_forest|dagger]"
                 ],
                 "item_count": 1
               }
@@ -2699,7 +2695,7 @@
               {
                 "name": "Hidden Path",
                 "access_rules": [
-                  "$combat_logic_on|east_forest|dagger"
+                  "$combat_logic_equipment|east_forest|dagger,[$combat_logic_on|east_forest|dagger]"
                 ],
                 "item_count": 1
               }
@@ -2725,8 +2721,8 @@
                 "name": "Follow the Flowers",
                 "access_rules": [
                   "gun",
-                  "sword",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger"
+                  "sword,@Shop,$enemy_soul_access|rudelings",
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_any_soul_access|blobs|rudelings"
                 ]
               },
               {
@@ -2764,7 +2760,7 @@
               {
                 "name": "From Guardhouse 1 Chest",
                 "access_rules": [
-                  "$combat_logic_on|east_forest|dagger|laurels"
+                  "$combat_logic_equipment|east_forest|dagger|laurels,[$combat_logic_on|east_forest|dagger|laurels]"
                 ],
                 "item_count": 1
               }
@@ -2789,7 +2785,7 @@
               {
                 "name": "Dancing Fox Spirit Holy Cross",
                 "access_rules": [
-                  "cross,$combat_logic_on|east_forest|dagger|laurels"
+                  "cross,$combat_logic_equipment|east_forest|dagger|laurels,[$combat_logic_on|east_forest|dagger|laurels]"
                 ],
                 "item_count": 1
               }
@@ -2832,7 +2828,7 @@
               {
                 "name": "Beneath Spider Chest",
                 "access_rules": [
-                  "$combat_logic_on|east_forest|dagger|laurels"
+                  "$combat_logic_equipment|east_forest|dagger|laurels,[$combat_logic_on|east_forest|dagger|laurels]"
                 ],
                 "item_count": 1
               }
@@ -2857,7 +2853,7 @@
               {
                 "name": "Freeze the Blob and ascend With Orb",
                 "access_rules": [
-                  "dagger,icerod,orb,staff"
+                  "dagger,icerod,orb,staff,$enemy_soul_access|blobs"
                 ],
                 "item_count": 1
               }
@@ -2937,7 +2933,7 @@
               {
                 "name": "Use the Holy Cross",
                 "access_rules": [
-                  "cross,$combat_logic_on|east_forest|dagger"
+                  "cross,$combat_logic_equipment|east_forest|dagger,[$combat_logic_on|east_forest|dagger]"
                 ],
                 "item_count": 1
               }
@@ -3003,7 +2999,7 @@
       {
         "name": "Guard House 2 Upper",
         "access_rules": [
-          "@East Forest",
+          "@East Forest,$can_get_past_bushes_access",
           "@Guard House 2 Lower,$has_ladder|ladders_to_lower_forest"
         ],
         "children": [
@@ -3091,8 +3087,18 @@
             "sections": [
               {
                 "name": "Also, you need to defeat this guy!",
-                "access_rules": null,
+                "access_rules": [
+                  "$enemy_access|guard_captain"
+                ],
                 "hosted_item": "captain"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "access_rules": [
+                  "$enemy_access|guard_captain"
+                ],
+                "item_count": 1
               }
             ]
           }
@@ -3127,7 +3133,7 @@
               {
                 "name": "Chest",
                 "access_rules": [
-                  "$forest_grave_path_bush_access,$combat_logic_on|east_forest|dagger|laurels"
+                  "$forest_grave_path_bush_access,$combat_logic_equipment|east_forest|dagger|laurels,[$combat_logic_on|east_forest|dagger|laurels]"
                 ],
                 "item_count": 1
               }
@@ -3152,7 +3158,7 @@
               {
                 "name": "Behind the Trees",
                 "access_rules": [
-                  "$forest_grave_path_bush_access,$combat_logic_on|east_forest|dagger|laurels"
+                  "$forest_grave_path_bush_access,$combat_logic_equipment|east_forest|dagger|laurels,[$combat_logic_on|east_forest|dagger|laurels]"
                 ],
                 "item_count": 1
               }
@@ -3163,7 +3169,7 @@
       {
         "name": "Forest Grave Path Upper",
         "access_rules": [
-          "@East Forest",
+          "@East Forest,$east_forest_above_guard_house_access",
           "@Forest Grave Path Main,dash",
           "@Forest Grave Path Main,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,staff,icerod"
         ],
@@ -3248,7 +3254,7 @@
       {
         "name": "Dark Tomb Upper",
         "access_rules": [
-          "@Dark Tomb Entry Point,[$has_lantern],$combat_logic_on|dark_tomb",
+          "@Dark Tomb Entry Point,[$has_lantern],$combat_logic_equipment|dark_tomb,[$combat_logic_on|dark_tomb]",
           "@Dark Tomb Main,$has_ladder|ladder_in_dark_tomb"
         ],
         "children": [
@@ -3280,7 +3286,7 @@
       {
         "name": "Dark Tomb Main",
         "access_rules": [
-          "@Dark Tomb Dark Exit,[$has_lantern],$combat_logic_on|dark_tomb",
+          "@Dark Tomb Dark Exit,[$has_lantern],$combat_logic_equipment|dark_tomb,[$combat_logic_on|dark_tomb]",
           "@Dark Tomb Upper,$has_ladder|ladder_in_dark_tomb",
           "@Dark Tomb Upper,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,$enemy_soul_access|fleemers"
         ],
@@ -3428,7 +3434,9 @@
             "sections": [
               {
                 "name": "Can you roll?",
-                "access_rules": null,
+                "access_rules": [
+                  "$has_lantern"
+                ],
                 "item_count": 1
               }
             ]
@@ -3439,7 +3447,7 @@
         "name": "Dark Tomb Checkpoint",
         "access_rules": [
           "@Dark Tomb Entry Point",
-          "@Well Boss,$combat_logic_on|beneath_the_well",
+          "@Well Boss,$combat_logic_equipment|beneath_the_well,[$combat_logic_on|beneath_the_well]",
           "@Well Boss,[laurels_zips],dash"
         ],
         "children": [
@@ -3511,9 +3519,9 @@
           "@Beneath the Well Front,[stick],combat_logic_bosses_only",
           "@Beneath the Well Front,[sword],combat_logic_bosses_only",
           "@Beneath the Well Back,$has_ladder|ladders_in_well,combat_logic_on,dash",
-          "@Beneath the Well Back,$has_ladder|ladders_in_well,combat_logic_on,$combat_logic_on|beneath_the_well",
+          "@Beneath the Well Back,$has_ladder|ladders_in_well,combat_logic_on,$combat_logic_equipment|beneath_the_well,[$combat_logic_on|beneath_the_well]",
           "@Beneath the Well Front,combat_logic_on,dash",
-          "@Beneath the Well Front,combat_logic_on,$combat_logic_on|beneath_the_well"
+          "@Beneath the Well Front,combat_logic_on,$combat_logic_equipment|beneath_the_well,[$combat_logic_on|beneath_the_well]"
         ],
         "children": [
           {
@@ -3535,7 +3543,7 @@
               {
                 "name": "Mind the Slorms",
                 "access_rules": [
-                  "$combat_logic_on|beneath_the_well"
+                  "$combat_logic_equipment|beneath_the_well,[$combat_logic_on|beneath_the_well]"
                 ],
                 "item_count": 1
               }
@@ -3560,7 +3568,7 @@
               {
                 "name": "You can just go in there",
                 "access_rules": [
-                  "$combat_logic_on|beneath_the_well"
+                  "$combat_logic_equipment|beneath_the_well,[$combat_logic_on|beneath_the_well]"
                 ],
                 "item_count": 1
               }
@@ -3677,7 +3685,7 @@
               {
                 "name": "Behind the Slorms",
                 "access_rules": [
-                  "$combat_logic_on|beneath_the_well"
+                  "$combat_logic_equipment|beneath_the_well,[$combat_logic_on|beneath_the_well]"
                 ],
                 "item_count": 1
               }
@@ -3829,7 +3837,7 @@
               {
                 "name": "So Many Phrends!",
                 "access_rules": [
-                  "$combat_logic_on|overworld"
+                  "$combat_logic_equipment|overworld,[$combat_logic_on|overworld]"
                 ],
                 "item_count": 1
               }
@@ -3874,7 +3882,7 @@
           "@West Garden Portal Item,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
           "@West Garden after Boss,dash",
           "@West Garden after Boss,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|garden_knight",
-          "@West Garden after Boss,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$garden_knight_traversal_access"
+          "@West Garden after Boss,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]"
         ],
         "children": [
           {
@@ -4126,7 +4134,7 @@
               {
                 "name": "As you walk by",
                 "access_rules": [
-                  "@West Garden South Checkpoint,$combat_logic_on|west_garden"
+                  "@West Garden South Checkpoint,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
                 ],
                 "item_count": 1
               }
@@ -4151,7 +4159,7 @@
               {
                 "name": "Behind the Way",
                 "access_rules": [
-                  "@West Garden South Checkpoint,$combat_logic_on|west_garden"
+                  "@West Garden South Checkpoint,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
                 ],
                 "item_count": 1
               }
@@ -4176,7 +4184,7 @@
               {
                 "name": "By the Rudeling",
                 "access_rules": [
-                  "@West Garden South Checkpoint,$combat_logic_on|west_garden"
+                  "@West Garden South Checkpoint,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
                 ],
                 "item_count": 1
               }
@@ -4251,7 +4259,7 @@
               {
                 "name": "Under Boss Ladder",
                 "access_rules": [
-                  "@West Garden South Checkpoint,$west_garden_bush_access,$combat_logic_on|west_garden"
+                  "@West Garden South Checkpoint,$west_garden_bush_access,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
                 ],
                 "item_count": 1
               }
@@ -4281,7 +4289,7 @@
               {
                 "name": "Use the Holy Cross",
                 "access_rules": [
-                  "@West Garden before Boss,cross,$combat_logic_on|west_garden"
+                  "@West Garden before Boss,cross,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
                 ],
                 "item_count": 1
               }
@@ -4446,7 +4454,7 @@
         "access_rules": [
           "@Overworld to West Garden Upper",
           "@West Garden before Boss,dash",
-          "@West Garden before Boss,$garden_knight_traversal_access",
+          "@West Garden before Boss,$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]",
           "@LS Elev 2",
           "@West Garden,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
           "@West Garden before Boss,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|garden_knight"
@@ -4474,32 +4482,6 @@
                 "item_count": 1
               }
             ]
-          },
-          {
-            "name": "Garden Knight",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 960,
-                "y": 2475,
-                "size": 35
-              },
-              {
-                "map": "west_gardens",
-                "x": 720,
-                "y": 55,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Will Kill You",
-                "access_rules": [
-                  "sword"
-                ],
-                "hosted_item": "gknight"
-              }
-            ]
           }
         ]
       },
@@ -4514,7 +4496,6 @@
       {
         "name": "Ruined Atoll",
         "access_rules": [
-          "pray",
           "@Overworld to Atoll Upper",
           "@Ruined Atoll Frog Eye,$has_ladder|ladders_to_frogs_domain",
           "@Ruined Atoll Frog Mouth,dash",
@@ -4973,8 +4954,7 @@
         "name": "Ruined Atoll Statue",
         "access_rules": [
           "@Library Exterior Tree Region",
-          "@Ruined Atoll,$has_ladder|ladders_in_south_atoll,pray,$not_fs,$combat_logic_on|ruined_atoll",
-          "@Ruined Atoll,pray,$is_fs,atoll_northeast_fuse,atoll_northwest_fuse,atoll_southeast_fuse,atoll_southwest_fuse,$combat_logic_on|ruined_atoll"
+          "@Ruined Atoll,$ruined_atoll_statue_equipment_access,[$ruined_atoll_statue_access]"
         ],
         "children": []
       },
@@ -5077,7 +5057,7 @@
               {
                 "name": "Frog Meeting",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5102,7 +5082,7 @@
               {
                 "name": "Upper Right Corner",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5153,7 +5133,7 @@
               {
                 "name": "Obscured Doorway Ledge",
                 "access_rules": [
-                  "$frogs_above_vault_combat_access"
+                  "$frogs_above_vault_combat_equipment_access,[$frogs_above_vault_combat_access]"
                 ],
                 "item_count": 1
               }
@@ -5178,7 +5158,7 @@
               {
                 "name": "Mind the Adult Frog",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5203,7 +5183,7 @@
               {
                 "name": "Altar Chest",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5228,7 +5208,7 @@
               {
                 "name": "Already Stolen",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5253,7 +5233,7 @@
               {
                 "name": "Still Useful",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5278,7 +5258,7 @@
               {
                 "name": "ORB",
                 "access_rules": [
-                  "$combat_logic_on|frogs_domain"
+                  "$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
                 ],
                 "item_count": 1
               }
@@ -5456,7 +5436,12 @@
             "sections": [
               {
                 "name": "Page",
-                "access_rules": null,
+                "access_rules": [
+                  "stick",
+                  "sword",
+                  "staff",
+                  "gun"
+                ],
                 "item_count": 1
               }
             ]
@@ -5479,7 +5464,12 @@
             "sections": [
               {
                 "name": "Page",
-                "access_rules": null,
+                "access_rules": [
+                  "stick",
+                  "sword",
+                  "staff",
+                  "gun"
+                ],
                 "item_count": 1
               }
             ]
@@ -5502,7 +5492,12 @@
             "sections": [
               {
                 "name": "Page",
-                "access_rules": null,
+                "access_rules": [
+                  "stick",
+                  "sword",
+                  "staff",
+                  "gun"
+                ],
                 "item_count": 1
               }
             ]
@@ -5651,10 +5646,18 @@
               {
                 "name": "Hexagon Green",
                 "access_rules": [
-                  "$boss_reward_access|librarian"
+                  "$boss_reward_equipment_access|librarian,[$boss_reward_access|librarian]"
                 ],
                 "item_count": 1,
                 "hosted_item": "librarian"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "access_rules": [
+                  "$enemy_equipment_access|librarian,[$enemy_access|librarian]"
+                ],
+                "item_count": 1
               }
             ]
           }
@@ -5663,7 +5666,7 @@
       {
         "name": "Fortress Exterior from East Forest",
         "access_rules": [
-          "@Forest Belltower Main",
+          "@Forest Belltower Main,$forest_belltower_to_fortress_access",
           "@Fortress Exterior from Overworld,dash"
         ],
         "children": [
@@ -5835,7 +5838,7 @@
         "name": "Fortress Courtyard",
         "access_rules": [
           "@Eastern Vault Fortress",
-          "@Fortress Courtyard Upper,$combat_logic_on|eastern_vault_fortress|dagger",
+          "@Fortress Courtyard Upper,$combat_logic_equipment|eastern_vault_fortress|dagger,[$combat_logic_on|eastern_vault_fortress|dagger]",
           "@Fortress Exterior from Overworld,dash",
           "@Fortress Grave Path",
           "@Fortress Exterior near cave,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,staff,icerod",
@@ -5875,13 +5878,13 @@
       {
         "name": "Beneath the Vault Front",
         "access_rules": [
-          "@Beneath the Vault Back,[$has_lantern],$combat_logic_on|beneath_the_vault",
-          "@Beneath the Vault Entry Spot,[$has_lantern],stick,$combat_logic_on|beneath_the_vault",
-          "@Beneath the Vault Entry Spot,[$has_lantern],sword,$combat_logic_on|beneath_the_vault",
-          "@Beneath the Vault Entry Spot,[$has_lantern],dash,$combat_logic_on|beneath_the_vault",
-          "@Beneath the Vault Entry Spot,[$has_lantern],staff,$combat_logic_on|beneath_the_vault",
-          "@Beneath the Vault Entry Spot,[$has_lantern],gun,$combat_logic_on|beneath_the_vault",
-          "@Beneath the Vault Entry Spot,[$has_lantern],orb,$combat_logic_on|beneath_the_vault"
+          "@Beneath the Vault Back,[$has_lantern],$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
+          "@Beneath the Vault Entry Spot,[$has_lantern],stick,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
+          "@Beneath the Vault Entry Spot,[$has_lantern],sword,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
+          "@Beneath the Vault Entry Spot,[$has_lantern],dash,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
+          "@Beneath the Vault Entry Spot,[$has_lantern],staff,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
+          "@Beneath the Vault Entry Spot,[$has_lantern],gun,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
+          "@Beneath the Vault Entry Spot,[$has_lantern],orb,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]"
         ],
         "children": [
           {
@@ -6109,7 +6112,7 @@
               {
                 "name": "Use the Holy Cross",
                 "access_rules": [
-                  "cross,$combat_logic_on|eastern_vault_fortress|dagger"
+                  "cross,$combat_logic_equipment|eastern_vault_fortress|dagger,[$combat_logic_on|eastern_vault_fortress|dagger]"
                 ],
                 "item_count": 1
               }
@@ -6155,7 +6158,7 @@
         "name": "Eastern Vault Fortress Gold Door",
         "access_rules": [
           "@Eastern Vault Fortress,[ice_grapple_med],vis_ice_grapple_med,dagger,orb",
-          "@Eastern Vault Fortress,pray,$not_fs",
+          "@Eastern Vault Fortress,pray,$not_fs,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]",
           "@Eastern Vault Fortress,$is_fs,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,fortress_door_left_fuse,fortress_courtyard_upper_fuse,fortress_courtyard_fuse,fortress_door_right_fuse",
           "@Fortress Arena"
         ],
@@ -6369,10 +6372,18 @@
               {
                 "name": "Siege Engine|Vault Key Pickup",
                 "access_rules": [
-                  "$boss_reward_access|siege_engine"
+                  "$boss_reward_equipment_access|siege_engine,[$boss_reward_access|siege_engine]"
                 ],
                 "item_count": 1,
                 "hosted_item": "engine"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "access_rules": [
+                  "$enemy_equipment_access|siege_engine,[$enemy_access|siege_engine]"
+                ],
+                "item_count": 1
               },
               {
                 "name": "Hexagon Red",
@@ -6467,9 +6478,9 @@
           "@Quarry Entry,[sword],combat_logic_bosses_only",
           "@Quarry Monastery Entry,[staff],combat_logic_bosses_only",
           "@Quarry Monastery Entry,[sword],combat_logic_bosses_only",
-          "@Quarry Back,combat_logic_on,$combat_logic_on|quarry",
-          "@Quarry Entry,combat_logic_on,$combat_logic_on|quarry",
-          "@Quarry Monastery Entry,combat_logic_on,$combat_logic_on|quarry"
+          "@Quarry Back,combat_logic_on,$combat_logic_equipment|quarry,[$combat_logic_on|quarry]",
+          "@Quarry Entry,combat_logic_on,$combat_logic_equipment|quarry,[$combat_logic_on|quarry]",
+          "@Quarry Monastery Entry,combat_logic_on,$combat_logic_equipment|quarry,[$combat_logic_on|quarry]"
         ],
         "children": [
           {
@@ -6959,7 +6970,11 @@
       {
         "name": "Monastery Back",
         "access_rules": [
-          "@Monastery Front,$combat_logic_on|quarry",
+          "@Monastery Front,combat_logic_off,sword",
+          "@Monastery Front,combat_logic_off,staff",
+          "@Monastery Front,combat_logic_bosses_only,sword",
+          "@Monastery Front,combat_logic_bosses_only,staff",
+          "@Monastery Front,combat_logic_on,$combat_logic_equipment|quarry,[$combat_logic_on|quarry]",
           "@Monastery Hero's Grave Region",
           "@Monastery Rope",
           "@Quarry Entry,[ladder_storage_med],vis_ladder_storage_med,$can_ls",
@@ -7157,7 +7172,7 @@
         "access_rules": [
           "@Lower Quarry,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,$enemy_soul_access|scavengers",
           "@Lower Quarry,$has_ladder|ladders_in_lower_quarry",
-          "@Even Lower Quarry Isolated Chest,$even_lower_quarry_combat_access"
+          "@Even Lower Quarry Isolated Chest,$even_lower_quarry_combat_equipment_access,[$even_lower_quarry_combat_access]"
         ],
         "children": [
           {
@@ -7406,7 +7421,7 @@
               {
                 "name": "Defeat those Mechs",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,pray,$not_fs,$ziggurat_miniboss_route_access",
+                  "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,pray,$not_fs,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
                   "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse"
                 ],
                 "item_count": 1
@@ -7432,10 +7447,18 @@
               {
                 "name": "Scavenger Queen",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Back,$boss_reward_access|boss_scavenger"
+                  "@Enemy Logic - Rooted Ziggurat Lower Back,$boss_reward_equipment_access|boss_scavenger,[$boss_reward_access|boss_scavenger]"
                 ],
                 "item_count": 1,
                 "hosted_item": "scavboss"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "access_rules": [
+                  "@Enemy Logic - Rooted Ziggurat Lower Back,$enemy_equipment_access|boss_scavenger,[$enemy_access|boss_scavenger]"
+                ],
+                "item_count": 1
               }
             ]
           }
@@ -7492,7 +7515,7 @@
               {
                 "name": "You can shoot it",
                 "access_rules": [
-                  "$ziggurat_bridge_switch_combat_access"
+                  "$ziggurat_bridge_switch_combat_equipment_access,[$ziggurat_bridge_switch_combat_access]"
                 ],
                 "item_count": 1
               }
@@ -7507,7 +7530,7 @@
           "@Rooted Ziggurat Upper Front,dash",
           "@Rooted Ziggurat Upper Front,sword,combat_logic_off,$enemy_soul_access|administrator",
           "@Rooted Ziggurat Upper Front,sword,combat_logic_bosses_only,$enemy_soul_access|administrator",
-          "@Rooted Ziggurat Upper Front,combat_logic_on,$combat_logic_on|rooted_ziggurat"
+          "@Rooted Ziggurat Upper Front,combat_logic_on,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]"
         ],
         "children": [
           {
@@ -7723,7 +7746,7 @@
               {
                 "name": "Gazing out over the Graves",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -7748,7 +7771,7 @@
               {
                 "name": "Through the Nook",
                 "access_rules": [
-                  "$swamp_dash_or_combat_access"
+                  "$swamp_dash_or_combat_equipment_access,[$swamp_dash_or_combat_access]"
                 ],
                 "item_count": 1
               }
@@ -7773,7 +7796,7 @@
               {
                 "name": "End of Ledge",
                 "access_rules": [
-                  "$combat_logic_on|swamp|dagger|laurels"
+                  "$combat_logic_equipment|swamp|dagger|laurels,[$combat_logic_on|swamp|dagger|laurels]"
                 ],
                 "item_count": 1
               }
@@ -7798,7 +7821,7 @@
               {
                 "name": "Super Clipping",
                 "access_rules": [
-                  "$combat_logic_on|swamp|dagger"
+                  "$combat_logic_equipment|swamp|dagger,[$combat_logic_on|swamp|dagger]"
                 ],
                 "item_count": 1
               }
@@ -7848,7 +7871,7 @@
                 "access_rules": [
                   "[sword],combat_logic_off",
                   "[sword],combat_logic_bosses_only",
-                  "combat_logic_on,$combat_logic_on|swamp"
+                  "combat_logic_on,$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -7960,7 +7983,7 @@
               {
                 "name": "You can also dash across here",
                 "access_rules": [
-                  "$swamp_dash_or_combat_access"
+                  "$swamp_dash_or_combat_equipment_access,[$swamp_dash_or_combat_access]"
                 ],
                 "item_count": 1
               }
@@ -7985,7 +8008,7 @@
               {
                 "name": "Do You Even Live?",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8010,7 +8033,7 @@
               {
                 "name": "Up them Ramps",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8035,7 +8058,7 @@
               {
                 "name": "Overlooking the Graves",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8060,7 +8083,7 @@
               {
                 "name": "Alternatively, Before the Cathedral",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8085,7 +8108,7 @@
               {
                 "name": "Between Two Hills",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8162,7 +8185,7 @@
         "access_rules": [
           "@Cathedral Entry",
           "@Swamp Mid,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|gunslinger",
-          "@Swamp Mid,dash,pray,sword,$not_fs,$combat_logic_bosses|swamp",
+          "@Swamp Mid,dash,pray,sword,$not_fs,$combat_logic_bosses_equipment|swamp,[$combat_logic_bosses|swamp]",
           "@Swamp Mid,$is_fs,swamp_fuse_1,swamp_fuse_2,swamp_fuse_3"
         ],
         "children": []
@@ -8293,7 +8316,7 @@
               {
                 "name": "Beside 3 Miasma Seekers",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8318,7 +8341,7 @@
               {
                 "name": "Mind the Miasma Seeker",
                 "access_rules": [
-                  "$cathedral_near_spikes_combat_access"
+                  "$cathedral_near_spikes_combat_equipment_access,[$cathedral_near_spikes_combat_access]"
                 ],
                 "item_count": 1
               }
@@ -8343,14 +8366,14 @@
               {
                 "name": "[2F] Bird Room",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               },
               {
                 "name": "[2F] Bird Room Secret Wall",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8375,7 +8398,7 @@
               {
                 "name": "Overlooking Miasma",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8400,7 +8423,7 @@
               {
                 "name": "Behind the Ladder",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8425,7 +8448,7 @@
               {
                 "name": "Before the big reveal...",
                 "access_rules": [
-                  "$combat_logic_on|swamp"
+                  "$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
                 ],
                 "item_count": 1
               }
@@ -8482,7 +8505,7 @@
       {
         "name": "Cathedral Gauntlet Checkpoint",
         "access_rules": [
-          "@Cathedral Entry,$cathedral_elevator_access"
+          "@Cathedral Entry,$cathedral_elevator_equipment_access,[$cathedral_elevator_access]"
         ],
         "children": []
       },
@@ -8512,7 +8535,7 @@
               {
                 "name": "Gauntlet Reward",
                 "access_rules": [
-                  "$boss_reward_access|gauntlet"
+                  "$boss_reward_equipment_access|gauntlet,[$boss_reward_access|gauntlet]"
                 ],
                 "item_count": 1,
                 "hosted_item": "gauntlet"
@@ -8955,7 +8978,7 @@
               {
                 "name": "What ending did you get?",
                 "access_rules": [
-                  "$heir_combat_access"
+                  "$heir_combat_equipment_access,[$heir_combat_access]"
                 ],
                 "hosted_item": "heir"
               }
@@ -9094,7 +9117,7 @@
           {
             "name": "[Southwest] Fountain Holy Cross",
             "access_rules": [
-              "@Overworld Holy Cross,$combat_logic_on|before_well|dagger"
+              "@Overworld Holy Cross,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
             ],
             "item_count": 1
           }

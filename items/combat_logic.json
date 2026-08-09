@@ -63,7 +63,7 @@
     "loop": false,
     "img": "images/golden_coins.png",
     "codes": "combat_money_200_count",
-    "max_quantity": 1
+    "max_quantity": 2
   },
   {
     "name": "Combat Logic Money x255 Receipts (Internal)",
@@ -71,6 +71,6 @@
     "loop": false,
     "img": "images/golden_coins.png",
     "codes": "combat_money_255_count",
-    "max_quantity": 1
+    "max_quantity": 2
   }
 ]

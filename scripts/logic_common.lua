@@ -2,7 +2,7 @@
 function apLayoutChange()
     local progSword = Tracker:FindObjectForCode("progswordSetting")
     if (string.find(Tracker.ActiveVariantUID, "standard") or string.find(Tracker.ActiveVariantUID, "var_itemsonly") or string.find(Tracker.ActiveVariantUID, "var_minimal")) then
-        if progSword.CurrentStage == 1 then
+        if progSword.Active then
             Tracker:AddLayouts("layouts/itemspop_progsword.json")
             Tracker:AddLayouts("layouts/broadcastpop_progsword.json")
         else
@@ -15,12 +15,12 @@ end
 ScriptHost:AddWatchForCode("useApLayout", "progswordSetting", apLayoutChange)
 
 function updateLayout()
-    local ladders = Tracker:FindObjectForCode("ladder_shuffle_off")
+    local ladders = Tracker:FindObjectForCode("ladder_shuffle")
     local fuses = Tracker:FindObjectForCode("fuse_shuffle")
     local enemySouls = Tracker:FindObjectForCode("enemy_soul_shuffle_setting")
     local layoutString = "layouts/trackerpop"
     if (string.find(Tracker.ActiveVariantUID, "standard") or string.find(Tracker.ActiveVariantUID, "var_itemsonly") or string.find(Tracker.ActiveVariantUID, "var_minimal")) then
-        if ladders.CurrentStage ~= 0 then
+        if ladders.Active then
             layoutString = layoutString .. "_ladders"
         end
         if fuses.Active then
@@ -40,7 +40,7 @@ function updateLayout()
 end
 
 function has_ladder(ladderName)
-    if Tracker:FindObjectForCode("ladder_shuffle_off").CurrentStage == 0 then
+    if not Tracker:FindObjectForCode("ladder_shuffle").Active then
         return true
     end
 
@@ -79,11 +79,11 @@ function has_hex_goal_amount()
 end
 
 function is_hexquest_on()
-    return Tracker:FindObjectForCode("hexagonquest").CurrentStage == 1
+    return Tracker:FindObjectForCode("hexagonquest").Active
 end
 
 
-ScriptHost:AddWatchForCode("ladderLayout", "ladder_shuffle_off", updateLayout)
+ScriptHost:AddWatchForCode("ladderLayout", "ladder_shuffle", updateLayout)
 ScriptHost:AddWatchForCode("fuseLayout", "fuse_shuffle", updateLayout)
 ScriptHost:AddWatchForCode("hintsLayout", "show_hints", updateLayout)
 ScriptHost:AddWatchForCode("enemySoulLayout", "enemy_soul_shuffle_setting", updateLayout)

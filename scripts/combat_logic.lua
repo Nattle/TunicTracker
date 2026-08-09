@@ -31,7 +31,7 @@ end
 
 function sword_upgrade_count()
     local sword_setting = Tracker:FindObjectForCode("progswordSetting")
-    if not sword_setting or sword_setting.CurrentStage ~= 1 then
+    if not sword_setting or not sword_setting.Active then
         return 0
     end
 
@@ -291,6 +291,26 @@ local function copy_set(values)
     return result
 end
 
+local function check_combat_equipment(area_name, state, alternate)
+    local source = alternate or (COMBAT_AREA_DATA[area_name] and make_area(COMBAT_AREA_DATA[area_name]))
+    if not source then return false end
+
+    local has_magic = state.wand or state.gun
+    local has_sword = state.sword
+    local has_melee = has_sword or state.stick or state.sword_upgrades > 0
+
+    for item, _ in pairs(list_to_set(source.equipment)) do
+        if item == "Stick" and not has_melee and not has_magic then
+            return false
+        elseif item == "Sword" and not has_sword then
+            if source.is_boss or not has_melee then return false end
+        elseif item == "Laurels" and not state.laurels then
+            return false
+        end
+    end
+    return true
+end
+
 local function check_combat_reqs(area_name, state, alternate)
     local source = alternate or (COMBAT_AREA_DATA[area_name] and make_area(COMBAT_AREA_DATA[area_name]))
     if not source then return false end
@@ -394,17 +414,38 @@ function has_combat_reqs(area_name)
     return check_combat_reqs(area_name, read_combat_state())
 end
 
+function has_combat_equipment(area_name)
+    return check_combat_equipment(area_name, read_combat_state())
+end
+
+-- verification helpers
 function evaluate_combat_reqs(area_name, state)
     return check_combat_reqs(area_name, state)
+end
+
+function evaluate_combat_equipment(area_name, state)
+    return check_combat_equipment(area_name, state)
 end
 
 function combat_logic_bosses(area_name)
     return combat_logic_mode() == 0 or has_combat_reqs(area_name)
 end
 
+function combat_logic_bosses_equipment(area_name)
+    return combat_logic_mode() == 0 or has_combat_equipment(area_name)
+end
+
 function combat_logic_on(area_name, dagger_bypass, laurels_bypass)
     if combat_logic_mode() ~= 2 then return true end
     return has_combat_reqs(area_name)
+        or (dagger_bypass == "dagger" and has_code("dagger"))
+        or (laurels_bypass == "laurels" and has_code("dash"))
+end
+
+
+function combat_logic_equipment(area_name, dagger_bypass, laurels_bypass)
+    if combat_logic_mode() ~= 2 then return true end
+    return has_combat_equipment(area_name)
         or (dagger_bypass == "dagger" and has_code("dagger"))
         or (laurels_bypass == "laurels" and has_code("dash"))
 end

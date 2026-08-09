@@ -46,7 +46,7 @@
           {
             "name": "Swamp - [Central] Activate Fuse",
             "access_rules": [
-              "@Swamp Mid,sword,pray,swamp_fuse_1,$combat_logic_on|swamp"
+              "@Swamp Mid,sword,pray,swamp_fuse_1,$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
             ],
             "map_locations": [
               {
@@ -70,7 +70,7 @@
           {
             "name": "Swamp - [Outside Cathedral] Activate Fuse",
             "access_rules": [
-              "@Swamp Mid,sword,pray,swamp_fuse_1,swamp_fuse_2"
+              "@Swamp Mid,pray,swamp_fuse_1,swamp_fuse_2"
             ],
             "map_locations": [
               {
@@ -96,7 +96,7 @@
       {
         "name": "West Garden",
         "access_rules": [
-          "@West Garden,pray"
+          "@West Garden South Checkpoint,pray"
         ],
         "children": [
           {
@@ -131,8 +131,8 @@
           {
             "name": "Ruined Atoll - [Northwest] Activate Fuse",
             "access_rules": [
-              "@Ruined Atoll,pray,dash,$combat_logic_on|ruined_atoll",
-              "@Ruined Atoll,pray,orb,$combat_logic_on|ruined_atoll"
+              "@Ruined Atoll,pray,dash,$combat_logic_equipment|ruined_atoll,[$combat_logic_on|ruined_atoll]",
+              "@Ruined Atoll,pray,orb,$combat_logic_equipment|ruined_atoll,[$combat_logic_on|ruined_atoll]"
             ],
             "map_locations": [
               {
@@ -177,7 +177,7 @@
           {
             "name": "Ruined Atoll - [Southwest] Activate Fuse",
             "access_rules": [
-              "$combat_logic_on|ruined_atoll"
+              "$combat_logic_equipment|ruined_atoll,[$combat_logic_on|ruined_atoll]"
             ],
             "map_locations": [
               {
@@ -323,7 +323,7 @@
           {
             "name": "Fortress Courtyard - [Upper] Activate Fuse",
             "access_rules": [
-              "@Fortress Courtyard Upper,pray,fortress_exterior_fuse_1,$combat_logic_on|eastern_vault_fortress"
+              "@Fortress Courtyard Upper,pray,fortress_exterior_fuse_1,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
             ],
             "map_locations": [
               {
@@ -355,7 +355,7 @@
           {
             "name": "Fortress Courtyard - [Central] Activate Fuse",
             "access_rules": [
-              "@Fortress Courtyard,pray,fortress_exterior_fuse_1,fortress_courtyard_upper_fuse,$combat_logic_on|eastern_vault_fortress"
+              "@Fortress Courtyard,pray,fortress_exterior_fuse_1,fortress_courtyard_upper_fuse,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
             ],
             "map_locations": [
               {
@@ -387,7 +387,7 @@
           {
             "name": "Beneath the Fortress - Activate Fuse",
             "access_rules": [
-              "@Beneath the Vault Back,pray,fortress_exterior_fuse_1,fortress_exterior_fuse_2,$combat_logic_on|beneath_the_vault"
+              "@Beneath the Vault Back,pray,fortress_exterior_fuse_1,fortress_exterior_fuse_2,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]"
             ],
             "map_locations": [
               {
@@ -419,7 +419,7 @@
           {
             "name": "Eastern Vault Fortress - [Candle Room] Activate Fuse",
             "access_rules": [
-              "@Eastern Vault Fortress,pray,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,$combat_logic_on|eastern_vault_fortress"
+              "@Eastern Vault Fortress,pray,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
             ],
             "map_locations": [
               {
@@ -443,7 +443,7 @@
           {
             "name": "Eastern Vault Fortress - [Left of Door] Activate Fuse",
             "access_rules": [
-              "@Eastern Vault Fortress,pray,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,$combat_logic_on|eastern_vault_fortress"
+              "@Eastern Vault Fortress,pray,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
             ],
             "map_locations": [
               {
@@ -467,7 +467,7 @@
           {
             "name": "Eastern Vault Fortress - [Right of Door] Activate Fuse",
             "access_rules": [
-              "@Eastern Vault Fortress,pray,fortress_exterior_fuse_1,fortress_courtyard_upper_fuse,fortress_courtyard_fuse,$combat_logic_on|eastern_vault_fortress"
+              "@Eastern Vault Fortress,pray,fortress_exterior_fuse_1,fortress_courtyard_upper_fuse,fortress_courtyard_fuse,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
             ],
             "map_locations": [
               {
@@ -603,7 +603,7 @@
             "access_rules": [
               "sword,pray,combat_logic_off",
               "sword,pray,combat_logic_bosses_only",
-              "pray,combat_logic_on,$combat_logic_on|rooted_ziggurat"
+              "pray,combat_logic_on,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]"
             ],
             "map_locations": [
               {
@@ -629,7 +629,7 @@
       {
         "name": "Cathedral",
         "access_rules": [
-          "@Cathedral,pray"
+          "@Cathedral Main,pray"
         ],
         "children": [
           {

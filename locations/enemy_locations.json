@@ -2,8 +2,8 @@
   {
     "name": "Enemy Drops",
     "visibility_rules": "enemy_drop_shuffle",
-    "chest_unopened_img": "images/PLACEHOLDER.png",
-    "chest_opened_img": "images/PLACEHOLDER.png",
+    "chest_unopened_img": "images/souls/enemy_soul.png",
+    "chest_opened_img": "images/souls/enemy_soul_grey.png",
     "overlay_background": "#000000",
     "children": [
       {
@@ -318,13 +318,6 @@
             "item_count": 5,
             "access_rules": [
               "@Forest Belltower Main,$enemy_access|blob"
-            ]
-          },
-          {
-            "name": "Forest Boss Room - Guard Captains",
-            "item_count": 1,
-            "access_rules": [
-              "@Forest Boss Room,$enemy_access|guard_captain"
             ]
           },
           {
@@ -687,13 +680,6 @@
             ]
           },
           {
-            "name": "West Garden before Boss - Garden Knights",
-            "item_count": 1,
-            "access_rules": [
-              "@West Garden before Boss,$enemy_access|garden_knight"
-            ]
-          },
-          {
             "name": "West Garden before Terry - Zombie Foxes [Extra]",
             "item_count": 1,
             "access_rules": [
@@ -929,13 +915,6 @@
             "item_count": 1,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|custodian"
-            ]
-          },
-          {
-            "name": "Fortress Arena - Siege Engine",
-            "item_count": 1,
-            "access_rules": [
-              "@Fortress Arena,$enemy_access|siege_engine"
             ]
           },
           {
@@ -1278,13 +1257,6 @@
         ],
         "sections": [
           {
-            "name": "Library Arena - Librarian",
-            "item_count": 1,
-            "access_rules": [
-              "@Library Arena,$enemy_access|librarian"
-            ]
-          },
-          {
             "name": "Library Hall - Administrators (Coffee Table)",
             "item_count": 1,
             "access_rules": [
@@ -1436,13 +1408,6 @@
           }
         ],
         "sections": [
-          {
-            "name": "Rooted Ziggurat Lower Back - Boss Scavenger",
-            "item_count": 1,
-            "access_rules": [
-              "@Enemy Logic - Rooted Ziggurat Lower Back,$enemy_access|boss_scavenger"
-            ]
-          },
           {
             "name": "Rooted Ziggurat Lower Front - Administrators",
             "item_count": 4,

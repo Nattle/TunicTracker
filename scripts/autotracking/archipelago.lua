@@ -171,8 +171,7 @@ function onClear(slot_data)
     Tracker:FindObjectForCode("icerod").Active = should_activate
 
     --print("slot_data.sword_progression: " .. slot_data.sword_progression)
-    Tracker:FindObjectForCode("progswordSetting").CurrentStage = slot_data.sword_progression
-    Tracker:FindObjectForCode("progswordSetting").CurrentStage = slot_data.sword_progression
+    set_option("progswordSetting", slot_data.sword_progression, false)
 
     if slot_data.start_with_sword ~= 0 then
         --print("slot_data.start_with_sword: " .. slot_data.start_with_sword)
@@ -181,7 +180,7 @@ function onClear(slot_data)
         Tracker:FindObjectForCode("sword").CurrentStage = 0
     end
 
-    Tracker:FindObjectForCode("hexagonquest").CurrentStage = slot_data.hexagon_quest
+    set_option("hexagonquest", slot_data.hexagon_quest, false)
     if slot_data.hexagon_quest ~= 0 then
         HEXGOAL = slot_data["Hexagon Quest Goal"]
     end
@@ -208,7 +207,7 @@ function onClear(slot_data)
     set_option("vis_ice_grapple_off", math.max(slot_data.ice_grappling, Tracker:FindObjectForCode("vis_ice_grapple_off").CurrentStage), true)
     set_option("vis_ladder_storage_off", math.max(slot_data.ladder_storage, Tracker:FindObjectForCode("vis_ladder_storage_off").CurrentStage), true)
 
-    Tracker:FindObjectForCode("ladder_shuffle_off").CurrentStage = slot_data.shuffle_ladders
+    set_option("ladder_shuffle", slot_data.shuffle_ladders, false)
 
     Tracker:FindObjectForCode("auto_tab").CurrentStage = 1
     local slot_player = "Slot:" .. Archipelago.PlayerNumber

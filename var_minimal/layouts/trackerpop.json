@@ -17,7 +17,7 @@
       },
       {
         "type": "group",
-        "header": "Classic/Hexagon Quest",
+        "header": "Hexagon Quest",
         "header_background": "#3e4b57",
         "content": [
           {
@@ -29,7 +29,7 @@
       },
       {
         "type": "group",
-        "header": "Sword Setting",
+        "header": "Sword Progression",
         "header_background": "#3e4b57",
         "content": [
           {
@@ -47,7 +47,7 @@
           {
             "type": "item",
             "margin": "-5,-1,-5,-5",
-            "item": "ladder_shuffle_off"
+            "item": "ladder_shuffle"
           }
         ]
       },
