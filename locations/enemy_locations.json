@@ -31,7 +31,7 @@
             ]
           },
           {
-            "name": "After Ruined Passage - Zombie Foxes [Extra]",
+            "name": "After Ruined Passage - Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@After Ruined Passage,$enemy_access|fox_enemy_zombie"
@@ -46,7 +46,7 @@
             ]
           },
           {
-            "name": "East Overworld - Blobs [Extra]",
+            "name": "East Overworld - Blob [Extra]",
             "item_count": 1,
             "access_rules": [
               "@East Overworld,$enemy_access|blob"
@@ -68,14 +68,14 @@
             ]
           },
           {
-            "name": "Overworld - Autobolts",
+            "name": "Autobolts",
             "item_count": 3,
             "access_rules": [
               "@Overworld,$enemy_access|autobolt"
             ]
           },
           {
-            "name": "Overworld - Beefboys [Extra]",
+            "name": "Beefboy [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|beefboy"
@@ -83,7 +83,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Overworld - Big Fleemers [Extra]",
+            "name": "Big Fleemer [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|fleemer_big"
@@ -91,14 +91,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Overworld - Blobs",
+            "name": "Blobs",
             "item_count": 9,
             "access_rules": [
               "@Overworld,$enemy_access|blob"
             ]
           },
           {
-            "name": "Overworld - Blobs [Extra]",
+            "name": "Blob [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|blob"
@@ -106,7 +106,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Overworld - Envoys",
+            "name": "Envoy",
             "item_count": 1,
             "access_rules": [
               "@Overworld,@Shop,$enemy_access|envoy_shop",
@@ -114,14 +114,14 @@
             ]
           },
           {
-            "name": "Overworld - Envoys (Quarry Bridge)",
+            "name": "Envoy (Quarry Bridge)",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|envoy_bridge"
             ]
           },
           {
-            "name": "Overworld - Guard Captains [Extra]",
+            "name": "Guard Captain [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|guard_captain"
@@ -129,28 +129,28 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Overworld - Hedgehogs",
+            "name": "Hedgehogs",
             "item_count": 9,
             "access_rules": [
               "@Overworld,$enemy_access|hedgehog"
             ]
           },
           {
-            "name": "Overworld - Phrends",
+            "name": "Phrends",
             "item_count": 2,
             "access_rules": [
               "@Overworld,$enemy_access|phrend"
             ]
           },
           {
-            "name": "Overworld - Rudelings",
+            "name": "Rudelings",
             "item_count": 10,
             "access_rules": [
               "@Overworld,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "Overworld - Rudelings [Extra]",
+            "name": "Rudeling [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|rudeling"
@@ -158,14 +158,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Overworld - Shield Rudelings",
+            "name": "Shield Rudelings",
             "item_count": 7,
             "access_rules": [
               "@Overworld,$enemy_access|rudeling_shield"
             ]
           },
           {
-            "name": "Overworld - Shield Rudelings [Extra]",
+            "name": "Shield Rudeling [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Overworld,$enemy_access|rudeling_shield"
@@ -173,42 +173,42 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Overworld above Patrol Cave - Hedgehogs",
+            "name": "Above Patrol Cave - Hedgehogs",
             "item_count": 2,
             "access_rules": [
               "@Overworld above Patrol Cave,$enemy_access|hedgehog"
             ]
           },
           {
-            "name": "Overworld Beach - Autobolts",
+            "name": "Beach - Autobolts",
             "item_count": 2,
             "access_rules": [
               "@Overworld Beach,$enemy_access|autobolt"
             ]
           },
           {
-            "name": "Overworld Beach - Autobolts (Gap)",
+            "name": "Beach - Autobolt (Gap)",
             "item_count": 1,
             "access_rules": [
               "@Overworld Beach,$enemy_access|autobolt_gap"
             ]
           },
           {
-            "name": "Overworld Tunnel Turret - Autobolts",
+            "name": "Tunnel Turret - Autobolt",
             "item_count": 1,
             "access_rules": [
               "@Overworld Tunnel Turret,$enemy_access|autobolt"
             ]
           },
           {
-            "name": "Patrol Cave - Rudelings (Shop Route)",
+            "name": "Patrol Cave - Rudeling (Shop Route)",
             "item_count": 1,
             "access_rules": [
               "@Patrol Cave,@Shop,$enemy_access|rudeling_patrol"
             ]
           },
           {
-            "name": "Upper Overworld - Guard Captains",
+            "name": "Upper Overworld - Guard Captain",
             "item_count": 1,
             "access_rules": [
               "@Upper Overworld,$enemy_access|guard_captain"
@@ -248,28 +248,28 @@
         ],
         "sections": [
           {
-            "name": "East Forest - Blobs",
+            "name": "Blobs",
             "item_count": 5,
             "access_rules": [
               "@East Forest,$enemy_access|blob"
             ]
           },
           {
-            "name": "East Forest - Hedgehogs",
+            "name": "Hedgehogs",
             "item_count": 4,
             "access_rules": [
               "@East Forest,$enemy_access|hedgehog"
             ]
           },
           {
-            "name": "East Forest - Rudelings",
+            "name": "Rudelings",
             "item_count": 5,
             "access_rules": [
               "@East Forest,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "East Forest - Rudelings [Extra]",
+            "name": "Rudelings [Extra]",
             "item_count": 4,
             "access_rules": [
               "@East Forest,$enemy_access|rudeling"
@@ -277,7 +277,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "East Forest - Spiders [Extra]",
+            "name": "Spider [Extra]",
             "item_count": 1,
             "access_rules": [
               "@East Forest,$enemy_access|spider"
@@ -285,7 +285,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "East Forest above Guard House 2 - Envoys",
+            "name": "Above Guard House 2 - Envoy",
             "item_count": 1,
             "access_rules": [
               "@East Forest,@Shop,$enemy_access|envoy_shop",
@@ -293,21 +293,21 @@
             ]
           },
           {
-            "name": "East Forest above Guard House 2 - Rudelings",
+            "name": "Above Guard House 2 - Rudeling",
             "item_count": 1,
             "access_rules": [
               "@East Forest,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "East Forest above Guard House 2 - Shield Rudelings",
+            "name": "Above Guard House 2 - Shield Rudeling",
             "item_count": 1,
             "access_rules": [
               "@East Forest,$enemy_access|rudeling_shield"
             ]
           },
           {
-            "name": "East Forest Dance Fox Spot - Hedgehogs",
+            "name": "Dance Fox Spot - Hedgehogs",
             "item_count": 2,
             "access_rules": [
               "@East Forest Dance Fox Spot,$enemy_access|hedgehog"
@@ -321,7 +321,7 @@
             ]
           },
           {
-            "name": "Forest Boss Room - Rudelings",
+            "name": "Forest Boss Room - Rudeling",
             "item_count": 1,
             "access_rules": [
               "@Forest Boss Room,$enemy_access|rudeling"
@@ -336,7 +336,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Forest Grave Path by Grave - Strong Zombie Foxes [Extra]",
+            "name": "Forest Grave Path by Grave - Strong Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Forest Grave Path by Grave,$enemy_access|fox_enemy"
@@ -344,7 +344,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Forest Grave Path by Grave - Zombie Foxes [Extra]",
+            "name": "Forest Grave Path by Grave - Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Forest Grave Path by Grave,$enemy_access|fox_enemy_zombie"
@@ -366,7 +366,7 @@
             ]
           },
           {
-            "name": "Forest Grave Path Main - Rudelings",
+            "name": "Forest Grave Path Main - Rudeling",
             "item_count": 1,
             "access_rules": [
               "@Forest Grave Path Main,$enemy_access|rudeling"
@@ -381,7 +381,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Forest Grave Path Main - Support Scavengers [Extra]",
+            "name": "Forest Grave Path Main - Support Scavenger [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Forest Grave Path Main,$enemy_access|scavenger_support"
@@ -396,7 +396,7 @@
             ]
           },
           {
-            "name": "Guard House 1 West - Hedgehogs",
+            "name": "Guard House 1 West - Hedgehog",
             "item_count": 1,
             "access_rules": [
               "@Guard House 1 West,$enemy_access|hedgehog"
@@ -417,7 +417,7 @@
             ]
           },
           {
-            "name": "Lower Forest - Blobs (Ice Grapple)",
+            "name": "Lower Forest - Blob (Ice Grapple)",
             "item_count": 1,
             "access_rules": [
               "@Lower Forest,$enemy_access|blob_ice_grapple"
@@ -438,7 +438,7 @@
             ]
           },
           {
-            "name": "Lower Forest - Spiders [Extra]",
+            "name": "Lower Forest - Spider [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Lower Forest,$enemy_access|spider"
@@ -465,21 +465,21 @@
         ],
         "sections": [
           {
-            "name": "Beneath the Well Back - Phrends",
+            "name": "Back - Phrends",
             "item_count": 9,
             "access_rules": [
               "@Beneath the Well Back,$enemy_access|phrend"
             ]
           },
           {
-            "name": "Beneath the Well Main - Autobolts",
+            "name": "Main - Autobolts",
             "item_count": 2,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|autobolt"
             ]
           },
           {
-            "name": "Beneath the Well Main - Autobolts [Extra]",
+            "name": "Main - Autobolt [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|autobolt"
@@ -487,28 +487,28 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Beneath the Well Main - Rudelings",
+            "name": "Main - Rudelings",
             "item_count": 3,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "Beneath the Well Main - Shield Rudelings",
+            "name": "Main - Shield Rudelings",
             "item_count": 3,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|rudeling_shield"
             ]
           },
           {
-            "name": "Beneath the Well Main - Slorms",
+            "name": "Main - Slorms",
             "item_count": 9,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|slorm"
             ]
           },
           {
-            "name": "Beneath the Well Main - Slorms [Extra]",
+            "name": "Main - Slorms [Extra]",
             "item_count": 3,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|slorm"
@@ -516,14 +516,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Beneath the Well Main - Tentacles",
+            "name": "Main - Tentacles",
             "item_count": 4,
             "access_rules": [
               "@Beneath the Well Main,$enemy_access|tentacle"
             ]
           },
           {
-            "name": "Well Boss - Envoys [Extra]",
+            "name": "Well Boss - Envoy [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Well Boss,@Shop,$enemy_access|envoy_shop",
@@ -532,7 +532,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Well Boss - Guard Captains",
+            "name": "Well Boss - Guard Captain",
             "item_count": 1,
             "access_rules": [
               "@Well Boss,$enemy_access|guard_captain"
@@ -565,14 +565,14 @@
         ],
         "sections": [
           {
-            "name": "Dark Tomb Main - Fleemers",
+            "name": "Main - Fleemers",
             "item_count": 7,
             "access_rules": [
               "@Dark Tomb Main,$enemy_access|fleemer"
             ]
           },
           {
-            "name": "Dark Tomb Main - Fleemers [Extra]",
+            "name": "Main - Fleemers [Extra]",
             "item_count": 5,
             "access_rules": [
               "@Dark Tomb Main,$enemy_access|fleemer"
@@ -580,21 +580,21 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Dark Tomb Main - Laser Traps",
+            "name": "Main - Laser Traps",
             "item_count": 19,
             "access_rules": [
               "@Dark Tomb Main,$enemy_access|laser_trap"
             ]
           },
           {
-            "name": "Dark Tomb Upper - Fleemers",
+            "name": "Upper - Fleemers",
             "item_count": 8,
             "access_rules": [
               "@Dark Tomb Upper,$enemy_access|fleemer"
             ]
           },
           {
-            "name": "Dark Tomb Upper - Fleemers [Extra]",
+            "name": "Upper - Fleemer [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Dark Tomb Upper,$enemy_access|fleemer"
@@ -602,7 +602,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Dark Tomb Upper - Phrends",
+            "name": "Upper - Phrends",
             "item_count": 5,
             "access_rules": [
               "@Dark Tomb Upper,$enemy_access|phrend"
@@ -628,14 +628,14 @@
         ],
         "sections": [
           {
-            "name": "West Garden after Terry - Chompignoms",
+            "name": "After Terry - Chompignom",
             "item_count": 1,
             "access_rules": [
               "@West Garden after Terry,$enemy_access|chompignom"
             ]
           },
           {
-            "name": "West Garden after Terry - Chompignoms [Extra]",
+            "name": "After Terry - Chompignom [Extra]",
             "item_count": 1,
             "access_rules": [
               "@West Garden after Terry,$enemy_access|chompignom"
@@ -643,14 +643,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "West Garden after Terry - Fairies",
+            "name": "After Terry - Fairy",
             "item_count": 1,
             "access_rules": [
               "@West Garden after Terry,$enemy_access|fairy"
             ]
           },
           {
-            "name": "West Garden after Terry - Fairies [Extra]",
+            "name": "After Terry - Fairy [Extra]",
             "item_count": 1,
             "access_rules": [
               "@West Garden after Terry,$enemy_access|fairy"
@@ -658,14 +658,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "West Garden at Dagger House - Chompignoms",
+            "name": "At Dagger House - Chompignoms",
             "item_count": 2,
             "access_rules": [
               "@West Garden at Dagger House,$enemy_access|chompignom"
             ]
           },
           {
-            "name": "West Garden at Dagger House - Chompignoms [Extra]",
+            "name": "At Dagger House - Chompignom [Extra]",
             "item_count": 1,
             "access_rules": [
               "@West Garden at Dagger House,$enemy_access|chompignom"
@@ -673,14 +673,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "West Garden at Dagger House - Rudelings",
+            "name": "At Dagger House - Rudeling",
             "item_count": 1,
             "access_rules": [
               "@West Garden at Dagger House,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "West Garden before Terry - Zombie Foxes [Extra]",
+            "name": "Before Terry - Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@West Garden before Terry,$enemy_access|fox_enemy_zombie"
@@ -688,28 +688,28 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "West Garden South Checkpoint - Chompignoms",
+            "name": "South Checkpoint - Chompignom",
             "item_count": 1,
             "access_rules": [
               "@West Garden South Checkpoint,$enemy_access|chompignom"
             ]
           },
           {
-            "name": "West Garden South Checkpoint - Fairies",
+            "name": "South Checkpoint - Fairies",
             "item_count": 4,
             "access_rules": [
               "@West Garden South Checkpoint,$enemy_access|fairy"
             ]
           },
           {
-            "name": "West Garden South Checkpoint - Guard Captains",
+            "name": "South Checkpoint - Guard Captain",
             "item_count": 1,
             "access_rules": [
               "@West Garden South Checkpoint,$enemy_access|guard_captain"
             ]
           },
           {
-            "name": "West Garden South Checkpoint - Guard Captains [Extra]",
+            "name": "South Checkpoint - Guard Captain [Extra]",
             "item_count": 1,
             "access_rules": [
               "@West Garden South Checkpoint,$enemy_access|guard_captain"
@@ -717,28 +717,28 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "West Garden South Checkpoint - Rudelings",
+            "name": "South Checkpoint - Rudelings",
             "item_count": 2,
             "access_rules": [
               "@West Garden South Checkpoint,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "West Garden South Checkpoint - Shield Rudelings",
+            "name": "South Checkpoint - Shield Rudelings",
             "item_count": 2,
             "access_rules": [
               "@West Garden South Checkpoint,$enemy_access|rudeling_shield"
             ]
           },
           {
-            "name": "West Garden West Combat - Chompignoms",
+            "name": "West Combat - Chompignoms",
             "item_count": 5,
             "access_rules": [
               "@West Garden West Combat,$enemy_access|chompignom"
             ]
           },
           {
-            "name": "West Garden West Combat - Chompignoms [Extra]",
+            "name": "West Combat - Chompignoms [Extra]",
             "item_count": 3,
             "access_rules": [
               "@West Garden West Combat,$enemy_access|chompignom"
@@ -746,14 +746,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "West Garden West Combat - Fairies",
+            "name": "West Combat - Fairies",
             "item_count": 4,
             "access_rules": [
               "@West Garden West Combat,$enemy_access|fairy"
             ]
           },
           {
-            "name": "West Garden West Combat - Fairies [Extra]",
+            "name": "West Combat - Fairies [Extra]",
             "item_count": 3,
             "access_rules": [
               "@West Garden West Combat,$enemy_access|fairy"
@@ -780,14 +780,14 @@
         ],
         "sections": [
           {
-            "name": "Beneath the Vault Back - Baby Slorms",
+            "name": "Beneath the Vault Back - Baby Slorm",
             "item_count": 1,
             "access_rules": [
               "@Beneath the Vault Back,$enemy_access|baby_slorm"
             ]
           },
           {
-            "name": "Beneath the Vault Back - Candelabra Custodians [Extra]",
+            "name": "Beneath the Vault Back - Candelabra Custodian [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Beneath the Vault Back,$enemy_access|custodian_candelabra"
@@ -866,21 +866,21 @@
         ],
         "sections": [
           {
-            "name": "Eastern Vault Fortress - Baby Slorms",
+            "name": "Fortress - Baby Slorms",
             "item_count": 3,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|baby_slorm"
             ]
           },
           {
-            "name": "Eastern Vault Fortress - Candelabra Custodians",
+            "name": "Fortress - Candelabra Custodians",
             "item_count": 2,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|custodian_candelabra"
             ]
           },
           {
-            "name": "Eastern Vault Fortress - Candelabra Custodians [Extra]",
+            "name": "Fortress - Candelabra Custodian [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|custodian_candelabra"
@@ -888,7 +888,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Eastern Vault Fortress - Laser Traps [Extra]",
+            "name": "Fortress - Laser Traps [Extra]",
             "item_count": 2,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|laser_trap"
@@ -896,14 +896,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Eastern Vault Fortress - Sword Custodians",
+            "name": "Fortress - Sword Custodians",
             "item_count": 8,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|custodian_sword"
             ]
           },
           {
-            "name": "Eastern Vault Fortress - Sword Custodians [Extra]",
+            "name": "Fortress - Sword Custodians [Extra]",
             "item_count": 3,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|custodian_sword"
@@ -911,14 +911,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Eastern Vault Fortress - Wizard Custodians",
+            "name": "Fortress - Wizard Custodian",
             "item_count": 1,
             "access_rules": [
               "@Eastern Vault Fortress,$enemy_access|custodian"
             ]
           },
           {
-            "name": "Fortress Courtyard - Candelabra Custodians",
+            "name": "Fortress Courtyard - Candelabra Custodian",
             "item_count": 1,
             "access_rules": [
               "@Fortress Courtyard,$enemy_access|custodian_candelabra"
@@ -932,14 +932,14 @@
             ]
           },
           {
-            "name": "Fortress Courtyard - Wizard Custodians",
+            "name": "Fortress Courtyard - Wizard Custodian",
             "item_count": 1,
             "access_rules": [
               "@Fortress Courtyard,$enemy_access|custodian"
             ]
           },
           {
-            "name": "Fortress Courtyard Upper - Candelabra Custodians",
+            "name": "Fortress Courtyard Upper - Candelabra Custodian",
             "item_count": 1,
             "access_rules": [
               "@Fortress Courtyard Upper,$enemy_access|custodian_candelabra"
@@ -960,14 +960,14 @@
             ]
           },
           {
-            "name": "Fortress East Shortcut Upper - Candelabra Custodians",
+            "name": "Fortress East Shortcut Upper - Candelabra Custodian",
             "item_count": 1,
             "access_rules": [
               "@Fortress East Shortcut Upper,$enemy_access|custodian_candelabra"
             ]
           },
           {
-            "name": "Fortress East Shortcut Upper - Candelabra Custodians [Extra]",
+            "name": "Fortress East Shortcut Upper - Candelabra Custodian [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Fortress East Shortcut Upper,$enemy_access|custodian_candelabra"
@@ -975,7 +975,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Fortress East Shortcut Upper - Sword Custodians",
+            "name": "Fortress East Shortcut Upper - Sword Custodian",
             "item_count": 1,
             "access_rules": [
               "@Fortress East Shortcut Upper,$enemy_access|custodian_sword"
@@ -989,7 +989,7 @@
             ]
           },
           {
-            "name": "Fortress Grave Path by Grave - Zombie Foxes [Extra]",
+            "name": "Fortress Grave Path by Grave - Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Fortress Grave Path by Grave,$enemy_access|fox_enemy_zombie"
@@ -1038,21 +1038,21 @@
         ],
         "sections": [
           {
-            "name": "Ruined Atoll - Baby Slorms",
+            "name": "Baby Slorms",
             "item_count": 3,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|baby_slorm"
             ]
           },
           {
-            "name": "Ruined Atoll - Crabbits",
+            "name": "Crabbits",
             "item_count": 22,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|crabbit"
             ]
           },
           {
-            "name": "Ruined Atoll - Crabbits [Extra]",
+            "name": "Crabbits [Extra]",
             "item_count": 7,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|crabbit"
@@ -1060,14 +1060,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Ruined Atoll - Crabbos",
+            "name": "Crabbos",
             "item_count": 2,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|crabbo"
             ]
           },
           {
-            "name": "Ruined Atoll - Envoys",
+            "name": "Envoy",
             "item_count": 1,
             "access_rules": [
               "@Ruined Atoll,@Shop,$enemy_access|envoy_shop",
@@ -1075,35 +1075,35 @@
             ]
           },
           {
-            "name": "Ruined Atoll - Fairies",
+            "name": "Fairies",
             "item_count": 11,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|fairy"
             ]
           },
           {
-            "name": "Ruined Atoll - Frogs (Raised Ruins)",
+            "name": "Frogs (Raised Ruins)",
             "item_count": 2,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|frog_atoll"
             ]
           },
           {
-            "name": "Ruined Atoll - Hushers",
+            "name": "Hushers",
             "item_count": 4,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|husher"
             ]
           },
           {
-            "name": "Ruined Atoll - Plovers",
+            "name": "Plovers",
             "item_count": 3,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|plover"
             ]
           },
           {
-            "name": "Ruined Atoll - Shell Crabbits [Extra]",
+            "name": "Shell Crabbits [Extra]",
             "item_count": 2,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|crabbit_shell"
@@ -1111,28 +1111,28 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Ruined Atoll - Slorms",
+            "name": "Slorms",
             "item_count": 6,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|slorm"
             ]
           },
           {
-            "name": "Ruined Atoll - Small Frogs (Raised Ruins)",
+            "name": "Small Frog (Raised Ruins)",
             "item_count": 1,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|frog_atoll"
             ]
           },
           {
-            "name": "Ruined Atoll - Small Frogs",
+            "name": "Small Frog",
             "item_count": 1,
             "access_rules": [
               "@Ruined Atoll,$enemy_access|frog_small"
             ]
           },
           {
-            "name": "Ruined Atoll Lower Entry Area - Plovers",
+            "name": "Lower Entry Area - Plover",
             "item_count": 1,
             "access_rules": [
               "@Ruined Atoll Lower Entry Area,$enemy_access|plover"
@@ -1158,49 +1158,49 @@
         ],
         "sections": [
           {
-            "name": "Frog Stairs Lower - Small Frogs",
+            "name": "Frog Stairs Lower - Small Frog",
             "item_count": 1,
             "access_rules": [
               "@Frog Stairs Lower,$enemy_access|frog_small"
             ]
           },
           {
-            "name": "Frog Stairs Upper - Spear Frogs",
+            "name": "Frog Stairs Upper - Spear Frog",
             "item_count": 1,
             "access_rules": [
               "@Frog Stairs Upper,$enemy_access|frog_spear"
             ]
           },
           {
-            "name": "Frog's Domain Back - Autobolts (Gap)",
+            "name": "Back - Autobolt (Gap)",
             "item_count": 1,
             "access_rules": [
               "@Frog's Domain Back,$enemy_access|autobolt_gap"
             ]
           },
           {
-            "name": "Frog's Domain Main - Baby Slorms",
+            "name": "Main - Baby Slorms",
             "item_count": 17,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|baby_slorm"
             ]
           },
           {
-            "name": "Frog's Domain Main - Frogs",
+            "name": "Main - Frogs",
             "item_count": 5,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|frog"
             ]
           },
           {
-            "name": "Frog's Domain Main - Small Frogs",
+            "name": "Main - Small Frogs",
             "item_count": 17,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|frog_small"
             ]
           },
           {
-            "name": "Frog's Domain Main - Small Frogs (Secret) [Extra]",
+            "name": "Main - Small Frog (Secret) [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|frog_secret"
@@ -1208,7 +1208,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Frog's Domain Main - Small Frogs [Extra]",
+            "name": "Main - Small Frogs [Extra]",
             "item_count": 5,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|frog_small"
@@ -1216,21 +1216,21 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Frog's Domain Main - Spear Frogs",
+            "name": "Main - Spear Frogs",
             "item_count": 2,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|frog_spear"
             ]
           },
           {
-            "name": "Frog's Domain Main - Wizard Custodians",
+            "name": "Main - Wizard Custodian",
             "item_count": 1,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|custodian"
             ]
           },
           {
-            "name": "Frog's Domain Main - Wizard Custodians [Extra]",
+            "name": "Main - Wizard Custodian [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Frog's Domain Main,$enemy_access|custodian"
@@ -1257,14 +1257,14 @@
         ],
         "sections": [
           {
-            "name": "Library Hall - Administrators (Coffee Table)",
+            "name": "Hall - Administrator (Coffee Table)",
             "item_count": 1,
             "access_rules": [
               "@Library Hall,$enemy_access|administrator_coffee"
             ]
           },
           {
-            "name": "Library Hall - Beefboys",
+            "name": "Hall - Beefboys",
             "item_count": 2,
             "access_rules": [
               "@Library Hall,$enemy_access|beefboy"
@@ -1297,14 +1297,14 @@
             ]
           },
           {
-            "name": "Even Lower Quarry - Scavengers (Sniper)",
+            "name": "Even Lower Quarry - Scavenger (Sniper)",
             "item_count": 1,
             "access_rules": [
               "@Even Lower Quarry,$enemy_access|scavenger_sniper"
             ]
           },
           {
-            "name": "Even Lower Quarry - Support Scavengers",
+            "name": "Even Lower Quarry - Support Scavenger",
             "item_count": 1,
             "access_rules": [
               "@Even Lower Quarry,$enemy_access|scavenger_support"
@@ -1339,7 +1339,7 @@
             ]
           },
           {
-            "name": "Monastery Back - Zombie Foxes [Extra]",
+            "name": "Monastery Back - Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Monastery Back,$enemy_access|fox_enemy_zombie"
@@ -1369,21 +1369,21 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Quarry - Miner Scavengers",
+            "name": "Miner Scavengers",
             "item_count": 7,
             "access_rules": [
               "@Quarry,$enemy_access|scavenger_miner"
             ]
           },
           {
-            "name": "Quarry - Scavengers",
+            "name": "Scavengers",
             "item_count": 7,
             "access_rules": [
               "@Quarry,$enemy_access|scavenger"
             ]
           },
           {
-            "name": "Quarry - Support Scavengers",
+            "name": "Support Scavengers",
             "item_count": 5,
             "access_rules": [
               "@Quarry,$enemy_access|scavenger_support"
@@ -1409,56 +1409,56 @@
         ],
         "sections": [
           {
-            "name": "Rooted Ziggurat Lower Front - Administrators",
+            "name": "Lower Front - Administrators",
             "item_count": 4,
             "access_rules": [
               "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|administrator"
             ]
           },
           {
-            "name": "Rooted Ziggurat Lower Front - Autobolts",
+            "name": "Lower Front - Autobolts",
             "item_count": 4,
             "access_rules": [
               "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|autobolt"
             ]
           },
           {
-            "name": "Rooted Ziggurat Lower Front - Autobolts (Gap)",
+            "name": "Lower Front - Autobolts (Gap)",
             "item_count": 2,
             "access_rules": [
               "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|autobolt_gap"
             ]
           },
           {
-            "name": "Rooted Ziggurat Lower Front - Voidlings",
+            "name": "Lower Front - Voidlings",
             "item_count": 10,
             "access_rules": [
               "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|voidling"
             ]
           },
           {
-            "name": "Rooted Ziggurat Upper Front - Administrators",
+            "name": "Upper Front - Administrators",
             "item_count": 2,
             "access_rules": [
               "@Rooted Ziggurat Upper Front,$enemy_access|administrator"
             ]
           },
           {
-            "name": "Rooted Ziggurat Upper Front - Autobolts",
+            "name": "Upper Front - Autobolts",
             "item_count": 4,
             "access_rules": [
               "@Rooted Ziggurat Upper Front,$enemy_access|autobolt"
             ]
           },
           {
-            "name": "Rooted Ziggurat Upper Front - Autobolts (Gap)",
+            "name": "Upper Front - Autobolt (Gap)",
             "item_count": 1,
             "access_rules": [
               "@Rooted Ziggurat Upper Front,$enemy_access|autobolt_gap"
             ]
           },
           {
-            "name": "Rooted Ziggurat Upper Front - Fairies",
+            "name": "Upper Front - Fairies",
             "item_count": 10,
             "access_rules": [
               "@Rooted Ziggurat Upper Front,$enemy_access|fairy"
@@ -1484,49 +1484,49 @@
         ],
         "sections": [
           {
-            "name": "Swamp Front - Big Fleemers",
+            "name": "Front - Big Fleemer",
             "item_count": 1,
             "access_rules": [
               "@Swamp Front,$enemy_access|fleemer_big"
             ]
           },
           {
-            "name": "Swamp Front - Fleemer Fencers",
+            "name": "Front - Fleemer Fencer",
             "item_count": 1,
             "access_rules": [
               "@Swamp Front,$enemy_access|fleemer_fencer"
             ]
           },
           {
-            "name": "Swamp Front - Fleemers",
+            "name": "Front - Fleemers",
             "item_count": 10,
             "access_rules": [
               "@Swamp Front,$enemy_access|fleemer"
             ]
           },
           {
-            "name": "Swamp Front - Gunslingers",
+            "name": "Front - Gunslingers",
             "item_count": 3,
             "access_rules": [
               "@Swamp Front,$enemy_access|gunslinger"
             ]
           },
           {
-            "name": "Swamp Front - Lost Echoes",
+            "name": "Front - Lost Echoes",
             "item_count": 2,
             "access_rules": [
               "@Swamp Front,$enemy_access|lost_echo"
             ]
           },
           {
-            "name": "Swamp Front - Tentacles",
+            "name": "Front - Tentacles",
             "item_count": 3,
             "access_rules": [
               "@Swamp Front,$enemy_access|tentacle"
             ]
           },
           {
-            "name": "Swamp Mid - Beefboys [Extra]",
+            "name": "Mid - Beefboys [Extra]",
             "item_count": 2,
             "access_rules": [
               "@Swamp Mid,$enemy_access|beefboy"
@@ -1534,21 +1534,21 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Swamp Mid - Fleemer Fencers",
+            "name": "Mid - Fleemer Fencers",
             "item_count": 3,
             "access_rules": [
               "@Swamp Mid,$enemy_access|fleemer_fencer"
             ]
           },
           {
-            "name": "Swamp Mid - Gunslingers",
+            "name": "Mid - Gunslingers",
             "item_count": 2,
             "access_rules": [
               "@Swamp Mid,$enemy_access|gunslinger"
             ]
           },
           {
-            "name": "Swamp Mid - Hushers [Extra]",
+            "name": "Mid - Hushers [Extra]",
             "item_count": 3,
             "access_rules": [
               "@Swamp Mid,$enemy_access|husher"
@@ -1556,7 +1556,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Swamp Mid - Lost Echoes",
+            "name": "Mid - Lost Echoes",
             "item_count": 6,
             "access_rules": [
               "@Swamp Mid,$enemy_access|lost_echo"
@@ -1582,77 +1582,77 @@
         ],
         "sections": [
           {
-            "name": "Cathedral Entry - Laser Traps",
+            "name": "Entry - Laser Traps",
             "item_count": 2,
             "access_rules": [
               "@Cathedral Entry,$enemy_access|laser_trap"
             ]
           },
           {
-            "name": "Cathedral Entry - Zombie Foxes",
+            "name": "Entry - Zombie Foxes",
             "item_count": 5,
             "access_rules": [
               "@Cathedral Entry,$enemy_access|fox_enemy_zombie"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Fairies (Gauntlet)",
+            "name": "Gauntlet - Fairies (Gauntlet)",
             "item_count": 17,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|fairy_gauntlet"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Fleemers (Gauntlet)",
+            "name": "Gauntlet - Fleemers (Gauntlet)",
             "item_count": 15,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|fleemer_gauntlet"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Garden Knights",
+            "name": "Gauntlet - Garden Knights",
             "item_count": 2,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|garden_knight"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Guard Captains",
+            "name": "Gauntlet - Guard Captain",
             "item_count": 1,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|guard_captain"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Rudelings",
+            "name": "Gauntlet - Rudelings",
             "item_count": 3,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|rudeling"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Shield Rudelings",
+            "name": "Gauntlet - Shield Rudelings",
             "item_count": 3,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|rudeling_shield"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Small Frogs",
+            "name": "Gauntlet - Small Frogs",
             "item_count": 9,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|frog_small"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Spear Frogs",
+            "name": "Gauntlet - Spear Frogs",
             "item_count": 2,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|frog_spear"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Strong Zombie Foxes [Extra]",
+            "name": "Gauntlet - Strong Zombie Fox [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|fox_enemy"
@@ -1660,14 +1660,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Cathedral Gauntlet - Wizard Custodians",
+            "name": "Gauntlet - Wizard Custodians",
             "item_count": 5,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|custodian"
             ]
           },
           {
-            "name": "Cathedral Gauntlet - Zombie Foxes [Extra]",
+            "name": "Gauntlet - Zombie Foxes [Extra]",
             "item_count": 2,
             "access_rules": [
               "@Cathedral Gauntlet,$enemy_access|fox_enemy_zombie"
@@ -1675,7 +1675,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Cathedral Main - Beefboys [Extra]",
+            "name": "Main - Beefboy [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Cathedral Main,$enemy_access|beefboy"
@@ -1683,14 +1683,14 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Cathedral Main - Hushers",
+            "name": "Main - Hushers",
             "item_count": 5,
             "access_rules": [
               "@Cathedral Main,$enemy_access|husher"
             ]
           },
           {
-            "name": "Cathedral Main - Laser Traps (Back Hallway)",
+            "name": "Main - Laser Trap (Back Hallway)",
             "item_count": 1,
             "access_rules": [
               "@Cathedral Main,$enemy_access|laser_cathedral_orb",
@@ -1698,21 +1698,21 @@
             ]
           },
           {
-            "name": "Cathedral Main - Laser Traps",
+            "name": "Main - Laser Traps",
             "item_count": 4,
             "access_rules": [
               "@Cathedral Main,$enemy_access|laser_trap"
             ]
           },
           {
-            "name": "Cathedral Main - Strong Zombie Foxes",
+            "name": "Main - Strong Zombie Foxes",
             "item_count": 3,
             "access_rules": [
               "@Cathedral Main,$enemy_access|fox_enemy"
             ]
           },
           {
-            "name": "Cathedral Main - Voidtouched [Extra]",
+            "name": "Main - Voidtouched [Extra]",
             "item_count": 1,
             "access_rules": [
               "@Cathedral Main,$enemy_equipment_access|voidtouched,[$enemy_access|voidtouched]"
@@ -1720,7 +1720,7 @@
             "visibility_rules": "enemy_drops_extra"
           },
           {
-            "name": "Cathedral Main - Zombie Foxes",
+            "name": "Main - Zombie Foxes",
             "item_count": 9,
             "access_rules": [
               "@Cathedral Main,$enemy_access|fox_enemy_zombie"
