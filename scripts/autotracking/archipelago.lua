@@ -140,7 +140,7 @@ function onClear(slot_data)
             print(string.format("onClear: could not find enemy soul item %s", item_code))
         end
     end
-    -- for combat calculator
+    -- reset combat calculation variables for sword and effigies
     for _, counter_code in ipairs({"sword_upgrade_count", "effigy_count"}) do
         local counter = Tracker:FindObjectForCode(counter_code)
         if counter then
