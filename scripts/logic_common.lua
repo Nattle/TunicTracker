@@ -3,9 +3,27 @@ function apLayoutChange()
     local progSword = Tracker:FindObjectForCode("progswordSetting")
     if (string.find(Tracker.ActiveVariantUID, "standard") or string.find(Tracker.ActiveVariantUID, "var_itemsonly") or string.find(Tracker.ActiveVariantUID, "var_minimal")) then
         if progSword.Active then
+            -- Stick/Sword stay loaded when switching layouts, and must be cleared when switching to Sword Progression.
+            local stick = Tracker:FindObjectForCode("stick")
+            local sword = Tracker:FindObjectForCode("sword")
+            if stick then
+                stick.Active = false
+            end
+            if sword then
+                sword.CurrentStage = 0
+                sword.Active = false
+            end
+
             Tracker:AddLayouts("layouts/itemspop_progsword.json")
             Tracker:AddLayouts("layouts/broadcastpop_progsword.json")
         else
+            -- Same thing but other direciton.
+            local progressiveSword = Tracker:FindObjectForCode("progsword")
+            if progressiveSword then
+                progressiveSword.CurrentStage = 0
+                progressiveSword.Active = false
+            end
+
             Tracker:AddLayouts("layouts/itemspop.json")
             Tracker:AddLayouts("layouts/standard_broadcastpop.json")
         end
