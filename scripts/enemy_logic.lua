@@ -17,10 +17,12 @@ local function has_soul(soul)
     return code ~= nil and has(code)
 end
 
+-- off setting will waive all soul requirements
 function enemy_soul_access(soul)
     return has_soul(soul)
 end
 
+-- PopTracker rule is an AND expression, so we do OR here in Lua.
 function enemy_any_soul_access(...)
     for _, soul in ipairs({...}) do
         if has_soul(soul) then
@@ -137,6 +139,7 @@ function enemy_equipment_access(signature)
     if not access or not has_soul(access.soul) then return false end
 
     if access.rule == "voidtouched" then
+        -- equipment rule for Soul and Sword, missing upgrades or laurels will see yellow
         return has_sword()
     elseif access.rule == "siege_engine" and combat_logic_mode() >= 1 then
         return has_combat_equipment("siege_engine")
@@ -249,6 +252,7 @@ function heir_combat_equipment_access()
     return has_combat_equipment("heir")
 end
 
+-- route helpers
 function west_garden_bush_access()
     return has_soul("rudelings") or has_soul("chompignom")
         or has_sword() or has_wand() or has("dash") or has("gun")

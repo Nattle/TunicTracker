@@ -92,6 +92,8 @@
               {
                 "name": "Enemy Drop",
                 "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
                 "access_rules": [
                   "$enemy_access|garden_knight"
                 ],

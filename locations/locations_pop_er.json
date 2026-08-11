@@ -3095,6 +3095,8 @@
               {
                 "name": "Enemy Drop",
                 "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
                 "access_rules": [
                   "$enemy_access|guard_captain"
                 ],
@@ -5654,6 +5656,8 @@
               {
                 "name": "Enemy Drop",
                 "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
                 "access_rules": [
                   "$enemy_equipment_access|librarian,[$enemy_access|librarian]"
                 ],
@@ -6380,6 +6384,8 @@
               {
                 "name": "Enemy Drop",
                 "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
                 "access_rules": [
                   "$enemy_equipment_access|siege_engine,[$enemy_access|siege_engine]"
                 ],
@@ -7455,6 +7461,8 @@
               {
                 "name": "Enemy Drop",
                 "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
                 "access_rules": [
                   "@Enemy Logic - Rooted Ziggurat Lower Back,$enemy_equipment_access|boss_scavenger,[$enemy_access|boss_scavenger]"
                 ],

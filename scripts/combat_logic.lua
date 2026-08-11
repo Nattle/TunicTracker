@@ -276,6 +276,9 @@ local function has_required_stats(data, state)
         money_required = money_required + cheapest
     end
 
+    -- Assume a player is not going to track their money manually.
+    -- If there is no SLOT_DATA (no Archipelago connection), then assume the player has bought the stat upgrade they've incremented.
+    if SLOT_DATA == nil then return true end
     return get_money_count(state) >= money_required
 end
 
