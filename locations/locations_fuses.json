@@ -595,7 +595,7 @@
       {
         "name": "Rooted Ziggurat Lower Miniboss Platform",
         "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform"
+          "@Rooted Ziggurat Lower Miniboss Platform"
         ],
         "children": [
           {

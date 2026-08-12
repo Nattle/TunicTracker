@@ -79,7 +79,7 @@
               {
                 "name": "If you seek to increase your power...",
                 "access_rules": [
-                  "$combat_logic_equipment|before_well|none|laurels,[$combat_logic_on|before_well|none|laurels]"
+                  "@Overworld Well Entry Area"
                 ],
                 "item_count": 1
               }
@@ -450,9 +450,7 @@
               {
                 "name": "Deep between the Trees",
                 "access_rules": [
-                  "$combat_logic_equipment|before_well,[$combat_logic_on|before_well]",
-                  "@Overworld Beach,dash",
-                  "@Overworld Beach,$has_ladder|ladders_in_overworld_town"
+                  "@Overworld Tunnel to Beach"
                 ],
                 "item_count": 1
               }
@@ -933,8 +931,8 @@
           "@Fortress Exterior near cave,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_to_beneath_the_vault",
           "@Overworld Special Shop Entry,dash",
           "@Overworld at Patrol Cave,dash",
-          "@LS Elev 3,[ladder_storage_med],vis_ladder_storage_med",
-          "@LS Elev 5,[ladder_storage_med],vis_ladder_storage_med"
+          "@LS Elev 3,[ladder_storage_med],vis_ladder_storage_med,$enemy_any_soul_access|blobs|hedgehogs",
+          "@LS Elev 5,[ladder_storage_med],vis_ladder_storage_med,$enemy_any_soul_access|blobs|hedgehogs"
         ],
         "children": [
           {
@@ -1063,7 +1061,7 @@
           "@Overworld after Temple Rafters,$has_ladder|ladder_near_temple_rafters",
           "@Overworld above Patrol Cave,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
           "@Overworld after Temple Rafters,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
-          "@LS Elev 7,[ladder_storage_med],vis_ladder_storage_med"
+          "@LS Elev 7,[ladder_storage_med],vis_ladder_storage_med,$enemy_any_soul_access|rudelings|phrend"
         ],
         "children": [
           {
@@ -1185,7 +1183,7 @@
           "[glitches]",
           "$overworld_after_envoy_access",
           "@Overworld Quarry Entry,$has_ladder|ladder_to_quarry",
-          "@LS Elev 3,[ladder_storage_med],vis_ladder_storage_med"
+          "@LS Elev 3,[ladder_storage_med],vis_ladder_storage_med,$enemy_soul_access|envoy"
         ],
         "children": [
           {
@@ -1229,7 +1227,7 @@
           "orb",
           "@Overworld at Patrol Cave,$has_ladder|ladders_near_patrol_cave",
           "@Upper Overworld,$has_ladder|ladders_near_patrol_cave",
-          "@LS Elev 6,[ladder_storage_med],vis_ladder_storage_med",
+          "@LS Elev 6,[ladder_storage_med],vis_ladder_storage_med,$enemy_soul_access|hedgehogs",
           "@Overworld at Patrol Cave,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
           "@East Overworld,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff"
         ],
@@ -1266,7 +1264,8 @@
         "access_rules": [
           "@Overworld Beach,dash",
           "@West Garden Laurels Exit Region",
-          "@West Garden,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls"
+          "@LS Elev 0",
+          "@West Garden after Terry,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls"
         ],
         "children": []
       },
@@ -1275,7 +1274,7 @@
         "access_rules": [
           "@Overworld Belltower,$has_ladder|ladders_to_west_bell",
           "@West Garden after Boss",
-          "@West Garden,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
+          "@West Garden before Boss,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
           "@Overworld Belltower,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb"
         ],
         "children": []
@@ -1315,9 +1314,26 @@
         ]
       },
       {
+        "name": "Overworld Tunnel to Beach",
+        "access_rules": [
+          "@Overworld,$combat_logic_equipment|before_well,[$combat_logic_on|before_well]",
+          "@Overworld Beach,dash",
+          "@Overworld Beach,$has_ladder|ladders_in_overworld_town"
+        ],
+        "children": []
+      },
+      {
+        "name": "Overworld Well Entry Area",
+        "access_rules": [
+          "@Overworld,$combat_logic_equipment|before_well|none|laurels,[$combat_logic_on|before_well|none|laurels]",
+          "@Overworld Well Ladder,$has_ladder|ladders_in_well"
+        ],
+        "children": []
+      },
+      {
         "name": "Overworld Well Ladder",
         "access_rules": [
-          "$has_ladder|ladders_in_well,$combat_logic_equipment|before_well|none|laurels,[$combat_logic_on|before_well|none|laurels]",
+          "@Overworld Well Entry Area,$has_ladder|ladders_in_well",
           "@Beneath the Well Ladder Exit"
         ],
         "children": []
@@ -1332,8 +1348,9 @@
           "@Maze Cave",
           "@Overworld to Atoll Upper,$has_ladder|ladder_to_ruined_atoll",
           "@Ruined Atoll Lower Entry Area",
+          "@Overworld West Garden Laurels Entry,dash",
           "@Ruined Atoll,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
-          "@LS Elev 0,[ladder_storage_med],vis_ladder_storage_med"
+          "@LS Elev 0,[ladder_storage_med],vis_ladder_storage_med,$enemy_soul_access|autobolt"
         ],
         "children": [
           {
@@ -1636,8 +1653,6 @@
         "name": "Overworld Fountain Cross Door",
         "access_rules": [
           "cross",
-          "@Fountain Cross Room",
-          "@LS Elev 2,[ladder_storage_hard],vis_ladder_storage_hard",
           "[ice_grapple_med],vis_ice_grapple_med,dagger,orb"
         ],
         "children": []
@@ -1655,8 +1670,7 @@
       {
         "name": "Overworld Town Portal",
         "access_rules": [
-          "pray,$combat_logic_equipment|before_well,[$combat_logic_on|before_well]",
-          "@Far Shore"
+          "pray,$combat_logic_equipment|before_well,[$combat_logic_on|before_well]"
         ],
         "children": []
       },
@@ -1827,7 +1841,10 @@
       },
       {
         "name": "Windmill",
-        "access_rules": null,
+        "access_rules": [
+          "@Overworld",
+          "@Shop 1"
+        ],
         "children": []
       },
       {
@@ -2236,10 +2253,17 @@
         ]
       },
       {
-        "name": "Cube Cave",
+        "name": "Cube Cave Entrance Region",
         "access_rules": [
 	      "@Overworld,gun",
 	      "@Overworld,sword,@Shop,$enemy_soul_access|rudelings"
+	    ],
+        "children": []
+      },
+      {
+        "name": "Cube Cave",
+        "access_rules": [
+	      "@Cube Cave Entrance Region"
 	    ],
         "children": [
           {
@@ -2321,7 +2345,8 @@
       {
         "name": "Fountain Cross Room",
         "access_rules": [
-          "@Overworld Fountain Cross Door"
+          "@Overworld Fountain Cross Door",
+          "@LS Elev 2,[ladder_storage_hard],vis_ladder_storage_hard"
         ],
         "children": [
           {
@@ -2497,7 +2522,7 @@
         "access_rules": [
           "@East Overworld",
           "@Forest Belltower Upper",
-          "@Fortress Exterior from East Forest,$fortress_to_forest_belltower_access",
+          "@Forest Belltower Main behind bushes,$fortress_to_forest_belltower_access",
           "@LS Elev 5"
         ],
         "children": [
@@ -2540,6 +2565,14 @@
         ]
       },
       {
+        "name": "Forest Belltower Main behind bushes",
+        "access_rules": [
+          "@Forest Belltower Main,$forest_belltower_to_fortress_access",
+          "@Fortress Exterior from East Forest"
+        ],
+        "children": []
+      },
+      {
         "name": "Forest Belltower Lower",
         "access_rules": [
           "@East Forest",
@@ -2573,10 +2606,10 @@
           "@East Forest Dance Fox Spot,dash",
           "@East Forest Portal",
           "@Forest Grave Path Main",
-          "@Forest Grave Path Upper",
+          "@East Forest above Guard House 2,$east_forest_below_guard_house_access",
           "@Guard House 1 East",
           "@Guard House 1 West",
-          "@Guard House 2 Upper",
+          "@Guard House 2 Upper before bushes",
           "@Lower Forest,$has_ladder|ladders_to_lower_forest",
           "@East Forest Dance Fox Spot,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
           "@Forest Grave Path Main,[ladder_storage_medium],$can_ls"
@@ -2736,6 +2769,15 @@
             ]
           }
         ]
+      },
+      {
+        "name": "East Forest above Guard House 2",
+        "access_rules": [
+          "@East Forest,$east_forest_above_guard_house_access",
+          "@East Forest,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_any_soul_access|rudelings|envoy",
+          "@Forest Grave Path Upper"
+        ],
+        "children": []
       },
       {
         "name": "East Forest Dance Fox Spot",
@@ -2997,9 +3039,17 @@
         "children": []
       },
       {
-        "name": "Guard House 2 Upper",
+        "name": "Guard House 2 Upper before bushes",
         "access_rules": [
-          "@East Forest,$can_get_past_bushes_access",
+          "@East Forest",
+          "@Guard House 2 Upper after bushes,$can_get_past_bushes_access"
+        ],
+        "children": []
+      },
+      {
+        "name": "Guard House 2 Upper after bushes",
+        "access_rules": [
+          "@Guard House 2 Upper before bushes,$can_get_past_bushes_access",
           "@Guard House 2 Lower,$has_ladder|ladders_to_lower_forest"
         ],
         "children": [
@@ -3031,7 +3081,7 @@
       {
         "name": "Guard House 2 Lower",
         "access_rules": [
-          "@Guard House 2 Upper,$has_ladder|ladders_to_lower_forest",
+          "@Guard House 2 Upper after bushes,$has_ladder|ladders_to_lower_forest",
           "@Lower Forest"
         ],
         "children": [
@@ -3171,7 +3221,8 @@
       {
         "name": "Forest Grave Path Upper",
         "access_rules": [
-          "@East Forest,$east_forest_above_guard_house_access",
+          "@East Forest above Guard House 2",
+          "@East Forest,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
           "@Forest Grave Path Main,dash",
           "@Forest Grave Path Main,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,staff,icerod"
         ],
@@ -4352,7 +4403,8 @@
       {
         "name": "Magic Dagger House",
         "access_rules": [
-          "@West Garden at Dagger House"
+          "@West Garden at Dagger House",
+          "@West Garden after Terry,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls"
         ],
         "children": [
           {
@@ -4404,16 +4456,24 @@
       {
         "name": "West Garden Portal",
         "access_rules": [
-          "@Far Shore to West Garden Region",
-          "@West Garden Portal Item,dash,pray,$not_fs",
-          "@West Garden Portal Item,dash,pray,$is_fs,west_garden_fuse"
+          "@West Garden by Portal,pray,@Activate West Garden Fuse,$not_fs",
+          "@West Garden by Portal,pray,$is_fs,west_garden_fuse"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden by Portal",
+        "access_rules": [
+          "@West Garden Portal",
+          "@West Garden Portal Item,dash",
+          "@Far Shore to West Garden Region"
         ],
         "children": []
       },
       {
         "name": "West Garden Portal Item",
         "access_rules": [
-          "@West Garden Portal,dash",
+          "@West Garden by Portal,dash",
           "@West Garden at Dagger House,[ice_grapple_med],vis_ice_grapple_med,dagger,icerod,orb,staff,$west_garden_ice_soul_access"
         ],
         "children": [
@@ -4435,7 +4495,9 @@
             "sections": [
               {
                 "name": "Come from the Far Shore",
-                "access_rules": [],
+                "access_rules": [
+                  "dash"
+                ],
                 "item_count": 1
               }
             ]
@@ -4458,7 +4520,7 @@
           "@West Garden before Boss,dash",
           "@West Garden before Boss,$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]",
           "@LS Elev 2",
-          "@West Garden,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
+          "@West Garden before Boss,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
           "@West Garden before Boss,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|garden_knight"
         ],
         "children": [
@@ -4506,7 +4568,8 @@
           "@Ruined Atoll Lower Entry Area,orb",
           "@Ruined Atoll Portal",
           "@Ruined Atoll Statue",
-          "@LS Elev 1"
+          "@Library Exterior Tree Region",
+          "@Shop 5"
         ],
         "children": [
           {
@@ -4940,7 +5003,8 @@
         "access_rules": [
           "@Frog Stairs Eye Exit",
           "@Ruined Atoll,$has_ladder|ladders_to_frogs_domain",
-          "@Ruined Atoll,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
+          "@Ruined Atoll,[ladder_storage_med],vis_ladder_storage_med,$can_ls",
+          "@Frog's Domain Front,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_to_frogs_domain"
         ],
         "children": []
       },
@@ -4955,7 +5019,6 @@
       {
         "name": "Ruined Atoll Statue",
         "access_rules": [
-          "@Library Exterior Tree Region",
           "@Ruined Atoll,$ruined_atoll_statue_equipment_access,[$ruined_atoll_statue_access]"
         ],
         "children": []
@@ -4978,8 +5041,7 @@
           "@Frog Stairs Eye Exit,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,staff,icerod",
           "@Ruined Atoll,[ladder_storage_med],vis_ladder_storage_med,$can_ls",
           "@Ruined Atoll,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladders_in_south_atoll",
-          "@Ruined Atoll,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,key:2",
-          "@Ruined Atoll,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,[ice_grapple_med],vis_ice_grapple_med,dagger,orb"
+          "@Ruined Atoll,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,key:2"
         ],
         "children": []
       },
@@ -4988,8 +5050,7 @@
         "access_rules": [
           "@Frog Stairs Upper,$has_ladder|ladders_to_frogs_domain",
           "@Frog Stairs to Frog's Domain,$has_ladder|ladders_to_frogs_domain",
-          "@Frog's Domain Back",
-          "@Frog's Domain,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_to_frogs_domain"
+          "@Frog's Domain Back"
         ],
         "children": []
       },
@@ -5011,7 +5072,7 @@
       {
         "name": "Frog's Domain",
         "access_rules": [
-          "@Frog's Domain Entry,$has_ladder|ladders_to_frogs_domain"
+          "@Frog's Domain Front"
         ],
         "children": [
           {
@@ -5273,7 +5334,7 @@
         "access_rules": [
           "@Frog Stairs Lower",
           "@Frog's Domain Main,orb",
-          "@Frog's Domain Main,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_to_frogs_domain"
+          "@Frog's Domain Front,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_to_frogs_domain,$enemy_soul_access|frogs"
         ],
         "children": [
           {
@@ -5307,8 +5368,16 @@
       {
         "name": "Library Exterior Tree Region",
         "access_rules": [
-          "@Library Exterior Ladder Region,dash,$has_ladder|ladders_in_library,pray",
-          "@Library Exterior Ladder Region,$has_ladder|ladders_in_library,orb,pray",
+          "@Library Exterior by Tree,pray"
+        ],
+        "children": []
+      },
+      {
+        "name": "Library Exterior by Tree",
+        "access_rules": [
+          "@Library Exterior Tree Region",
+          "@Library Exterior Ladder Region,orb",
+          "@Library Exterior Ladder Region,dash,$has_ladder|ladders_in_library",
           "@Ruined Atoll Statue"
         ],
         "children": []
@@ -5316,8 +5385,8 @@
       {
         "name": "Library Exterior Ladder Region",
         "access_rules": [
-          "@Library Exterior Tree Region,dash,$has_ladder|ladders_in_library",
-          "@Library Exterior Tree Region,$has_ladder|ladders_in_library,orb",
+          "@Library Exterior by Tree,dash,$has_ladder|ladders_in_library",
+          "@Library Exterior by Tree,$has_ladder|ladders_in_library,orb",
           "@Library Hall Bookshelf"
         ],
         "children": []
@@ -5416,8 +5485,8 @@
           "@Library Lab Lower,dash,$has_ladder|ladders_in_library",
           "@Library Lab Lower,$has_ladder|ladders_in_library,orb",
           "@Library Lab to Librarian,$has_ladder|ladders_in_library",
-          "@Library Portal,dash",
-          "@Library Portal,$has_ladder|ladders_in_library"
+          "@Library Lab on Portal Pad,dash",
+          "@Library Lab on Portal Pad,$has_ladder|ladders_in_library"
         ],
         "children": [
           {
@@ -5607,11 +5676,19 @@
         "children": []
       },
       {
+        "name": "Library Lab on Portal Pad",
+        "access_rules": [
+          "@Library Lab,$has_ladder|ladders_in_library",
+          "@Library Portal",
+          "@Far Shore to Library Region"
+        ],
+        "children": []
+      },
+      {
         "name": "Library Portal",
         "access_rules": [
-          "@Far Shore to Library Region",
-          "@Library Lab,$has_ladder|ladders_in_library,pray,$not_fs",
-          "@Library Lab,$has_ladder|ladders_in_library,pray,$is_fs,library_lab_fuse"
+          "@Library Lab on Portal Pad,pray,@Activate Library Fuse,$not_fs",
+          "@Library Lab on Portal Pad,pray,$is_fs,library_lab_fuse"
         ],
         "children": []
       },
@@ -5670,7 +5747,7 @@
       {
         "name": "Fortress Exterior from East Forest",
         "access_rules": [
-          "@Forest Belltower Main,$forest_belltower_to_fortress_access",
+          "@Forest Belltower Main behind bushes",
           "@Fortress Exterior from Overworld,dash"
         ],
         "children": [
@@ -5778,8 +5855,7 @@
           "@Fortress Exterior from Overworld,dash",
           "@Fortress Exterior from Overworld,pray,$not_fs",
           "@Fortress Exterior from Overworld,pray,$is_fs,fortress_exterior_fuse_1",
-          "@Fortress Exterior from Overworld,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
-          "@Fortress Exterior from East Forest,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls"
+          "@Shop 3"
         ],
         "children": [
           {
@@ -5875,12 +5951,12 @@
         "name": "Beneath the Vault Entry Spot",
         "access_rules": [
           "@Beneath the Vault Ladder Exit,$has_ladder|ladder_to_beneath_the_vault",
-          "@Beneath the Vault Front"
+          "@Beneath the Vault Main,$beneath_the_vault_main_to_entry_access"
         ],
         "children": []
       },
       {
-        "name": "Beneath the Vault Front",
+        "name": "Beneath the Vault Main",
         "access_rules": [
           "@Beneath the Vault Back,[$has_lantern],$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
           "@Beneath the Vault Entry Spot,[$has_lantern],stick,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]",
@@ -5921,7 +5997,7 @@
       {
         "name": "Beneath the Vault Back",
         "access_rules": [
-          "@Beneath the Vault Front,[$has_lantern]",
+          "@Beneath the Vault Main",
           "@Eastern Vault Fortress"
         ],
         "children": [
@@ -5948,6 +6024,8 @@
                 "name": "Chest",
                 "access_rules": [
                   "dash",
+                  "dagger",
+                  "gun",
                   "staff",
                   "stick",
                   "sword"
@@ -6020,7 +6098,12 @@
             "sections": [
               {
                 "name": "Lose the Lure or take 2 Damage",
-                "access_rules": null,
+                "access_rules": [
+                  "$enemy_soul_access|custodians",
+                  "pot_breaker",
+                  "orb",
+                  "dash"
+                ],
                 "item_count": 1
               }
             ]
@@ -6038,7 +6121,8 @@
           "@Eastern Vault Fortress Gold Door,$is_fs,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,fortress_door_left_fuse,fortress_courtyard_upper_fuse,fortress_courtyard_fuse,fortress_door_right_fuse",
           "@Fortress Exterior from Overworld,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
           "@Fortress Exterior from East Forest,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
-          "@Fortress Exterior near cave,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_to_beneath_the_vault"
+          "@Fortress Exterior near cave,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_to_beneath_the_vault",
+          "@Shop 4"
         ],
         "children": [
           {
@@ -6162,7 +6246,7 @@
         "name": "Eastern Vault Fortress Gold Door",
         "access_rules": [
           "@Eastern Vault Fortress,[ice_grapple_med],vis_ice_grapple_med,dagger,orb",
-          "@Eastern Vault Fortress,pray,$not_fs,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]",
+          "@Eastern Vault Fortress,@Activate Eastern Vault West Fuses,@Activate Eastern Vault East Fuse,$not_fs",
           "@Eastern Vault Fortress,$is_fs,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,fortress_door_left_fuse,fortress_courtyard_upper_fuse,fortress_courtyard_fuse,fortress_door_right_fuse",
           "@Fortress Arena"
         ],
@@ -6420,7 +6504,7 @@
         "name": "Fortress Arena Portal",
         "access_rules": [
           "@Far Shore to Fortress Region",
-          "@Fortress Arena,pray,$not_fs",
+          "@Fortress Arena,pray,@Activate Eastern Vault West Fuses,$not_fs",
           "@Fortress Arena,pray,$is_fs,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,fortress_door_left_fuse"
         ],
         "children": []
@@ -6465,7 +6549,8 @@
         "access_rules": [
           "@Quarry",
           "@Quarry Connector",
-          "@Quarry Portal"
+          "@Quarry Portal",
+          "@Shop 6"
         ],
         "children": []
       },
@@ -6712,7 +6797,7 @@
         "name": "Quarry Portal",
         "access_rules": [
           "@Far Shore to Quarry Region",
-          "@Quarry Connector,orb,pray,@Quarry Entry,$not_fs",
+          "@Quarry Entry,pray,@Activate Quarry Fuse,$not_fs",
           "@Quarry Entry,pray,$is_fs,quarry_fuse_1,quarry_fuse_2"
         ],
         "children": []
@@ -7277,7 +7362,7 @@
               {
                 "name": "They are Dead",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Entry"
+                  "@Rooted Ziggurat Lower Entry"
                 ],
                 "item_count": 1
               }
@@ -7302,7 +7387,7 @@
               {
                 "name": "Use the Gun",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Entry"
+                  "@Rooted Ziggurat Lower Entry"
                 ],
                 "item_count": 1
               }
@@ -7327,7 +7412,7 @@
               {
                 "name": "Help",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Front"
+                  "@Rooted Ziggurat Lower Front"
                 ],
                 "item_count": 1
               }
@@ -7352,7 +7437,7 @@
               {
                 "name": "Oh god they're everywhere",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Front"
+                  "@Rooted Ziggurat Lower Front"
                 ],
                 "item_count": 1
               }
@@ -7377,7 +7462,7 @@
               {
                 "name": "Haircut Time!",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint"
+                  "@Rooted Ziggurat Lower Mid Checkpoint"
                 ],
                 "item_count": 1
               }
@@ -7402,7 +7487,7 @@
               {
                 "name": "Moment of Reprieve",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint"
+                  "@Rooted Ziggurat Lower Mid Checkpoint"
                 ],
                 "item_count": 1
               }
@@ -7427,8 +7512,8 @@
               {
                 "name": "Defeat those Mechs",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,pray,$not_fs,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
-                  "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse"
+                  "@Rooted Ziggurat Lower Miniboss Platform,pray,$not_fs,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
+                  "@Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse"
                 ],
                 "item_count": 1
               }
@@ -7453,7 +7538,7 @@
               {
                 "name": "Scavenger Queen",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Back,$boss_reward_equipment_access|boss_scavenger,[$boss_reward_access|boss_scavenger]"
+                  "@Rooted Ziggurat Lower Back,$boss_reward_equipment_access|boss_scavenger,[$boss_reward_access|boss_scavenger]"
                 ],
                 "item_count": 1,
                 "hosted_item": "scavboss"
@@ -7464,7 +7549,7 @@
                 "chest_unopened_img": "images/souls/enemy_soul.png",
                 "chest_opened_img": "images/souls/enemy_soul_grey.png",
                 "access_rules": [
-                  "@Enemy Logic - Rooted Ziggurat Lower Back,$enemy_equipment_access|boss_scavenger,[$enemy_access|boss_scavenger]"
+                  "@Rooted Ziggurat Lower Back,$enemy_equipment_access|boss_scavenger,[$enemy_access|boss_scavenger]"
                 ],
                 "item_count": 1
               }
@@ -7475,7 +7560,7 @@
       {
         "name": "Lower Quarry Zig Door",
         "access_rules": [
-          "@Even Lower Quarry Isolated Chest,@Quarry Connector,orb,pray,$not_fs",
+          "@Even Lower Quarry Isolated Chest,@Activate Quarry Fuse,$not_fs",
           "@Even Lower Quarry Isolated Chest,$is_fs,quarry_fuse_1,quarry_fuse_2",
           "@Rooted Ziggurat Entry",
           "@Even Lower Quarry Isolated Chest,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,$enemy_soul_access|scavengers"
@@ -7600,8 +7685,17 @@
       {
         "name": "Rooted Ziggurat Middle Bottom",
         "access_rules": [
-          "@Rooted Ziggurat Lower Front",
           "@Rooted Ziggurat Middle Top",
+          "@Rooted Ziggurat Lower Entry"
+        ],
+        "children": []
+      },
+      {
+        "name": "Rooted Ziggurat Lower Entry",
+        "access_rules": [
+          "@Rooted Ziggurat Middle Bottom",
+          "@Rooted Ziggurat Lower Front",
+          "@Rooted Ziggurat Lower Mid Checkpoint,dash",
           "@Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
         ],
         "children": []
@@ -7609,48 +7703,72 @@
       {
         "name": "Rooted Ziggurat Lower Front",
         "access_rules": [
-          "@Rooted Ziggurat Lower Back,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,pray,sword,$not_fs",
-          "@Rooted Ziggurat Lower Back,dash,pray,sword,$not_fs",
-          "@Rooted Ziggurat Lower Back,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,$is_fs,ziggurat_miniboss_fuse",
-          "@Rooted Ziggurat Lower Back,dash,$is_fs,ziggurat_miniboss_fuse",
-          "@Rooted Ziggurat Middle Bottom",
-          "@Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
+          "@Rooted Ziggurat Lower Entry,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]",
+          "@Rooted Ziggurat Lower Mid Checkpoint,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Rooted Ziggurat Lower Mid Checkpoint",
+        "access_rules": [
+          "@Rooted Ziggurat Lower Front",
+          "@Rooted Ziggurat Lower Entry,dash",
+          "@Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
+          "@Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Rooted Ziggurat Lower Miniboss Platform",
+        "access_rules": [
+          "@Rooted Ziggurat Lower Mid Checkpoint",
+          "@Rooted Ziggurat Lower Back,dash",
+          "@Rooted Ziggurat Lower Back,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$enemy_soul_access|voidling",
+          "@Rooted Ziggurat Lower Back,$is_fs,ziggurat_miniboss_fuse"
         ],
         "children": []
       },
       {
         "name": "Rooted Ziggurat Lower Back",
         "access_rules": [
-          "@Rooted Ziggurat Lower Front,dash",
-          "@Rooted Ziggurat Lower Front,pray,sword,$not_fs",
-          "@Rooted Ziggurat Lower Front,$is_fs,ziggurat_miniboss_fuse",
-          "@Rooted Ziggurat Portal Room Entrance"
+          "@Rooted Ziggurat Lower Miniboss Platform,dash",
+          "@Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
+          "@Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
+          "@Rooted Ziggurat Portal Room Entrance",
+          "@Rooted Ziggurat Portal Room Exit"
         ],
         "children": []
       },
       {
         "name": "Rooted Ziggurat Portal Room Entrance",
         "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Back,pray,$not_fs",
-          "@Enemy Logic - Rooted Ziggurat Lower Back,$is_fs,ziggurat_teleporter_fuse",
-          "@Rooted Ziggurat Portal Room Exit"
+          "@Rooted Ziggurat Lower Back,@Activate Ziggurat Fuse,$not_fs",
+          "@Rooted Ziggurat Lower Back,$is_fs,ziggurat_teleporter_fuse"
+        ],
+        "children": []
+      },
+      {
+        "name": "Rooted Ziggurat Portal Room",
+        "access_rules": [
+          "@Rooted Ziggurat Portal Room Entrance",
+          "@Rooted Ziggurat Portal",
+          "@Rooted Ziggurat Portal Room Exit",
+          "@Far Shore"
         ],
         "children": []
       },
       {
         "name": "Rooted Ziggurat Portal",
         "access_rules": [
-          "@Far Shore",
-          "@Rooted Ziggurat Portal Room Exit,pray"
+          "@Rooted Ziggurat Portal Room,pray"
         ],
         "children": []
       },
       {
         "name": "Rooted Ziggurat Portal Room Exit",
         "access_rules": [
-          "@Rooted Ziggurat Portal Room Entrance",
-          "@Rooted Ziggurat Portal,impossible_1,$not_fs",
-          "@Rooted Ziggurat Portal,$is_fs,ziggurat_teleporter_fuse"
+          "@Rooted Ziggurat Portal Room,@Activate Ziggurat Fuse,$not_fs",
+          "@Rooted Ziggurat Portal Room,$is_fs,ziggurat_teleporter_fuse"
         ],
         "children": []
       },
@@ -7663,7 +7781,8 @@
           "@Swamp Mid,dash",
           "@Swamp Mid,$has_ladder|ladders_in_swamp",
           "@LS Elev 0",
-          "@Back of Swamp,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
+          "@Back of Swamp,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_any_soul_access|gunslinger|fleemers",
+          "@Shop 7"
         ],
         "children": [
           {
@@ -8513,7 +8632,8 @@
       {
         "name": "Cathedral Gauntlet Checkpoint",
         "access_rules": [
-          "@Cathedral Entry,$cathedral_elevator_equipment_access,[$cathedral_elevator_access]"
+          "@Cathedral to Gauntlet",
+          "@Shop 8"
         ],
         "children": []
       },
@@ -8571,6 +8691,10 @@
           "@Far Shore to Spawn Region,dash",
           "@Far Shore to West Garden Region",
           "@Overworld Town Portal",
+          "@West Garden Portal",
+          "@Fortress Arena Portal",
+          "@Library Portal",
+          "@Quarry Portal",
           "@Rooted Ziggurat Portal",
           "@Ruined Atoll Portal",
           "@Spirit Arena"
@@ -8657,16 +8781,15 @@
       {
         "name": "Far Shore to Quarry Region",
         "access_rules": [
-          "@Far Shore,@Quarry Connector,orb,pray,$not_fs",
-          "@Far Shore,$is_fs,quarry_fuse_1,quarry_fuse_2",
-          "@Quarry Portal"
+          "@Far Shore,@Activate Quarry Fuse,$not_fs",
+          "@Far Shore,$is_fs,quarry_fuse_1,quarry_fuse_2"
         ],
         "children": []
       },
       {
         "name": "Far Shore to Fortress Region",
         "access_rules": [
-          "@Fortress Arena Portal",
+          "@Far Shore,@Activate Eastern Vault West Fuses,$not_fs",
           "@Far Shore,$is_fs,fortress_exterior_fuse_1,fortress_exterior_fuse_2,beneath_the_vault_fuse,fortress_candles_fuse,fortress_door_left_fuse"
         ],
         "children": []
@@ -8674,18 +8797,16 @@
       {
         "name": "Far Shore to Library Region",
         "access_rules": [
-          "@Far Shore,impossible_2,$not_fs",
-          "@Far Shore,$is_fs,library_lab_fuse",
-          "@Library Portal"
+          "@Far Shore,@Activate Library Fuse,$not_fs",
+          "@Far Shore,$is_fs,library_lab_fuse"
         ],
         "children": []
       },
       {
         "name": "Far Shore to West Garden Region",
         "access_rules": [
-          "@Far Shore,@West Garden,pray,$not_fs",
-          "@Far Shore,$is_fs,west_garden_fuse",
-          "@West Garden Portal"
+          "@Far Shore,@Activate West Garden Fuse,$not_fs",
+          "@Far Shore,$is_fs,west_garden_fuse"
         ],
         "children": []
       },
@@ -8813,19 +8934,75 @@
         "children": []
       },
       {
-        "name": "Shop",
+        "name": "Shop 1",
         "access_rules": [
-          "@Cathedral Gauntlet Checkpoint",
-          "@Eastern Vault Fortress",
+          "@Windmill"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 2",
+        "access_rules": [
+          "@West Garden before Terry"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 3",
+        "access_rules": [
           "@Fortress Exterior near cave",
-          "@Quarry Entry",
-          "@Ruined Atoll",
-          "@Swamp Front",
-          "@West Garden",
-          "@Windmill",
-          "@Back of Swamp,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladders_in_swamp",
           "@Fortress Exterior from Overworld,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
           "@Fortress Exterior from East Forest,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 4",
+        "access_rules": [
+          "@Eastern Vault Fortress"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 5",
+        "access_rules": [
+          "@Ruined Atoll"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 6",
+        "access_rules": [
+          "@Quarry Entry"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 7",
+        "access_rules": [
+          "@Swamp Front",
+          "@Back of Swamp,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop 8",
+        "access_rules": [
+          "@Cathedral Gauntlet Checkpoint"
+        ],
+        "children": []
+      },
+      {
+        "name": "Shop",
+        "access_rules": [
+          "@Shop 1",
+          "@Shop 2",
+          "@Shop 3",
+          "@Shop 4",
+          "@Shop 5",
+          "@Shop 6",
+          "@Shop 7",
+          "@Shop 8"
         ],
         "children": [
           {
@@ -8963,8 +9140,8 @@
       {
         "name": "Spirit Arena Victory",
         "access_rules": [
-          "@Spirit Arena,blue,green,red,@Sealed Temple,attrelic,defrelic,potionrelic,hprelic,sprelic,mprelic,sword",
-          "@Spirit Arena,$is_hexquest_on,$has_hex_goal_amount"
+          "@Spirit Arena,blue,green,red,@Sealed Temple,attrelic,defrelic,potionrelic,hprelic,sprelic,mprelic,sword,$heir_combat_equipment_access,[$heir_combat_access]",
+          "@Spirit Arena,$is_hexquest_on,$has_hex_goal_amount,$heir_combat_equipment_access,[$heir_combat_access]"
         ],
         "children": [
           {
@@ -8985,9 +9162,7 @@
             "sections": [
               {
                 "name": "What ending did you get?",
-                "access_rules": [
-                  "$heir_combat_equipment_access,[$heir_combat_access]"
-                ],
+                "access_rules": null,
                 "hosted_item": "heir"
               }
             ]
@@ -9265,7 +9440,8 @@
             "name": "Sign",
             "visibility_rules": "breakable_shuffle",
             "access_rules": [
-              "sign_breaker"
+              "sign_breaker",
+              "stick,firesword"
             ]
           }
         ]

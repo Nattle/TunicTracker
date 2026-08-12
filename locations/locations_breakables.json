@@ -454,7 +454,15 @@
                 "name": "Pot 3"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "East Forest above Guard House 2",
+        "access_rules": [
+          "@East Forest above Guard House 2,pot_breaker"
+        ],
+        "children": [
           {
             "name": "Pots by Envoy",
             "map_locations": [
@@ -865,13 +873,16 @@
       },
       {
         "name": "Fortress Courtyard westmost pots",
+        "access_rules": [
+          "@Fortress Courtyard",
+          "@Fortress Exterior near cave,staff",
+          "@Fortress Exterior near cave,gun"
+        ],
         "children": [
           {
             "name": "Fire Pots",
             "access_rules": [
-              "@Fortress Courtyard,pot_breaker",
-              "@Fortress Exterior near cave,staff",
-              "@Fortress Exterior near cave,gun"
+              "pot_breaker"
             ],
             "map_locations": [
               {
@@ -899,12 +910,15 @@
       },
       {
         "name": "Fortress Courtyard west pots",
+        "access_rules": [
+          "@Fortress Courtyard",
+          "@Fortress Exterior near cave,staff"
+        ],
         "children": [
           {
             "name": "Fire Pots",
             "access_rules": [
-              "@Fortress Courtyard,pot_breaker",
-              "@Fortress Exterior near cave,staff"
+              "pot_breaker"
             ],
             "map_locations": [
               {
@@ -970,12 +984,15 @@
       },
       {
         "name": "Fortress Courtyard Upper pot",
+        "access_rules": [
+          "@Fortress Courtyard Upper",
+          "@Fortress Courtyard,staff"
+        ],
         "children": [
           {
             "name": "Upper Fire Pot",
             "access_rules": [
-              "@Fortress Courtyard Upper,pot_breaker",
-              "@Fortress Courtyard,staff"
+              "pot_breaker"
             ],
             "map_locations": [
               {
@@ -1000,12 +1017,12 @@
       },
       {
         "name": "Fortress Grave Path",
-        "access_rules": [
-          "@Fortress Grave Path,pot_breaker"
-          ],
         "children": [
           {
             "name": "[Entry] Pots",
+            "access_rules": [
+              "@Fortress Grave Path Entry,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1030,6 +1047,9 @@
           },
           {
             "name": "[Central] Fire Pots",
+            "access_rules": [
+              "@Fortress Grave Path Combat,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1053,12 +1073,15 @@
       },
       {
         "name": "Fortress Grave Path pots",
+        "access_rules": [
+          "@Fortress Grave Path by Grave",
+          "@Fortress Grave Path Dusty Entrance Region,staff"
+        ],
         "children": [
           {
             "name": "[By Grave] Pots",
             "access_rules": [
-              "@Fortress Grave Path,pot_breaker",
-              "@Fortress Grave Path Dusty Entrance Region,staff"
+              "pot_breaker"
             ],
             "map_locations": [
               {
@@ -1099,13 +1122,16 @@
       {
         "name": "Fortress Grave Path westmost pot",
         "access_rules": [
-              "@Fortress Grave Path,pot_breaker",
-              "@Fortress Grave Path Upper,staff",
-              "@Fortress Grave Path Upper,gun"
-            ],
+          "@Fortress Grave Path Entry",
+          "@Fortress Grave Path Upper,staff",
+          "@Fortress Grave Path Upper,gun"
+        ],
         "children": [
           {
             "name": "[Central] Fire Pots",
+            "access_rules": [
+              "pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1396,9 +1422,9 @@
         ]
       },
       {
-        "name": "Beneath the Vault Front",
+        "name": "Beneath the Vault Main",
         "access_rules": [
-          "@Beneath the Vault Front,pot_breaker"
+          "@Beneath the Vault Main,pot_breaker"
         ],
         "children": [
           {
@@ -1661,12 +1687,12 @@
       },
       {
         "name": "Frog's Domain",
-        "access_rules": [
-          "@Frog's Domain,pot_breaker"
-        ],
         "children": [
           {
             "name": "Pots above Orb Altar",
+            "access_rules": [
+              "@Frog's Domain Front,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1691,6 +1717,9 @@
           },
           {
             "name": "Side Room Pots",
+            "access_rules": [
+              "@Frog's Domain Main,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1718,6 +1747,9 @@
           },
           {
             "name": "Main Room Pots",
+            "access_rules": [
+              "@Frog's Domain Main,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1742,6 +1774,9 @@
           },
           {
             "name": "Slorm Room",
+            "access_rules": [
+              "@Frog's Domain Main,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1763,6 +1798,9 @@
           },
           {
             "name": "Pots after Gate",
+            "access_rules": [
+              "@Frog's Domain Main,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -1787,6 +1825,9 @@
           },
           {
             "name": "Orb Room Explosive Pots",
+            "access_rules": [
+              "@Frog's Domain Main,pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -2035,13 +2076,16 @@
       {
         "name": "Lower Quarry upper pots",
         "access_rules": [
-          "@Lower Quarry,pot_breaker",
+          "@Lower Quarry",
           "@Quarry Back,staff",
           "@Quarry Back,gun"
         ],
         "children": [
           {
             "name": "[West] Explosive Pots near Bombable Wall",
+            "access_rules": [
+              "pot_breaker"
+            ],
             "map_locations": [
               {
                 "map": "fullmap",
@@ -2255,7 +2299,7 @@
       {
         "name": "Cathedral",
         "access_rules": [
-          "@Cathedral,pot_breaker"
+          "@Cathedral Main,pot_breaker"
         ],
         "children": [
           {

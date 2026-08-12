@@ -3,9 +3,16 @@
     "name": "Combat Logic Regions",
     "children": [
       {
+        "name": "Frog's Domain Front",
+        "access_rules": [
+          "@Frog's Domain Entry,$has_ladder|ladders_to_frogs_domain"
+        ],
+        "children": []
+      },
+      {
         "name": "Frog's Domain Main",
         "access_rules": [
-          "@Frog's Domain,$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
+          "@Frog's Domain Front,$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
         ],
         "children": []
       },
@@ -15,7 +22,8 @@
           "@Overworld to West Garden from Furnace",
           "@LS Elev 0",
           "@West Garden Hero's Grave Region",
-          "@West Garden after Terry,$combat_logic_equipment|west_garden|dagger|laurels,[$combat_logic_on|west_garden|dagger|laurels]"
+          "@West Garden after Terry,$combat_logic_equipment|west_garden|dagger|laurels,[$combat_logic_on|west_garden|dagger|laurels]",
+          "@Shop 2"
         ],
         "children": []
       },
@@ -141,60 +149,20 @@
         "children": []
       },
       {
-        "name": "Enemy Logic - Rooted Ziggurat Lower Entry",
-        "access_rules": [
-          "@Rooted Ziggurat Middle Bottom",
-          "@Enemy Logic - Rooted Ziggurat Lower Front",
-          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint,dash",
-          "@Enemy Logic - Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
-        ],
-        "children": []
-      },
-      {
-        "name": "Enemy Logic - Rooted Ziggurat Lower Front",
-        "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Entry,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]",
-          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]"
-        ],
-        "children": []
-      },
-      {
-        "name": "Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint",
-        "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Front",
-          "@Enemy Logic - Rooted Ziggurat Lower Entry,dash",
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]"
-        ],
-        "children": []
-      },
-      {
-        "name": "Enemy Logic - Rooted Ziggurat Lower Miniboss Platform",
-        "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Mid Checkpoint",
-          "@Enemy Logic - Rooted Ziggurat Lower Back,dash",
-          "@Enemy Logic - Rooted Ziggurat Lower Back,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$enemy_soul_access|voidling",
-          "@Enemy Logic - Rooted Ziggurat Lower Back,$is_fs,ziggurat_miniboss_fuse"
-        ],
-        "children": []
-      },
-      {
-        "name": "Enemy Logic - Rooted Ziggurat Lower Back",
-        "access_rules": [
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,dash",
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
-          "@Enemy Logic - Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
-          "@Rooted Ziggurat Portal Room Entrance"
-        ],
-        "children": []
-      },
-      {
         "name": "Cathedral Entry",
         "access_rules": [
           "@Swamp to Cathedral Main Entrance Region",
-          "@Cathedral Gauntlet Checkpoint",
+          "@Cathedral to Gauntlet",
           "@Swamp Mid,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_in_swamp",
           "@Back of Swamp,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls"
+        ],
+        "children": []
+      },
+      {
+        "name": "Cathedral to Gauntlet",
+        "access_rules": [
+          "@Cathedral Entry,$cathedral_elevator_equipment_access,[$cathedral_elevator_access]",
+          "@Cathedral Gauntlet Checkpoint"
         ],
         "children": []
       },
@@ -202,6 +170,83 @@
         "name": "Cathedral Main",
         "access_rules": [
           "@Cathedral Entry,$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Furnace Fuse",
+        "access_rules": [
+          "@Furnace Fuse,pray,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate South and West Fortress Exterior Fuses",
+        "access_rules": [
+          "@Fortress Exterior from Overworld,pray,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Upper and Central Fortress Exterior Fuses",
+        "access_rules": [
+          "@Fortress Courtyard Upper,pray,$not_fs,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Beneath the Vault Fuse",
+        "access_rules": [
+          "@Beneath the Vault Back,@Activate South and West Fortress Exterior Fuses,$not_fs,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Eastern Vault West Fuses",
+        "access_rules": [
+          "@Eastern Vault Fortress,@Activate Beneath the Vault Fuse,$not_fs,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Eastern Vault East Fuse",
+        "access_rules": [
+          "@Eastern Vault Fortress,@Activate Upper and Central Fortress Exterior Fuses,@Activate South and West Fortress Exterior Fuses,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Quarry Connector Fuse",
+        "access_rules": [
+          "@Quarry Connector,pray,orb,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Quarry Fuse",
+        "access_rules": [
+          "@Quarry Entry,@Activate Quarry Connector Fuse,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Ziggurat Fuse",
+        "access_rules": [
+          "@Rooted Ziggurat Lower Back,pray,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate West Garden Fuse",
+        "access_rules": [
+          "@West Garden South Checkpoint,pray,$not_fs"
+        ],
+        "children": []
+      },
+      {
+        "name": "Activate Library Fuse",
+        "access_rules": [
+          "@Library Lab,pray,$has_ladder|ladders_in_library,$not_fs"
         ],
         "children": []
       }

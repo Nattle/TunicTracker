@@ -278,6 +278,15 @@ function east_forest_above_guard_house_access()
         or (has_soul("rudelings") and has_orb())
 end
 
+function east_forest_below_guard_house_access()
+    return can_get_past_bushes_access() or has_soul("rudelings")
+end
+
+function beneath_the_vault_main_to_entry_access()
+    return has_soul("spiders") or has_melee() or has("gun")
+        or has_orb() or has_wand() or has("dash")
+end
+
 function forest_belltower_to_fortress_access()
     return has_soul("blobs") or can_get_past_bushes_access()
 end

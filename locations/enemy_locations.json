@@ -288,22 +288,22 @@
             "name": "Above Guard House 2 - Envoy",
             "item_count": 1,
             "access_rules": [
-              "@East Forest,@Shop,$enemy_access|envoy_shop",
-              "@East Forest,$enemy_access|envoy_combat"
+              "@East Forest above Guard House 2,@Shop,$enemy_access|envoy_shop",
+              "@East Forest above Guard House 2,$enemy_access|envoy_combat"
             ]
           },
           {
             "name": "Above Guard House 2 - Rudeling",
             "item_count": 1,
             "access_rules": [
-              "@East Forest,$enemy_access|rudeling"
+              "@East Forest above Guard House 2,$enemy_access|rudeling"
             ]
           },
           {
             "name": "Above Guard House 2 - Shield Rudeling",
             "item_count": 1,
             "access_rules": [
-              "@East Forest,$enemy_access|rudeling_shield"
+              "@East Forest above Guard House 2,$enemy_access|rudeling_shield"
             ]
           },
           {
@@ -828,21 +828,21 @@
             "name": "Beneath the Vault Main - Baby Slorms",
             "item_count": 2,
             "access_rules": [
-              "@Beneath the Vault Front,$enemy_access|baby_slorm"
+              "@Beneath the Vault Main,$enemy_access|baby_slorm"
             ]
           },
           {
             "name": "Beneath the Vault Main - Spiders",
             "item_count": 12,
             "access_rules": [
-              "@Beneath the Vault Front,$enemy_access|spider"
+              "@Beneath the Vault Main,$enemy_access|spider"
             ]
           },
           {
             "name": "Beneath the Vault Main - Spiders [Extra]",
             "item_count": 2,
             "access_rules": [
-              "@Beneath the Vault Front,$enemy_access|spider"
+              "@Beneath the Vault Main,$enemy_access|spider"
             ],
             "visibility_rules": "enemy_drops_extra"
           }
@@ -1412,28 +1412,28 @@
             "name": "Lower Front - Administrators",
             "item_count": 4,
             "access_rules": [
-              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|administrator"
+              "@Rooted Ziggurat Lower Front,$enemy_access|administrator"
             ]
           },
           {
             "name": "Lower Front - Autobolts",
             "item_count": 4,
             "access_rules": [
-              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|autobolt"
+              "@Rooted Ziggurat Lower Front,$enemy_access|autobolt"
             ]
           },
           {
             "name": "Lower Front - Autobolts (Gap)",
             "item_count": 2,
             "access_rules": [
-              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|autobolt_gap"
+              "@Rooted Ziggurat Lower Front,$enemy_access|autobolt_gap"
             ]
           },
           {
             "name": "Lower Front - Voidlings",
             "item_count": 10,
             "access_rules": [
-              "@Enemy Logic - Rooted Ziggurat Lower Front,$enemy_access|voidling"
+              "@Rooted Ziggurat Lower Front,$enemy_access|voidling"
             ]
           },
           {
