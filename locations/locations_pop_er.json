@@ -1746,8 +1746,7 @@
         "name": "LS Elev 6",
         "access_rules": [
           "@LS Elev 5,[ladder_storage_med],vis_ladder_storage_med",
-          "[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladders_near_patrol_cave,@Overworld at Patrol Cave",
-          "[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_near_temple_rafters,@Overworld after Temple Rafters"
+          "[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladders_near_patrol_cave,@Overworld at Patrol Cave"
         ],
         "children": []
       },
@@ -1756,7 +1755,6 @@
         "access_rules": [
           "@LS Elev 6,[ladder_storage_med],vis_ladder_storage_med",
           "[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladders_near_patrol_cave,@Overworld at Patrol Cave",
-          "[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_near_temple_rafters,@Overworld after Temple Rafters",
           "[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladders_near_dark_tomb"
         ],
         "children": []
@@ -2612,7 +2610,7 @@
           "@Guard House 2 Upper before bushes",
           "@Lower Forest,$has_ladder|ladders_to_lower_forest",
           "@East Forest Dance Fox Spot,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
-          "@Forest Grave Path Main,[ladder_storage_medium],$can_ls"
+          "@Forest Grave Path Main,[ladder_storage_med],vis_ladder_storage_med,$can_ls"
         ],
         "children": [
           {
@@ -2785,7 +2783,7 @@
           "@East Forest,dash",
           "@Guard House 1 West",
           "@East Forest,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff",
-          "@East Forest,[ladder_storage_medium],$can_ls"
+          "@East Forest,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_soul_access|hedgehogs"
         ],
         "children": [
           {
@@ -5934,8 +5932,7 @@
           "@Fortress Grave Path Upper",
           "@Fortress Exterior from Overworld,[ladder_storage_med],vis_ladder_storage_med,$can_ls",
           "@Fortress Exterior from East Forest,[ladder_storage_med],vis_ladder_storage_med,$can_ls",
-          "@Fortress Exterior near cave,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$has_ladder|ladder_to_beneath_the_vault",
-          "Fortress Courtyard,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,staff,icerod"
+          "@Fortress Exterior near cave,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$has_ladder|ladder_to_beneath_the_vault"
         ],
         "children": []
       },
@@ -7063,8 +7060,10 @@
         "access_rules": [
           "@Monastery Front,combat_logic_off,sword",
           "@Monastery Front,combat_logic_off,staff",
+          "@Monastery Front,combat_logic_off,[laurels_zips],dash",
           "@Monastery Front,combat_logic_bosses_only,sword",
           "@Monastery Front,combat_logic_bosses_only,staff",
+          "@Monastery Front,combat_logic_bosses_only,[laurels_zips],dash",
           "@Monastery Front,combat_logic_on,$combat_logic_equipment|quarry,[$combat_logic_on|quarry]",
           "@Monastery Hero's Grave Region",
           "@Monastery Rope",
@@ -7724,6 +7723,7 @@
           "@Rooted Ziggurat Lower Mid Checkpoint",
           "@Rooted Ziggurat Lower Back,dash",
           "@Rooted Ziggurat Lower Back,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$enemy_soul_access|voidling",
+          "@Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_any_soul_access|voidling|administrator",
           "@Rooted Ziggurat Lower Back,$is_fs,ziggurat_miniboss_fuse"
         ],
         "children": []
