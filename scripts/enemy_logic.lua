@@ -307,6 +307,17 @@ function forest_grave_path_bush_access()
         or (has_melee() and has("firesword"))
 end
 
+-- Scavengers for ice-grapple Forest Grave Path  only with Extra Enemies.
+function forest_grave_path_ice_soul_access()
+    return has_soul("blobs") or has_soul("hedgehogs")
+        or has_soul("rudelings")
+        or (has("enemy_drops_extra") and has_soul("scavengers"))
+end
+
+function forest_grave_path_scavenger_ice_access()
+    return has("enemy_drops_extra") and has_soul("scavengers")
+end
+
 function hourglass_combat_access()
     if combat_logic_mode() ~= 2 then return true end
     return has_sword() and (has("shield") or sword_upgrade_count() >= 3)

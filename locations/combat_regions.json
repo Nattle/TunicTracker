@@ -19,6 +19,7 @@
       {
         "name": "West Garden before Terry",
         "access_rules": [
+          "@Hero Relic - West Garden",
           "@Overworld to West Garden from Furnace",
           "@LS Elev 0",
           "@West Garden Hero's Grave Region",
@@ -135,6 +136,7 @@
         "name": "Fortress Grave Path by Grave",
         "access_rules": [
           "@Fortress Grave Path Combat",
+          "@Hero Relic - Fortress",
           "@Fortress Hero's Grave Region",
           "@Fortress Grave Path Dusty Entrance Region,dash"
         ],
@@ -151,6 +153,7 @@
       {
         "name": "Cathedral Entry",
         "access_rules": [
+          "@Cathedral Main",
           "@Swamp to Cathedral Main Entrance Region",
           "@Cathedral to Gauntlet",
           "@Swamp Mid,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_in_swamp",

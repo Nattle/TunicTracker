@@ -53,7 +53,7 @@
 			},
 			{
 				"img": "images/sword4.png",
-				"codes": "sword,ring,grass,switch,tubes,bigsword,ls_item,pot_breaker,sign_breaker"
+				"codes": "sword,ring,grass,switch,tubes,ls_item,pot_breaker,sign_breaker"
 			}
 		]
 	},
