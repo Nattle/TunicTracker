@@ -4,10 +4,10 @@
 
 ENEMY_LOCATION_MAPPING = {
     ["Forest Boss Room - Guard Captain"] = {"@Full World/Forest Boss Room/Guard Captain/Enemy Drop"},
-    ["West Garden - [North] Defeat Garden Knight"] = {"@Combat Logic Regions/West Garden before Boss/Garden Knight/Enemy Drop"},
+    ["West Garden - [North] Defeat Garden Knight"] = {"@Full World/West Garden before Boss/Garden Knight/Enemy Drop"},
     ["Fortress Arena - Defeat Siege Engine"] = {"@Full World/Fortress Arena/Fortress Arena/Enemy Drop"},
     ["Librarian - Defeat Librarian"] = {"@Full World/Library Arena/The Librarian/Enemy Drop"},
-    ["Rooted Ziggurat Lower - Defeat Boss Scavenger"] = {"@Full World/Combat Logic Check Locations/Lower - Hexagon Blue/Enemy Drop"},
+    ["Rooted Ziggurat Lower - Defeat Boss Scavenger"] = {"@Full World/Rooted Ziggurat Lower Back/Lower - Hexagon Blue/Enemy Drop"},
     ["Overworld - [East] Blob After Ruined Passage 3"] = {"@Enemy Drops - Overworld/After Ruined Passage - Blobs"},
     ["Overworld - [East] Blob After Ruined Passage 1"] = {"@Enemy Drops - Overworld/After Ruined Passage - Blobs"},
     ["Overworld - [East] Blob After Ruined Passage 2"] = {"@Enemy Drops - Overworld/After Ruined Passage - Blobs"},
@@ -700,10 +700,10 @@ ENEMY_LOCATION_MAPPING = {
 
 ENEMY_LOCATION_SECTIONS = {
     "@Full World/Forest Boss Room/Guard Captain/Enemy Drop",
-    "@Combat Logic Regions/West Garden before Boss/Garden Knight/Enemy Drop",
+    "@Full World/West Garden before Boss/Garden Knight/Enemy Drop",
     "@Full World/Fortress Arena/Fortress Arena/Enemy Drop",
     "@Full World/Library Arena/The Librarian/Enemy Drop",
-    "@Full World/Combat Logic Check Locations/Lower - Hexagon Blue/Enemy Drop",
+    "@Full World/Rooted Ziggurat Lower Back/Lower - Hexagon Blue/Enemy Drop",
     "@Enemy Drops - Overworld/After Ruined Passage - Blobs",
     "@Enemy Drops - Overworld/After Ruined Passage - Zombie Fox [Extra]",
     "@Enemy Drops - Overworld/East Overworld - Blobs",

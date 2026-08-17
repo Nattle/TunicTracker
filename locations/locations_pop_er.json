@@ -1894,7 +1894,15 @@
           "@Furnace Walking Path,dash",
           "@Overworld Well to Furnace Rail"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Activate Furnace Fuse",
+            "access_rules": [
+              "pray,$not_fs"
+            ],
+            "children": []
+          }
+        ]
       },
       {
         "name": "Furnace Ladder Area",
@@ -5696,6 +5704,14 @@
               }
             ]
           }
+        ,
+          {
+            "name": "Activate Library Fuse",
+            "access_rules": [
+              "pray,$has_ladder|ladders_in_library,$not_fs"
+            ],
+            "children": []
+          }
         ]
       },
       {
@@ -5878,6 +5894,14 @@
               }
             ]
           }
+        ,
+          {
+            "name": "Activate South and West Fortress Exterior Fuses",
+            "access_rules": [
+              "pray,$not_fs"
+            ],
+            "children": []
+          }
         ]
       },
       {
@@ -5968,7 +5992,15 @@
           "@Fortress Exterior from East Forest,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_soul_access|custodians",
           "@Fortress Exterior near cave,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$has_ladder|ladder_to_beneath_the_vault,$enemy_soul_access|custodians"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Activate Upper and Central Fortress Exterior Fuses",
+            "access_rules": [
+              "pray,$not_fs,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
+            ],
+            "children": []
+          }
+        ]
       },
       {
         "name": "Beneath the Vault Ladder Exit",
@@ -6139,6 +6171,14 @@
               }
             ]
           }
+        ,
+          {
+            "name": "Activate Beneath the Vault Fuse",
+            "access_rules": [
+              "@Activate South and West Fortress Exterior Fuses,$not_fs,$combat_logic_equipment|beneath_the_vault,[$combat_logic_on|beneath_the_vault]"
+            ],
+            "children": []
+          }
         ]
       },
       {
@@ -6270,6 +6310,22 @@
                 ]
               }
             ]
+          }
+        ,
+          {
+            "name": "Activate Eastern Vault West Fuses",
+            "access_rules": [
+              "@Activate Beneath the Vault Fuse,$not_fs,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
+            ],
+            "children": []
+          }
+        ,
+          {
+            "name": "Activate Eastern Vault East Fuse",
+            "access_rules": [
+              "@Activate Upper and Central Fortress Exterior Fuses,@Activate South and West Fortress Exterior Fuses,$not_fs"
+            ],
+            "children": []
           }
         ]
       },
@@ -6572,7 +6628,15 @@
           "@Quarry Entry",
           "@LS Elev 4"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Activate Quarry Connector Fuse",
+            "access_rules": [
+              "pray,orb,$not_fs"
+            ],
+            "children": []
+          }
+        ]
       },
       {
         "name": "Quarry Entry",
@@ -6583,7 +6647,15 @@
           "@Quarry Portal",
           "@Shop 6"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Activate Quarry Fuse",
+            "access_rules": [
+              "@Activate Quarry Connector Fuse,$not_fs"
+            ],
+            "children": []
+          }
+        ]
       },
       {
         "name": "Quarry",
@@ -7347,8 +7419,159 @@
         ]
       },
       {
-        "name": "Combat Logic Check Locations",
-        "access_rules": null,
+        "name": "Frog's Domain Front",
+        "access_rules": [
+          "@Frog's Domain Entry,$has_ladder|ladders_to_frogs_domain"
+        ],
+        "children": []
+      },
+      {
+        "name": "Frog's Domain Main",
+        "access_rules": [
+          "@Frog's Domain Front,$combat_logic_equipment|frogs_domain,[$combat_logic_on|frogs_domain]"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden before Terry",
+        "access_rules": [
+          "@Hero Relic - West Garden",
+          "@Overworld to West Garden from Furnace",
+          "@LS Elev 0",
+          "@West Garden Hero's Grave Region",
+          "@West Garden after Terry,$combat_logic_equipment|west_garden|dagger|laurels,[$combat_logic_on|west_garden|dagger|laurels]",
+          "@Shop 2"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden after Terry",
+        "access_rules": [
+          "@West Garden before Terry,$combat_logic_equipment|west_garden|dagger|laurels,[$combat_logic_on|west_garden|dagger|laurels]",
+          "@West Garden West Combat",
+          "@West Garden South Checkpoint,dash"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden West Combat",
+        "access_rules": [
+          "@West Garden after Terry,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]",
+          "@West Garden South Checkpoint,$combat_logic_equipment|west_garden,[$combat_logic_on|west_garden]"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden South Checkpoint",
+        "access_rules": [
+          "@West Garden West Combat",
+          "@West Garden after Terry,dash",
+          "@West Garden at Dagger House,$west_garden_bush_access",
+          "@West Garden before Boss"
+        ],
+        "children": [
+          {
+            "name": "Activate West Garden Fuse",
+            "access_rules": [
+              "pray,$not_fs"
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "West Garden at Dagger House",
+        "access_rules": [
+          "@Magic Dagger House",
+          "@West Garden Laurels Exit Region,dash",
+          "@West Garden Portal Item,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,$enemy_soul_access|chompignom",
+          "@West Garden South Checkpoint,$west_garden_checkpoint_to_dagger_access"
+        ],
+        "children": []
+      },
+      {
+        "name": "West Garden before Boss",
+        "access_rules": [
+          "@West Garden South Checkpoint,$combat_logic_equipment|west_garden|none|laurels,[$combat_logic_on|west_garden|none|laurels]",
+          "@West Garden after Boss,dash",
+          "@West Garden after Boss,[ice_grapple_med],vis_ice_grapple_med,dagger,orb,$enemy_soul_access|garden_knight",
+          "@West Garden after Boss,[ice_grapple_easy],vis_ice_grapple_easy,dagger,orb,$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]"
+        ],
+        "children": [
+          {
+            "name": "Garden Knight",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 960,
+                "y": 2475,
+                "size": 35
+              },
+              {
+                "map": "west_gardens",
+                "x": 720,
+                "y": 55,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Will Kill You",
+                "access_rules": [
+                  "$garden_knight_traversal_equipment_access,[$garden_knight_traversal_access]"
+                ],
+                "hosted_item": "gknight"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
+                "access_rules": [
+                  "$enemy_access|garden_knight"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fortress Grave Path Entry",
+        "access_rules": [
+          "@Fortress Courtyard",
+          "@Fortress Grave Path Upper,[ice_grapple_easy],vis_ice_grapple_easy,dagger,icerod,orb,staff,$enemy_soul_access|custodians",
+          "@Fortress Grave Path Combat",
+          "@Fortress Grave Path by Grave",
+          "@Fortress Exterior from Overworld,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
+          "@Fortress Exterior from East Forest,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls",
+          "@Fortress Exterior near cave,[ladder_storage_easy],vis_ladder_storage_easy,$can_ls,$has_ladder|ladder_to_beneath_the_vault"
+        ],
+        "children": []
+      },
+      {
+        "name": "Fortress Grave Path Combat",
+        "access_rules": [
+          "@Fortress Grave Path Entry,$combat_logic_equipment|eastern_vault_fortress,[$combat_logic_on|eastern_vault_fortress]"
+        ],
+        "children": []
+      },
+      {
+        "name": "Fortress Grave Path by Grave",
+        "access_rules": [
+          "@Fortress Grave Path Combat",
+          "@Hero Relic - Fortress",
+          "@Fortress Hero's Grave Region",
+          "@Fortress Grave Path Dusty Entrance Region,dash"
+        ],
+        "children": []
+      },
+      {
+        "name": "Even Lower Quarry Isolated Chest",
+        "access_rules": [
+          "@Even Lower Quarry",
+          "@Quarry,[ice_grapple_hard],vis_ice_grapple_hard,dagger,orb,icerod,staff,$enemy_soul_access|scavengers"
+        ],
         "children": [
           {
             "name": "[Lowlands] Near Elevator",
@@ -7368,226 +7591,37 @@
             "sections": [
               {
                 "name": "End of the Tracks",
-                "access_rules": [
-                  "@Even Lower Quarry Isolated Chest"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - Near Corpses",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 340,
-                "y": 940
-              },
-              {
-                "map": "ziggurat",
-                "x": 532,
-                "y": 1084,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "They are Dead",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Entry"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - Spider Ambush",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 10,
-                "y": 1050
-              },
-              {
-                "map": "ziggurat",
-                "x": 271,
-                "y": 1393,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Use the Gun",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Entry"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - Guarded By Double Turrets",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 330,
-                "y": 1105
-              },
-              {
-                "map": "ziggurat",
-                "x": 702,
-                "y": 1227,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Help",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Front"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - Guarded By Double Turrets 2",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 530,
-                "y": 1060
-              },
-              {
-                "map": "ziggurat",
-                "x": 960,
-                "y": 1030,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Oh god they're everywhere",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Front"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - After 2nd Double Turret Chest",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 630,
-                "y": 1165
-              },
-              {
-                "map": "ziggurat",
-                "x": 1182,
-                "y": 1023,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Haircut Time!",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Mid Checkpoint"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - Left Of Checkpoint Before Fuse",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 400,
-                "y": 1165
-              },
-              {
-                "map": "ziggurat",
-                "x": 853,
-                "y": 1212,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Moment of Reprieve",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Mid Checkpoint"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - After Guarded Fuse",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 670,
-                "y": 1200
-              },
-              {
-                "map": "ziggurat",
-                "x": 1221,
-                "y": 1075,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Defeat those Mechs",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Miniboss Platform,pray,$not_fs,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
-                  "@Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse"
-                ],
-                "item_count": 1
-              }
-            ]
-          },
-          {
-            "name": "Lower - Hexagon Blue",
-            "map_locations": [
-              {
-                "map": "fullmap",
-                "x": 1155,
-                "y": 890
-              },
-              {
-                "map": "ziggurat",
-                "x": 2358,
-                "y": 1221,
-                "size": 45
-              }
-            ],
-            "sections": [
-              {
-                "name": "Scavenger Queen",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Back,$boss_reward_equipment_access|boss_scavenger,[$boss_reward_access|boss_scavenger]"
-                ],
-                "item_count": 1,
-                "hosted_item": "scavboss"
-              },
-              {
-                "name": "Enemy Drop",
-                "visibility_rules": "enemy_drop_shuffle",
-                "chest_unopened_img": "images/souls/enemy_soul.png",
-                "chest_opened_img": "images/souls/enemy_soul_grey.png",
-                "access_rules": [
-                  "@Rooted Ziggurat Lower Back,$enemy_equipment_access|boss_scavenger,[$enemy_access|boss_scavenger]"
-                ],
                 "item_count": 1
               }
             ]
           }
         ]
+      },
+      {
+        "name": "Cathedral Entry",
+        "access_rules": [
+          "@Cathedral Main",
+          "@Swamp to Cathedral Main Entrance Region",
+          "@Cathedral to Gauntlet",
+          "@Swamp Mid,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls,$has_ladder|ladders_in_swamp",
+          "@Back of Swamp,[ladder_storage_hard],vis_ladder_storage_hard,$can_ls"
+        ],
+        "children": []
+      },
+      {
+        "name": "Cathedral to Gauntlet",
+        "access_rules": [
+          "@Cathedral Entry,$cathedral_elevator_equipment_access,[$cathedral_elevator_access]",
+          "@Cathedral Gauntlet Checkpoint"
+        ],
+        "children": []
+      },
+      {
+        "name": "Cathedral Main",
+        "access_rules": [
+          "@Cathedral Entry,$combat_logic_equipment|swamp,[$combat_logic_on|swamp]"
+        ],
+        "children": []
       },
       {
         "name": "Lower Quarry Zig Door",
@@ -7731,7 +7765,52 @@
           "@Rooted Ziggurat Lower Mid Checkpoint,dash",
           "@Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_any_soul_access|voidling|autobolt"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Lower - Near Corpses",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 340,
+                "y": 940
+              },
+              {
+                "map": "ziggurat",
+                "x": 532,
+                "y": 1084,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "They are Dead",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Lower - Spider Ambush",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 10,
+                "y": 1050
+              },
+              {
+                "map": "ziggurat",
+                "x": 271,
+                "y": 1393,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Use the Gun",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Rooted Ziggurat Lower Front",
@@ -7739,7 +7818,52 @@
           "@Rooted Ziggurat Lower Entry,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]",
           "@Rooted Ziggurat Lower Mid Checkpoint,$combat_logic_equipment|rooted_ziggurat,[$combat_logic_on|rooted_ziggurat]"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Lower - Guarded By Double Turrets",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 330,
+                "y": 1105
+              },
+              {
+                "map": "ziggurat",
+                "x": 702,
+                "y": 1227,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Help",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Lower - Guarded By Double Turrets 2",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 530,
+                "y": 1060
+              },
+              {
+                "map": "ziggurat",
+                "x": 960,
+                "y": 1030,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Oh god they're everywhere",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Rooted Ziggurat Lower Mid Checkpoint",
@@ -7749,7 +7873,52 @@
           "@Rooted Ziggurat Lower Miniboss Platform,$is_fs,ziggurat_miniboss_fuse",
           "@Rooted Ziggurat Lower Miniboss Platform,$not_fs,pray,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Lower - After 2nd Double Turret Chest",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 630,
+                "y": 1165
+              },
+              {
+                "map": "ziggurat",
+                "x": 1182,
+                "y": 1023,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Haircut Time!",
+                "item_count": 1
+              }
+            ]
+          },
+          {
+            "name": "Lower - Left Of Checkpoint Before Fuse",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 400,
+                "y": 1165
+              },
+              {
+                "map": "ziggurat",
+                "x": 853,
+                "y": 1212,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Moment of Reprieve",
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Rooted Ziggurat Lower Miniboss Platform",
@@ -7760,7 +7929,34 @@
           "@Rooted Ziggurat Lower Back,[ladder_storage_med],vis_ladder_storage_med,$can_ls,$enemy_any_soul_access|voidling|administrator",
           "@Rooted Ziggurat Lower Back,$is_fs,ziggurat_miniboss_fuse"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Lower - After Guarded Fuse",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 670,
+                "y": 1200
+              },
+              {
+                "map": "ziggurat",
+                "x": 1221,
+                "y": 1075,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Defeat those Mechs",
+                "access_rules": [
+                  "pray,$not_fs,$ziggurat_miniboss_route_equipment_access,[$ziggurat_miniboss_route_access]",
+                  "$is_fs,ziggurat_miniboss_fuse"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Rooted Ziggurat Lower Back",
@@ -7771,7 +7967,52 @@
           "@Rooted Ziggurat Portal Room Entrance",
           "@Rooted Ziggurat Portal Room Exit"
         ],
-        "children": []
+        "children": [
+          {
+            "name": "Lower - Hexagon Blue",
+            "map_locations": [
+              {
+                "map": "fullmap",
+                "x": 1155,
+                "y": 890
+              },
+              {
+                "map": "ziggurat",
+                "x": 2358,
+                "y": 1221,
+                "size": 45
+              }
+            ],
+            "sections": [
+              {
+                "name": "Scavenger Queen",
+                "access_rules": [
+                  "$boss_reward_equipment_access|boss_scavenger,[$boss_reward_access|boss_scavenger]"
+                ],
+                "item_count": 1,
+                "hosted_item": "scavboss"
+              },
+              {
+                "name": "Enemy Drop",
+                "visibility_rules": "enemy_drop_shuffle",
+                "chest_unopened_img": "images/souls/enemy_soul.png",
+                "chest_opened_img": "images/souls/enemy_soul_grey.png",
+                "access_rules": [
+                  "$enemy_equipment_access|boss_scavenger,[$enemy_access|boss_scavenger]"
+                ],
+                "item_count": 1
+              }
+            ]
+          }
+        ,
+          {
+            "name": "Activate Ziggurat Fuse",
+            "access_rules": [
+              "pray,$not_fs"
+            ],
+            "children": []
+          }
+        ]
       },
       {
         "name": "Rooted Ziggurat Portal Room Entrance",
