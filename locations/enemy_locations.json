@@ -1161,7 +1161,7 @@
             "name": "Frog Stairs Lower - Small Frog",
             "item_count": 1,
             "access_rules": [
-              "@Frog Stairs Lower,$enemy_access|frog_small"
+              "@Frog Stairs Lower,$enemy_access|frog_stairs_lower"
             ]
           },
           {

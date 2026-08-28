@@ -119,6 +119,8 @@ function enemy_access(signature)
         return has("gun") or (has_sword() and (has_orb() or has("dash")))
     elseif rule == "frog_secret" then
         return has_sword() and (has("dash") or has_orb())
+    elseif rule == "frog_stairs_lower" then
+        return has_sword() and (has_orb() or has_ladder("ladders_to_frogs_domain"))
     elseif rule == "ice_grapple_blob" then
         return has("dagger") and has_wand() and has_orb() and has("icerod")
     elseif rule == "frog_atoll" then

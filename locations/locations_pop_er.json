@@ -156,7 +156,7 @@
                 "access_rules": [
                   "gun",
                   "sword,@Shop,$enemy_soul_access|rudelings",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|frogs"
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_any_soul_access|blobs|hedgehogs"
                 ]
               },
               {
@@ -477,7 +477,7 @@
                 "access_rules": [
                   "gun,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]",
                   "sword,@Shop,$enemy_soul_access|rudelings,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|frogs,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_any_soul_access|rudelings|hedgehogs,$combat_logic_equipment|before_well|dagger,[$combat_logic_on|before_well|dagger]"
                 ]
               },
               {
@@ -2794,7 +2794,7 @@
                 "access_rules": [
                   "gun",
                   "sword,@Shop,$enemy_soul_access|rudelings",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|frogs"
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_any_soul_access|blobs|rudelings"
                 ]
               },
               {
@@ -6298,7 +6298,7 @@
                 "access_rules": [
                   "gun",
                   "sword,@Shop,$enemy_soul_access|rudelings",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|frogs"
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|custodians"
                 ]
               },
               {
@@ -7010,7 +7010,7 @@
                 "access_rules": [
                   "gun",
                   "sword,@Shop,$enemy_soul_access|rudelings",
-                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|frogs"
+                  "[ice_grapple_hard],vis_ice_grapple_hard,orb,dagger,$enemy_soul_access|scavengers"
                 ]
               },
               {
@@ -9388,22 +9388,30 @@
             "sections": [
               {
                 "name": "Potion 1",
-                "access_rules": "sword",
+                "access_rules": [
+                  "sword,$enemy_soul_access|rudelings"
+                ],
                 "item_count": 1
               },
               {
                 "name": "Potion 2",
-                "access_rules": "sword",
+                "access_rules": [
+                  "sword,$enemy_soul_access|rudelings"
+                ],
                 "item_count": 1
               },
               {
                 "name": "Coin 1",
-                "access_rules": "sword",
+                "access_rules": [
+                  "sword,$enemy_soul_access|rudelings"
+                ],
                 "item_count": 1
               },
               {
                 "name": "Coin 2",
-                "access_rules": "sword",
+                "access_rules": [
+                  "sword,$enemy_soul_access|rudelings"
+                ],
                 "item_count": 1
               }
             ]
