@@ -53,7 +53,7 @@
 			},
 			{
 				"img": "images/sword4.png",
-				"codes": "sword,ring,grass,switch,tubes,bigsword,ls_item,pot_breaker,sign_breaker"
+				"codes": "sword,ring,grass,switch,tubes,ls_item,pot_breaker,sign_breaker"
 			}
 		]
 	},
@@ -751,40 +751,20 @@
 		]
 	},
 	{
-		"name": "Randomizer Mode",
-		"type": "progressive",
-		"loop": false,
-		"allow_disabled": false,
-		"stages": [
-			{ //Classic
-				"name": "Classic",
-				"img": "images/Classic.png",
-				"codes": "hexagonquest"
-			},
-			{ //Hexagon Quest
-				"name": "Hexagon Quest",
-				"img": "images/Hexagon_Quest.png",
-				"codes": "hexagonquest"
-			}
-		]
+		"name": "Hexagon Quest",
+		"type": "toggle",
+		"loop": true,
+		"disabled_img": "images/Hexagon_Quest.png",
+		"img": "images/Hexagon_Quest.png",
+		"codes": "hexagonquest"
 	},
 	{
-		"name": "Sword Setting",
-		"type": "progressive",
-		"loop": false,
-		"allow_disabled": false,
-		"stages": [
-			{
-				"name": "Stick and Swords",
-				"img": "images/stickandswords.png",
-				"codes": "progswordSetting"
-			},
-			{
-				"name": "Progressive Swords",
-				"img": "images/progressiveswords.png",
-				"codes": "progswordSetting"
-			}
-		]
+		"name": "Sword Progression",
+		"type": "toggle",
+		"loop": true,
+		"disabled_img": "images/progressiveswords.png",
+		"img": "images/progressiveswords.png",
+		"codes": "progswordSetting"
 	},
 	{
 		"name": "Entrance Rando Setting",
@@ -806,21 +786,11 @@
 	},
 	{
 		"name": "Ladder Shuffle Setting",
-		"type": "progressive",
-		"loop": false,
-		"allow_disabled": false,
-		"stages": [
-			{
-				"name": "Ladder Shuffle Off",
-				"img": "images/ladder_shuffle_off.png",
-				"codes": "ladder_shuffle_off"
-			},
-			{
-				"name": "Ladder Shuffle On",
-				"img": "images/ladder_shuffle_on.png",
-				"codes": "ladder_shuffle_on"
-			}
-		]
+		"type": "toggle",
+		"loop": true,
+		"disabled_img": "images/ladder_shuffle.png",
+		"img": "images/ladder_shuffle.png",
+		"codes": "ladder_shuffle"
 	},
 	{
 		"name": "Breakable Shuffle",

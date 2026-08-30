@@ -1,113 +1,4 @@
 {
-  "settings_popup": {
-    "type": "array",
-    "margin": "5",
-    "content": [
-      {
-        "type": "group",
-        "header": "Glitch Mode",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "mode"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Hexagon Quest",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "hexagonquest"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Sword Progression",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "progswordSetting"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Ladder Shuffle",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "ladder_shuffle"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Enemy Drop Shuffle",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "enemy_drop_shuffle_setting"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Enemy Soul Shuffle",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "enemy_soul_shuffle_setting"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Combat Logic",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "item",
-            "margin": "-5,-1,-5,-5",
-            "item": "combat_logic_setting"
-          }
-        ]
-      },
-      {
-        "type": "group",
-        "header": "Pack Settings",
-        "header_background": "#3e4b57",
-        "content": [
-          {
-            "type": "array",
-            "orientation": "horizontal",
-            "content": [
-              {
-                "type": "item",
-                "max_width": 80,
-                "margin": "5,5,5,5",
-                "item": "auto_tab"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
   "tracker_horizontal": {
     "type": "container",
     "background": "#877373",
@@ -118,7 +9,6 @@
         {
           "type": "dock",
           "dock": "bottom",
-          "h_alignment": "center",
           "content": [
             {
               "type": "group",
@@ -134,6 +24,46 @@
                 "style": "settings",
                 "popup_background": "#55212121",
                 "layout": "settings_popup"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Other Treasures",
+              "margin": "0,0,3,0",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "other"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Enemy Souls",
+              "margin": "0,0,3,0",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "enemy_souls"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Ladders",
+              "margin": "0,0,0,0",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "ladders"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Fuses",
+              "margin": "0,0,0,0",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "fuses"
               }
             }
           ]

@@ -5,12 +5,18 @@ ScriptHost:LoadScript("scripts/settings.lua")
 print("Active Variant:")
 print(Tracker.ActiveVariantUID)
 
+if PopVersion then
+  ScriptHost:LoadScript("scripts/generated_enemy_data.lua")
+  ScriptHost:LoadScript("scripts/generated_combat_data.lua")
+end
+
 if not (string.find(Tracker.ActiveVariantUID, "var_itemsonly")) then
   if PopVersion then
     Tracker:AddMaps("maps/maps_pop.json")
     Tracker:AddLocations("locations/locations_pop_er.json")
     Tracker:AddLocations("locations/locations_breakables.json")
     Tracker:AddLocations("locations/locations_fuses.json")
+    Tracker:AddLocations("locations/enemy_locations.json")
   else
     Tracker:AddMaps("maps/maps.json")
     Tracker:AddLocations("locations/locations.json")
@@ -20,6 +26,8 @@ end
 if PopVersion then
   Tracker:AddItems("items/common_pop.json")
   Tracker:AddItems("items/common_pop_modified.json")
+  Tracker:AddItems("items/combat_logic.json")
+  Tracker:AddItems("items/enemy_souls.json")
   Tracker:AddLayouts("layouts/itemspop.json")
   Tracker:AddLayouts("layouts/trackerpop.json")
   Tracker:AddLayouts("layouts/standard_broadcastpop.json")
@@ -36,6 +44,10 @@ ScriptHost:LoadScript("scripts/utils.lua")
 
 -- Logic Script
 ScriptHost:LoadScript("scripts/logic_common.lua")
+if PopVersion then
+  ScriptHost:LoadScript("scripts/combat_logic.lua")
+  ScriptHost:LoadScript("scripts/enemy_logic.lua")
+end
 
 -- see if the file exists
 function file_exists(file)

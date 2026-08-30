@@ -78,6 +78,8 @@ function onClear(slot_data)
     end
     SLOT_DATA = slot_data
     CUR_INDEX = -1
+    progsword_count = 0
+    start_with_sword_on = false
     -- reset locations
     for _, v in pairs(LOCATION_MAPPING) do
         if v[1] then
@@ -93,6 +95,17 @@ function onClear(slot_data)
                 end
             elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                 print(string.format("onClear: could not find object for code %s", v[1]))
+            end
+        end
+    end
+    -- reset enemies
+    if not string.find(Tracker.ActiveVariantUID, "var_itemsonly") then
+        for _, section_code in ipairs(ENEMY_LOCATION_SECTIONS or {}) do
+            local obj = Tracker:FindObjectForCode(section_code)
+            if obj then
+                obj.AvailableChestCount = obj.ChestCount
+            elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                print(string.format("onClear: could not find enemy section %s", section_code))
             end
         end
     end
@@ -119,6 +132,21 @@ function onClear(slot_data)
             end
         end
     end
+    for _, item_code in ipairs(ENEMY_SOUL_ITEM_CODES or {}) do
+        local obj = Tracker:FindObjectForCode(item_code)
+        if obj then
+            obj.Active = false
+        elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+            print(string.format("onClear: could not find enemy soul item %s", item_code))
+        end
+    end
+    -- reset combat calculation variables for sword and effigies
+    for _, counter_code in ipairs({"sword_upgrade_count", "effigy_count"}) do
+        local counter = Tracker:FindObjectForCode(counter_code)
+        if counter then
+            counter.AcquiredCount = 0
+        end
+    end
     -- reset hosted items
     for k, _ in pairs(HOSTED) do
         Tracker:FindObjectForCode(k).Active = false
@@ -143,8 +171,7 @@ function onClear(slot_data)
     Tracker:FindObjectForCode("icerod").Active = should_activate
 
     --print("slot_data.sword_progression: " .. slot_data.sword_progression)
-    Tracker:FindObjectForCode("progswordSetting").CurrentStage = slot_data.sword_progression
-    Tracker:FindObjectForCode("progswordSetting").CurrentStage = slot_data.sword_progression
+    set_option("progswordSetting", slot_data.sword_progression, false)
 
     if slot_data.start_with_sword ~= 0 then
         --print("slot_data.start_with_sword: " .. slot_data.start_with_sword)
@@ -153,7 +180,7 @@ function onClear(slot_data)
         Tracker:FindObjectForCode("sword").CurrentStage = 0
     end
 
-    Tracker:FindObjectForCode("hexagonquest").CurrentStage = slot_data.hexagon_quest
+    set_option("hexagonquest", slot_data.hexagon_quest, false)
     if slot_data.hexagon_quest ~= 0 then
         HEXGOAL = slot_data["Hexagon Quest Goal"]
     end
@@ -164,6 +191,10 @@ function onClear(slot_data)
 
     set_option("fuse_shuffle", slot_data.shuffle_fuses, false)
     set_option("bell_shuffle", slot_data.shuffle_bells, false)
+    set_option("enemy_drop_shuffle_setting", slot_data.shuffle_enemy_drops, true)
+    set_option("enemy_soul_shuffle_setting", slot_data.shuffle_enemy_souls, false)
+    set_option("combat_logic_setting", slot_data.combat_logic, true)
+    set_option("start_with_sword_setting", slot_data.start_with_sword, false)
 
     set_option("maskless", slot_data.maskless, false)
     set_option("lanternless", slot_data.lanternless, false)
@@ -176,7 +207,7 @@ function onClear(slot_data)
     set_option("vis_ice_grapple_off", math.max(slot_data.ice_grappling, Tracker:FindObjectForCode("vis_ice_grapple_off").CurrentStage), true)
     set_option("vis_ladder_storage_off", math.max(slot_data.ladder_storage, Tracker:FindObjectForCode("vis_ladder_storage_off").CurrentStage), true)
 
-    Tracker:FindObjectForCode("ladder_shuffle_off").CurrentStage = slot_data.shuffle_ladders
+    set_option("ladder_shuffle", slot_data.shuffle_ladders, false)
 
     Tracker:FindObjectForCode("auto_tab").CurrentStage = 1
     local slot_player = "Slot:" .. Archipelago.PlayerNumber
@@ -208,6 +239,9 @@ function onItem(index, item_id, item_name, player_number)
     end
     CUR_INDEX = index;
     local v = ITEM_MAPPING[item_id]
+    if not v and ENEMY_SOUL_ITEM_MAPPING then
+        v = ENEMY_SOUL_ITEM_MAPPING[item_id] or ENEMY_SOUL_ITEM_MAPPING[item_name]
+    end
     if not v then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
             print(string.format("onItem: could not find item mapping for id %s", item_id))
@@ -222,6 +256,12 @@ function onItem(index, item_id, item_name, player_number)
     end
     local obj = Tracker:FindObjectForCode(v[1])
     if obj then
+        if v[3] then
+            local counter = Tracker:FindObjectForCode(v[3])
+            if counter then
+                counter.AcquiredCount = counter.AcquiredCount + 1
+            end
+        end
         -- if progsword and start with sword is on, we need to avoid weird behavior
         -- so, we're counting up how many progswords you have separately
         if v[1] == "progsword" then
@@ -264,6 +304,9 @@ function onLocation(location_id, location_name)
         print(string.format("called onLocation: %s, %s", location_id, location_name))
     end
     local v = LOCATION_MAPPING[location_id]
+    if not v and ENEMY_LOCATION_MAPPING then
+        v = ENEMY_LOCATION_MAPPING[location_name]
+    end
     if not v and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("onLocation: could not find location mapping for id %s", location_id))
     end

@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Combat Logic",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Combat Logic Off",
+        "img": "images/sword1.png",
+        "inherit_codes": false,
+        "codes": "combat_logic_setting,combat_logic_off"
+      },
+      {
+        "name": "Combat Logic: Bosses Only",
+        "img": "images/sword2.png",
+        "inherit_codes": false,
+        "codes": "combat_logic_setting,combat_logic_bosses_only,combat_logic_enabled"
+      },
+      {
+        "name": "Combat Logic On",
+        "img": "images/sword4.png",
+        "inherit_codes": false,
+        "codes": "combat_logic_setting,combat_logic_on,combat_logic_enabled"
+      }
+    ]
+  },
+  {
+    "name": "Start With Sword",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/sword2.png",
+    "codes": "start_with_sword_setting"
+  },
+  {
+    "name": "Sword Upgrade Receipts",
+    "type": "consumable",
+    "loop": false,
+    "img": "images/progressiveswords.png",
+    "codes": "sword_upgrade_count",
+    "max_quantity": 4
+  },
+  {
+    "name": "Combat Logic Effigy Receipts (Internal)",
+    "type": "consumable",
+    "loop": false,
+    "img": "images/effigy.png",
+    "codes": "effigy_count",
+    "max_quantity": 28
+  },
+  {
+    "name": "Combat Logic Money x128 Receipts (Internal)",
+    "type": "consumable",
+    "loop": false,
+    "img": "images/golden_coins.png",
+    "codes": "combat_money_128_count",
+    "max_quantity": 3
+  },
+  {
+    "name": "Combat Logic Money x200 Receipts (Internal)",
+    "type": "consumable",
+    "loop": false,
+    "img": "images/golden_coins.png",
+    "codes": "combat_money_200_count",
+    "max_quantity": 2
+  },
+  {
+    "name": "Combat Logic Money x255 Receipts (Internal)",
+    "type": "consumable",
+    "loop": false,
+    "img": "images/golden_coins.png",
+    "codes": "combat_money_255_count",
+    "max_quantity": 2
+  }
+]
